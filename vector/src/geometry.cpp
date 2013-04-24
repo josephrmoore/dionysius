@@ -12,11 +12,13 @@ geometry::geometry(){
 
 }
 //------------------------------------------------------------------
-void geometry::create_geometry(ofPoint current_point, int sides, int radius, ofColor color){
+void geometry::create_geometry( int current_object, ofPoint current_point, int sides, int radius, ofColor color, int current_z){
     this->verticies = sides+1;
     this->radius = radius;
     this->color = color;
     this->centroid = current_point;
+    this->object = current_object;
+    this->z = current_object;
 }
 void geometry::update_geometry(ofPoint current_point, int sides, int radius, ofColor color){
     this->verticies = sides+1;
@@ -50,15 +52,32 @@ void geometry::updateCircle(ofPoint center, int radius, ofColor color){
 
 }
 //------------------------------------------------------------------
-void geometry::draw(){
+void geometry::drawOutline(){
+    
+}
+//------------------------------------------------------------------
+void geometry::draw(bool outline){
+    if(outline){
+        ofSetColor(ofColor(0));
+        ofFill();
+        if(this->verticies==1){
+            ofCircle(this->centroid.x, this->centroid.y, this->radius+3, this->radius+3);
+        } else if (this->verticies==2){
+            ofLine(this->centroid.x, this->centroid.y, this->centroid.x+this->radius, this->centroid.y+this->radius);
+        } else {
+            ofBeginShape();
+            for(int i=0; i<this->verticies;i++){
+                ofVertex(this->centroid.x + (float)((this->radius+6)*sin((i+1) * ((2*PI) / this->verticies))), this->centroid.y + (float)((this->radius+6)*-cos((i+1) * ((2*PI) / this->verticies))));
+            }
+            ofEndShape();
+        }
+    }
     ofSetColor(this->color);
     ofFill();
     if(this->verticies==1){
         ofCircle(this->centroid.x, this->centroid.y, this->radius, this->radius);
     } else if (this->verticies==2){
         ofLine(this->centroid.x, this->centroid.y, this->centroid.x+this->radius, this->centroid.y+this->radius);
-    } else if (this->verticies==4){
-        ofRect(this->centroid.x, this->centroid.y, this->radius, this->radius);
     } else {
         ofBeginShape();
         for(int i=0; i<this->verticies;i++){

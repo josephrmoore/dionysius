@@ -4,14 +4,12 @@
 void testApp::setup(){
     current_point.x = ofGetScreenWidth()/2;
     current_point.y = ofGetScreenHeight()/2;
-    current_object = 0;
+    current_object = -1;
     current_sides = 0;
     current_radius = 10;
+    current_z = current_object;
     current_color = ofColor(255,0,0);
-    preview_object.create_geometry(current_point, current_sides, current_radius, current_color);
-//    objects.assign(1, preview_object);
-//    objects.push_back(preview_object);
-//    current_object++;
+    preview_object.create_geometry(-2, current_point, current_sides, current_radius, current_color, current_z);
     ofSetVerticalSync(true);
     step = 1;
     
@@ -40,7 +38,7 @@ void testApp::update(){
         if(arduino != ""){
             output = arduino;
             values = ofSplitString(output, " ", true, true); // trues are ignoreempty & trim
-            if(values.size()==15){
+            if(values.size()==16){
                 current_point.x += ofToInt(values[0]);
                 current_point.y += ofToInt(values[1]);
                 if(ofToInt(values[8]) == 0 && j1_up == false){
@@ -56,7 +54,7 @@ void testApp::update(){
                 }
                 if(ofToInt(values[9]) == 0 && j1_down == false){
                     // J1 DOWN
-                    if((current_object-1) > 0){
+                    if((current_object) > 0){
                         current_object--;
                     } else {
                         current_object = (objects.size()-1);
@@ -67,7 +65,7 @@ void testApp::update(){
                 }
                 if(ofToInt(values[10]) == 0 && j1_left == false){
                     // J1 LEFT
-                    if((current_object-1) > 0){
+                    if((current_object) > 0){
                         current_object--;
                     } else {
                         current_object = (objects.size()-1);
@@ -90,7 +88,8 @@ void testApp::update(){
                 if(ofToInt(values[6]) == 1 && ok_button == false){
                     // OK button
                     geometry newgeo;
-                    newgeo.create_geometry(current_point, current_sides, current_radius, current_color);
+                    newgeo.create_geometry(objects.size(), current_point, current_sides, current_radius, current_color, current_z);
+                    zs.push_back(objects.size());
                     objects.push_back(newgeo);
                     current_object = objects.size()-1;
                     // step--;
@@ -143,7 +142,7 @@ void testApp::update(){
                 }
                 if(ofToInt(values[7]) == 0 && delete_button == false){
                     // DELETE
-                    if(current_object>0){
+                    if(current_object>=0){
                         objects.erase(objects.begin() + current_object);
                         current_object--;
                     }
@@ -154,11 +153,20 @@ void testApp::update(){
                 current_color.setHue(ofMap(ofToInt(values[14]), 5, 685, 0, 255));
                 current_sides = ofMap(ofToInt(values[13]), 5, 685, 0, 20);
                 current_radius = ofMap(ofToInt(values[12]), 5, 685, 0, ofGetScreenWidth()/2);
+                current_z = ofMap(ofToInt(values[15]), 5, 685, 0, objects.size());
             }
         }
         if (arduino == "") continue;
         //do something with str
     } while (arduino != "");
+    for(int i=0;i<objects.size();i++){
+        zs[i] = objects[i].z;
+    }
+    if(zs.size()>objects.size()){
+        for(int i=objects.size();i<zs.size();i++){
+            zs[i] = -1;
+        }
+    }
 }
 
 //--------------------------------------------------------------
@@ -173,13 +181,26 @@ void testApp::draw(){
     info += "saturation:"+ofToString(current_color.getSaturation())+"\n";
     info += "brightness:"+ofToString(current_color.getBrightness())+"\n";
     info += "step:"+ofToString(step)+"\n";
+    info += "z:"+ofToString(current_z)+"\n";
+    info += "selected:"+ofToString(current_object)+"\n";
     info += "serial:" + output;
 	ofSetHexColor(0x444342);
 	ofDrawBitmapString(info, 30, 30);
-    preview_object.draw();
-    for(vector<geometry>::iterator it = objects.begin(); it != objects.end(); it++){
-        (*it).draw();
+    preview_object.draw(false);
+    for(int i=0;i<zs.size();i++){
+        if(objects[zs[i]].object == current_object){
+            objects[zs[i]].draw(true);
+        } else {
+            objects[zs[i]].draw(false);
+        }
     }
+//    for(vector<geometry>::iterator it = objects.begin(); it != objects.end(); it++){
+//        if((*it).object == current_object){
+//            (*it).draw(true);
+//        } else {
+//            (*it).draw(false);
+//        }
+//    }
 }
 
 //--------------------------------------------------------------
@@ -214,29 +235,29 @@ void testApp::keyPressed(int key){
         bri-=step;
         current_color.setBrightness(bri);
     }
-    if(key == 'A'){
-        if((current_object-1) > 0){
+    if(key == 'a'){
+        if((current_object) > -1){
             current_object--;
         } else {
             current_object = (objects.size()-1);
         }
     }
-    if(key == 'D'){
+    if(key == 'd'){
         if(current_object < (objects.size()-1)){
             current_object++;
         } else {
             current_object = 0;
         }
     }
-    if(key == 'W'){
+    if(key == 'w'){
         if(current_object < (objects.size()-1)){
             current_object++;
         } else {
             current_object = 0;
         }
     }
-    if(key == 'S'){
-        if((current_object-1) > 0){
+    if(key == 's'){
+        if((current_object) > 0){
             current_object--;
         } else {
             current_object = (objects.size()-1);
@@ -277,16 +298,21 @@ void testApp::keyPressed(int key){
             current_color.setHue(hue);
         }
     }
+    if(key == 'z'){
+        current_z--;
+    }
+    if(key == 'x'){
+        current_z++;
+    }
     if(key == ' ' || key == OF_KEY_RETURN){
         geometry newgeo;
-        newgeo.create_geometry(current_point, current_sides, current_radius, current_color);
+        newgeo.create_geometry(objects.size(), current_point, current_sides, current_radius, current_color, current_z);
+        zs.push_back(objects.size());
         objects.push_back(newgeo);
-        current_object = objects.size()-1;
     }
     if(key == OF_KEY_BACKSPACE){
         if(current_object>0){
             objects.erase(objects.begin() + current_object);
-            current_object--;
         }
     }
 }
@@ -298,8 +324,8 @@ void testApp::keyReleased(int key){
 
 //--------------------------------------------------------------
 void testApp::mouseMoved(int x, int y ){
-//    current_point.x = x;
-//    current_point.y = y;
+    current_point.x = x;
+    current_point.y = y;
 }
 
 //--------------------------------------------------------------

@@ -1,3 +1,13 @@
+ffffffffffffffffffffffffffffffff 1497f7069df3b1697252460e9f455470 ffffffffffffffffffffffffffffffff 102 /Users/josephmoore/OF/apps/dionysius/vector/bin/vectorDebug.app
+ffffffffffffffffffffffffffffffff 96ec492c7f0c1e014c964471a32d3097 ffffffffffffffffffffffffffffffff 5578724 /Users/josephmoore/OF/apps/dionysius/vector/bin/vectorDebug.app/Contents/MacOS/vectorDebug
+87333ca09ca43911c9e0405e6d8c8eeb 85999b225568c8c87635ae261fd1b15c ffffffffffffffffffffffffffffffff 241464 /Users/josephmoore/OF/apps/dionysius/vector/build/vector.build/Debug/vector.build/Objects-normal/i386/testApp.o
+87333ca0dacd9384c9e0405e6d8d8070 6e6c0149fe47e7722bd2a75ebf676ce6 ffffffffffffffffffffffffffffffff 115172 /Users/josephmoore/OF/apps/dionysius/vector/build/vector.build/Debug/vector.build/Objects-normal/i386/main.o
+87333ca0cd1be248c9e0405e6d8ec4f1 1f792e09032a6487b2eccdd6f9288689 ffffffffffffffffffffffffffffffff 50168 /Users/josephmoore/OF/apps/dionysius/vector/build/vector.build/Debug/vector.build/Objects-normal/i386/geometry.o
+ffffffffffffffffffffffffffffffff ffffffffffffffffffffffffffffffff ffffffffffffffffffffffffffffffff 204 /Users/josephmoore/OF/apps/dionysius/vector/bin/vectorDebug.app/Contents/Frameworks/GLUT.framework
+ffffffffffffffffffffffffffffffff 77783d06ca16548a40cfa9056703e15e ffffffffffffffffffffffffffffffff 746608 /Users/josephmoore/OF/apps/dionysius/vector/build/vector.build/Debug/vector.build/Objects-normal/i386/ofxExtras.o
+000000004b4834ea00000000000005ff 87333ca0da0fe1c2c9e0405e6d8d87f8 ffffffffffffffffffffffffffffffff 39900912 /var/folders/Dc/DcObbznzEJyqvLZguF+Lwk+++TI/-Caches-/com.apple.Xcode.501/SharedPrecompiledHeaders/Carbon-bmjrktjmoyvpxagbylvcnybmvztq/Carbon.h.gch
+ffffffffffffffffffffffffffffffff ffffffffffffffffffffffffffffffff ffffffffffffffffffffffffffffffff 8 /Users/josephmoore/OF/apps/dionysius/vector/bin/vectorDebug.app/Contents/PkgInfo
+ffffffffffffffffffffffffffffffff ffffffffffffffffffffffffffffffff ffffffffffffffffffffffffffffffff 1010 /Users/josephmoore/OF/apps/dionysius/vector/bin/vectorDebug.app/Contents/Info.plist
 0c46da51f0175eb15ebf41ba1e42b7a0 4101161ca6fe2992544588761faf7324 ffffffffffffffffffffffffffffffff 102 /Users/josephmoore/OF/apps/Studio/vector/bin/vectorDebug.app
 0000000051237d4800000000000000cc 70fb958bffcceaf83af088037aabf625 ffffffffffffffffffffffffffffffff 204 /Users/josephmoore/OF/apps/Studio/vector/bin/vectorDebug.app/Contents/Frameworks/GLUT.framework
 ffffffffffffffffffffffffffffffff bf7ef4ef46af2e06e06f87426abcac9b ffffffffffffffffffffffffffffffff 5556272 /Users/josephmoore/OF/apps/Studio/vector/bin/vectorDebug.app/Contents/MacOS/vectorDebug

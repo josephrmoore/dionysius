@@ -14,7 +14,7 @@ class geometry{
     
 public:
     
-    int verticies, radius, x, y;
+    int object, verticies, radius, x, y, z;
     ofColor color;
     ofPoint centroid;
 
@@ -25,9 +25,10 @@ public:
     void updatePolygon(ofPoint centroid, int sides, int radius, ofColor color);
     void updateCircle(ofPoint center, int radius, ofColor color);
 
-    void create_geometry(ofPoint current_point, int sides, int radius, ofColor color);
+    void create_geometry(int current_object, ofPoint current_point, int sides, int radius, ofColor color, int current_z);
     void update_geometry(ofPoint current_point, int sides, int radius, ofColor color);
     void retrieve_geometry(int index);
     void delete_geometry(int index);
-    void draw();
+    void draw(bool outline);
+    void drawOutline();
 };
