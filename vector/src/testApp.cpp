@@ -4,7 +4,7 @@
 void testApp::setup(){
     current_point.x = ofGetScreenWidth()/2;
     current_point.y = ofGetScreenHeight()/2;
-    current_object = -1;
+    current_object = 0;
     current_sides = 0;
     current_radius = 10;
     current_z = current_object;
@@ -186,13 +186,17 @@ void testApp::draw(){
     info += "serial:" + output;
 	ofSetHexColor(0x444342);
 	ofDrawBitmapString(info, 30, 30);
-    preview_object.draw(false);
-    for(int i=0;i<zs.size();i++){
-        if(objects[zs[i]].object == current_object){
-            objects[zs[i]].draw(true);
-        } else {
-            objects[zs[i]].draw(false);
+    for(int i=0;i<objects.size();i++){
+        for(int j=0;j<zs.size();j++){
+            if(zs[j]==i){
+                if(objects[j].object == current_object){
+                    objects[j].draw(true);
+                } else {
+                    objects[j].draw(false);
+                }
+            }
         }
+        preview_object.draw(false);
     }
 //    for(vector<geometry>::iterator it = objects.begin(); it != objects.end(); it++){
 //        if((*it).object == current_object){
@@ -299,20 +303,30 @@ void testApp::keyPressed(int key){
         }
     }
     if(key == 'z'){
-        current_z--;
+        if(current_z>0){
+            current_z--;            
+        }
     }
     if(key == 'x'){
-        current_z++;
+        if(current_z<objects.size() && objects.size()>0){
+            current_z++;
+        }
     }
     if(key == ' ' || key == OF_KEY_RETURN){
         geometry newgeo;
         newgeo.create_geometry(objects.size(), current_point, current_sides, current_radius, current_color, current_z);
-        zs.push_back(objects.size());
+        for(int i=0;i<zs.size();i++){
+            if(zs[i] >= current_z){
+                zs[i] = zs[i] + 1;
+            }
+        }
+        zs.push_back(current_z);
         objects.push_back(newgeo);
     }
     if(key == OF_KEY_BACKSPACE){
         if(current_object>0){
             objects.erase(objects.begin() + current_object);
+            zs.erase(zs.begin() + current_object);
         }
     }
 }
