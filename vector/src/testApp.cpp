@@ -9,7 +9,7 @@ void testApp::setup(){
     current_radius = 10;
     current_z = current_object;
     current_color = ofColor(255,0,0);
-    preview_object.create_geometry(-2, current_point, current_sides, current_radius, current_color, current_z);
+    preview_object.create_geometry(-2, current_point, current_sides, current_radius, current_color, current_z, line);
     ofSetVerticalSync(true);
     step = 1;
     
@@ -88,7 +88,7 @@ void testApp::update(){
                 if(ofToInt(values[6]) == 1 && ok_button == false){
                     // OK button
                     geometry newgeo;
-                    newgeo.create_geometry(objects.size(), current_point, current_sides, current_radius, current_color, current_z);
+                    newgeo.create_geometry(objects.size(), current_point, current_sides, current_radius, current_color, current_z, line);
                     zs.push_back(objects.size());
                     objects.push_back(newgeo);
                     current_object = objects.size()-1;
@@ -159,6 +159,11 @@ void testApp::update(){
         if (arduino == "") continue;
         //do something with str
     } while (arduino != "");
+    if(current_sides != 1){
+        if(line.getArea() != 0){
+            line.clear();            
+        }
+    }
 //    for(int i=0;i<objects.size();i++){
 //        zs[i] = objects[i].z;
 //    }
@@ -190,6 +195,7 @@ void testApp::draw(){
         preview_object.draw(false);
     }
     for(int i=0;i<objects.size();i++){
+        cout<<objects[i].line.getArea()<<endl;
         for(int j=0;j<zs.size();j++){
             if(zs[j]==i){
                 if(current_z==zs[j]){
@@ -207,6 +213,12 @@ void testApp::draw(){
         }
 
     }
+    line.draw();
+//    for(int i=1; i<line.size(); i++){ 
+//        if(line.size()>1){
+//            ofLine(line[i-1],line[i]);            
+//        }
+//    } 
 //    for(vector<geometry>::iterator it = objects.begin(); it != objects.end(); it++){
 //        if((*it).object == current_object){
 //            (*it).draw(true);
@@ -260,6 +272,14 @@ void testApp::keyPressed(int key){
             current_object++;
         } else {
             current_object = 0;
+        }
+    }
+    if(key == 'c'){
+        line.close();
+    }
+    if(key == 'v'){
+        if(current_sides==1){
+            line.addVertex(current_point);
         }
     }
     if(key == 'w'){
@@ -323,7 +343,7 @@ void testApp::keyPressed(int key){
     }
     if(key == ' ' || key == OF_KEY_RETURN){
         geometry newgeo;
-        newgeo.create_geometry(objects.size(), current_point, current_sides, current_radius, current_color, current_z);
+        newgeo.create_geometry(objects.size(), current_point, current_sides, current_radius, current_color, current_z, line);
         for(int i=0;i<zs.size();i++){
             if(zs[i] >= current_z){
                 zs[i]++;
@@ -331,6 +351,7 @@ void testApp::keyPressed(int key){
         }
         zs.push_back(current_z);
         objects.push_back(newgeo);
+        line.clear();
     }
     if(key == OF_KEY_BACKSPACE){
         if(current_object>0){

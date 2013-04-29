@@ -29,6 +29,7 @@ class testApp : public ofBaseApp{
         ofColor current_color;
         int current_sides, current_radius, current_z, step;
         int wheel_state; // temporary for keyboard clone
+        ofPolyline line;
     
         bool		bSendSerialMessage;			// a flag for sending serial
         char		bytesRead[3];				// data from serial, we will be trying to read 3

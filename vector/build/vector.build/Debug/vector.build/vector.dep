@@ -1,9 +1,9 @@
 ffffffffffffffffffffffffffffffff 1497f7069df3b1697252460e9f455470 ffffffffffffffffffffffffffffffff 102 /Users/josephmoore/OF/apps/dionysius/vector/bin/vectorDebug.app
-ffffffffffffffffffffffffffffffff 96ec492c7f0c1e014c964471a32d3097 ffffffffffffffffffffffffffffffff 5587624 /Users/josephmoore/OF/apps/dionysius/vector/bin/vectorDebug.app/Contents/MacOS/vectorDebug
-87333ca09ca43d9fc9e0405e6d8c8d72 85999b225568c8c87635ae261fd1b15c ffffffffffffffffffffffffffffffff 292424 /Users/josephmoore/OF/apps/dionysius/vector/build/vector.build/Debug/vector.build/Objects-normal/i386/testApp.o
-87333ca0dac72a78c9e0405e6d8d807f 6e6c0149fe47e7722bd2a75ebf676ce6 ffffffffffffffffffffffffffffffff 127816 /Users/josephmoore/OF/apps/dionysius/vector/build/vector.build/Debug/vector.build/Objects-normal/i386/main.o
-87333ca0cd1be27fc9e0405e6d8ec3ac 1f792e09032a6487b2eccdd6f9288689 ffffffffffffffffffffffffffffffff 0 /Users/josephmoore/OF/apps/dionysius/vector/build/vector.build/Debug/vector.build/Objects-normal/i386/geometry.o
+ffffffffffffffffffffffffffffffff 96ec492c7f0c1e014c964471a32d3097 ffffffffffffffffffffffffffffffff 5585336 /Users/josephmoore/OF/apps/dionysius/vector/bin/vectorDebug.app/Contents/MacOS/vectorDebug
+87333ca09cae8ceac9e0405e6d8c9315 85999b225568c8c87635ae261fd1b15c ffffffffffffffffffffffffffffffff 0 /Users/josephmoore/OF/apps/dionysius/vector/build/vector.build/Debug/vector.build/Objects-normal/i386/testApp.o
 ffffffffffffffffffffffffffffffff ffffffffffffffffffffffffffffffff ffffffffffffffffffffffffffffffff 204 /Users/josephmoore/OF/apps/dionysius/vector/bin/vectorDebug.app/Contents/Frameworks/GLUT.framework
+87333ca0dacdb31dc9e0405e6d8d8010 6e6c0149fe47e7722bd2a75ebf676ce6 ffffffffffffffffffffffffffffffff 160060 /Users/josephmoore/OF/apps/dionysius/vector/build/vector.build/Debug/vector.build/Objects-normal/i386/main.o
+87333ca0cd1be436c9e0405e6d8ec4ed 1f792e09032a6487b2eccdd6f9288689 ffffffffffffffffffffffffffffffff 198404 /Users/josephmoore/OF/apps/dionysius/vector/build/vector.build/Debug/vector.build/Objects-normal/i386/geometry.o
 ffffffffffffffffffffffffffffffff 77783d06ca16548a40cfa9056703e15e ffffffffffffffffffffffffffffffff 746608 /Users/josephmoore/OF/apps/dionysius/vector/build/vector.build/Debug/vector.build/Objects-normal/i386/ofxExtras.o
 000000004b4834ea00000000000005ff 87333ca0da0fe1c2c9e0405e6d8d87f8 ffffffffffffffffffffffffffffffff 39900912 /var/folders/Dc/DcObbznzEJyqvLZguF+Lwk+++TI/-Caches-/com.apple.Xcode.501/SharedPrecompiledHeaders/Carbon-bmjrktjmoyvpxagbylvcnybmvztq/Carbon.h.gch
 ffffffffffffffffffffffffffffffff ffffffffffffffffffffffffffffffff ffffffffffffffffffffffffffffffff 8 /Users/josephmoore/OF/apps/dionysius/vector/bin/vectorDebug.app/Contents/PkgInfo
