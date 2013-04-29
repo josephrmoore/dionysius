@@ -9,7 +9,6 @@
 #pragma once
 #include "ofMain.h"
 
-
 class geometry{
     
 public:

@@ -57,13 +57,14 @@ void geometry::drawOutline(){
 }
 //------------------------------------------------------------------
 void geometry::draw(bool outline){
+//    cout<<this->points.size()<<endl;
     if(outline){
         ofSetColor(ofColor(0));
         ofFill();
         if(this->verticies==1){
             ofCircle(this->centroid.x, this->centroid.y, this->radius+3, this->radius+3);
         } else if (this->verticies==2){
-            ofLine(this->centroid.x, this->centroid.y, this->centroid.x+this->radius, this->centroid.y+this->radius);
+
         } else {
             ofBeginShape();
             for(int i=0; i<this->verticies;i++){
@@ -77,7 +78,7 @@ void geometry::draw(bool outline){
     if(this->verticies==1){
         ofCircle(this->centroid.x, this->centroid.y, this->radius, this->radius);
     } else if (this->verticies==2){
-        ofLine(this->centroid.x, this->centroid.y, this->centroid.x+this->radius, this->centroid.y+this->radius);
+        
     } else {
         ofBeginShape();
         for(int i=0; i<this->verticies;i++){

@@ -159,14 +159,14 @@ void testApp::update(){
         if (arduino == "") continue;
         //do something with str
     } while (arduino != "");
-    for(int i=0;i<objects.size();i++){
-        zs[i] = objects[i].z;
-    }
-    if(zs.size()>objects.size()){
-        for(int i=objects.size();i<zs.size();i++){
-            zs[i] = -1;
-        }
-    }
+//    for(int i=0;i<objects.size();i++){
+//        zs[i] = objects[i].z;
+//    }
+//    if(zs.size()>objects.size()){
+//        for(int i=objects.size();i<zs.size();i++){
+//            zs[i] = -1;
+//        }
+//    }
 }
 
 //--------------------------------------------------------------
@@ -186,9 +186,15 @@ void testApp::draw(){
     info += "serial:" + output;
 	ofSetHexColor(0x444342);
 	ofDrawBitmapString(info, 30, 30);
+    if(objects.size()==0){
+        preview_object.draw(false);
+    }
     for(int i=0;i<objects.size();i++){
         for(int j=0;j<zs.size();j++){
             if(zs[j]==i){
+                if(current_z==zs[j]){
+                    preview_object.draw(false);
+                }
                 if(objects[j].object == current_object){
                     objects[j].draw(true);
                 } else {
@@ -196,7 +202,10 @@ void testApp::draw(){
                 }
             }
         }
-        preview_object.draw(false);
+        if(current_z==zs.size()){
+            preview_object.draw(false);
+        }
+
     }
 //    for(vector<geometry>::iterator it = objects.begin(); it != objects.end(); it++){
 //        if((*it).object == current_object){
@@ -317,7 +326,7 @@ void testApp::keyPressed(int key){
         newgeo.create_geometry(objects.size(), current_point, current_sides, current_radius, current_color, current_z);
         for(int i=0;i<zs.size();i++){
             if(zs[i] >= current_z){
-                zs[i] = zs[i] + 1;
+                zs[i]++;
             }
         }
         zs.push_back(current_z);
