@@ -21,12 +21,13 @@ class testApp : public ofBaseApp{
 		void dragEvent(ofDragInfo dragInfo);
 		void gotMessage(ofMessage msg);
         
-        vector <geometry> objects; 
+        vector <geometry> objects;
+        vector <int> zs;
         geometry preview_object;
         int current_object;
         ofPoint current_point;
         ofColor current_color;
-        int current_sides, current_radius, step;
+        int current_sides, current_radius, current_z, step;
         int wheel_state; // temporary for keyboard clone
     
         bool		bSendSerialMessage;			// a flag for sending serial
