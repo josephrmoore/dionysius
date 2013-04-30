@@ -4,10 +4,10 @@
 void testApp::setup(){
     current_point.x = ofGetScreenWidth()/2;
     current_point.y = ofGetScreenHeight()/2;
-    current_object = 0;
+    current_object = -1;
     current_sides = 0;
     current_radius = 10;
-    current_z = current_object;
+    current_z = 0;
     current_color = ofColor(255,0,0);
     preview_object.create_geometry(-2, current_point, current_sides, current_radius, current_color, current_z, line);
     ofSetVerticalSync(true);
@@ -90,18 +90,24 @@ void testApp::update(){
                 }
                 if(ofToInt(values[6]) == 1 && ok_button == false){
                     // OK button
-                    if(current_sides!=0){
-                        geometry newgeo;
-                        newgeo.create_geometry(objects.size(), current_point, current_sides, current_radius, current_color, current_z, line);
-                        for(int i=0;i<zs.size();i++){
-                            if(zs[i] >= current_z){
-                                zs[i]++;
+                    if(current_object<0){
+                        if(current_sides!=0){
+                            geometry newgeo;
+                            newgeo.create_geometry(objects.size(), current_point, current_sides, current_radius, current_color, current_z, line);
+                            for(int i=0;i<zs.size();i++){
+                                if(zs[i] >= current_z){
+                                    zs[i]++;
+                                }
                             }
+                            zs.push_back(current_z);
+                            objects.push_back(newgeo);
+                            line.clear();
                         }
-                        zs.push_back(current_z);
-                        objects.push_back(newgeo);
-                        line.clear();
+                    } else {
+                        preview_object = objects[current_object];
+                        current_object = -1;
                     }
+
                     ok_button = true;
                 } else {
                     ok_button = false;
@@ -145,9 +151,9 @@ void testApp::update(){
                 }
                 if(ofToInt(values[7]) == 0 && delete_button == false){
                     // DELETE
-                    if(current_object>=0){
+                    if(current_object>0){
                         objects.erase(objects.begin() + current_object);
-                        current_object--;
+                        zs.erase(zs.begin() + current_object);
                     }
                     delete_button = true;
                 } else {
@@ -373,23 +379,37 @@ void testApp::keyPressed(int key){
     }
     if(key == ' ' || key == OF_KEY_RETURN){
         if(current_sides!=0){
-            geometry newgeo;
-            newgeo.create_geometry(objects.size(), current_point, current_sides, current_radius, current_color, current_z, line);
-            for(int i=0;i<zs.size();i++){
-                if(zs[i] >= current_z){
-                    zs[i]++;
+            if(current_object<0){
+                if(current_sides!=0){
+                    geometry newgeo;
+                    newgeo.create_geometry(objects.size(), current_point, current_sides, current_radius, current_color, current_z, line);
+                    for(int i=0;i<zs.size();i++){
+                        if(zs[i] >= current_z){
+                            zs[i]++;
+                        }
+                    }
+                    zs.push_back(current_z);
+                    objects.push_back(newgeo);
+                    line.clear();
                 }
+            } else {
+                current_sides = objects[current_object].verticies-1;
+                current_radius = objects[current_object].radius;
+                current_color = objects[current_object].color;
+                current_z = objects[current_object].z;
+                line = objects[current_object].line;
+                current_object = -1;
             }
-            zs.push_back(current_z);
-            objects.push_back(newgeo);
-            line.clear();
         }
+        cout<<objects.size()<<endl;
+
     }
     if(key == OF_KEY_BACKSPACE){
         if(current_object>0){
-            objects.erase(objects.begin() + current_object);
+            objects.erase((objects.begin() + current_object));
             zs.erase(zs.begin() + current_object);
         }
+        cout<<objects.size()<<endl;
     }
 }
 
