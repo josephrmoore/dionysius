@@ -33,6 +33,9 @@ void testApp::setup(){
 //--------------------------------------------------------------
 void testApp::update(){
     preview_object.update_geometry(current_point, current_sides, current_radius, current_color);
+    if(current_sides==0){
+        ofBackground(current_color);
+    }
     do {
         arduino = ofxGetSerialString(serial,';'); //read until end of line
         if(arduino != ""){
@@ -368,16 +371,18 @@ void testApp::keyPressed(int key){
         }
     }
     if(key == ' ' || key == OF_KEY_RETURN){
-        geometry newgeo;
-        newgeo.create_geometry(objects.size(), current_point, current_sides, current_radius, current_color, current_z, line);
-        for(int i=0;i<zs.size();i++){
-            if(zs[i] >= current_z){
-                zs[i]++;
+        if(current_sides!=0){
+            geometry newgeo;
+            newgeo.create_geometry(objects.size(), current_point, current_sides, current_radius, current_color, current_z, line);
+            for(int i=0;i<zs.size();i++){
+                if(zs[i] >= current_z){
+                    zs[i]++;
+                }
             }
+            zs.push_back(current_z);
+            objects.push_back(newgeo);
+            line.clear();
         }
-        zs.push_back(current_z);
-        objects.push_back(newgeo);
-        line.clear();
     }
     if(key == OF_KEY_BACKSPACE){
         if(current_object>0){
