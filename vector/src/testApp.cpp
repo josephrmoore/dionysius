@@ -5,14 +5,14 @@ void testApp::setup(){
     current_point.x = ofGetScreenWidth()/2;
     current_point.y = ofGetScreenHeight()/2;
     current_object = -1;
-    current_sides = 0;
+    current_sides = 1;
     current_radius = 10;
     current_z = 0;
     current_color = ofColor(255,0,0);
     preview_object.create_geometry(-2, current_point, current_sides, current_radius, current_color, current_z, line);
     ofSetVerticalSync(true);
     step = 1;
-    
+    info_on = true;
     arduino = "";
 	serial.setup(0, 9600); //open the first device
     
@@ -177,21 +177,6 @@ void testApp::update(){
 
 //--------------------------------------------------------------
 void testApp::draw(){
-    string info = "";
-	info += "x:"+ofToString(current_point.x)+"\n"; 
-	info += "y:"+ofToString(current_point.y)+"\n";
-    info += "sides:"+ofToString(current_sides+1)+"\n";
-    info += "size:"+ofToString(current_radius)+"\n";
-    info += "color:"+ofToString(current_color)+"\n";
-    info += "hue:"+ofToString(current_color.getHue())+"\n";
-    info += "saturation:"+ofToString(current_color.getSaturation())+"\n";
-    info += "brightness:"+ofToString(current_color.getBrightness())+"\n";
-    info += "step:"+ofToString(step)+"\n";
-    info += "z:"+ofToString(current_z)+"\n";
-    info += "selected:"+ofToString(current_object)+"\n";
-    info += "serial:" + output;
-	ofSetHexColor(0x444342);
-	ofDrawBitmapString(info, 30, 30);
     if(objects.size()==0){
         preview_object.draw(false);
         ofSetColor(current_color);
@@ -261,6 +246,23 @@ void testApp::draw(){
         }
 
     }
+    if(info_on){
+        string info = "";
+        info += "x:"+ofToString(current_point.x)+"\n"; 
+        info += "y:"+ofToString(current_point.y)+"\n";
+        info += "sides:"+ofToString(current_sides+1)+"\n";
+        info += "size:"+ofToString(current_radius)+"\n";
+        info += "color:"+ofToString(current_color)+"\n";
+        info += "hue:"+ofToString(current_color.getHue())+"\n";
+        info += "saturation:"+ofToString(current_color.getSaturation())+"\n";
+        info += "brightness:"+ofToString(current_color.getBrightness())+"\n";
+        info += "step:"+ofToString(step)+"\n";
+        info += "z:"+ofToString(current_z)+"\n";
+        info += "selected:"+ofToString(current_object)+"\n";
+        info += "serial:" + output;
+        ofSetHexColor(0x444342);
+        ofDrawBitmapString(info, 30, 30);
+    }
 }
 
 //--------------------------------------------------------------
@@ -295,6 +297,9 @@ void testApp::keyPressed(int key){
         float bri = current_color.getBrightness();
         bri-=step;
         current_color.setBrightness(bri);
+    }
+    if(key == 'i'){
+        info_on = !info_on;
     }
     if(key == 'c'){
         line.close();
