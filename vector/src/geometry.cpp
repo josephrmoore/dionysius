@@ -62,7 +62,7 @@ void geometry::draw(bool outline){
         ofSetColor(ofColor(0));
         ofFill();
         if(this->verticies==1){
-            ofCircle(this->centroid.x, this->centroid.y, this->radius+3, this->radius+3);
+            
         } else if (this->verticies==2){
             this->line.draw();
         } else {
