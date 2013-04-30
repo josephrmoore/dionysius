@@ -90,12 +90,18 @@ void testApp::update(){
                 }
                 if(ofToInt(values[6]) == 1 && ok_button == false){
                     // OK button
-                    geometry newgeo;
-                    newgeo.create_geometry(objects.size(), current_point, current_sides, current_radius, current_color, current_z, line);
-                    zs.push_back(objects.size());
-                    objects.push_back(newgeo);
-                    current_object = objects.size()-1;
-                    // step--;
+                    if(current_sides!=0){
+                        geometry newgeo;
+                        newgeo.create_geometry(objects.size(), current_point, current_sides, current_radius, current_color, current_z, line);
+                        for(int i=0;i<zs.size();i++){
+                            if(zs[i] >= current_z){
+                                zs[i]++;
+                            }
+                        }
+                        zs.push_back(current_z);
+                        objects.push_back(newgeo);
+                        line.clear();
+                    }
                     ok_button = true;
                 } else {
                     ok_button = false;
@@ -121,14 +127,9 @@ void testApp::update(){
                 if(values[4] == "1" && j2_left == false){
                     // J1 LEFT
                     float sat = current_color.getSaturation();
-                    cout<<sat<<endl;
-
-                    sat-=step;
+                    sat-=(2*step);
                     current_color.setSaturation(sat);
-                    cout<<sat<<endl;
                     sat = current_color.getSaturation();
-                    cout<<sat<<endl;
-
                     j2_left = true;
                 } else {
                     j2_left = false;
@@ -136,8 +137,7 @@ void testApp::update(){
                 if(values[5] == "1" && j2_right == false){
                     // J2 RIGHT
                     float sat = current_color.getSaturation();
-                    cout<<sat<<endl;
-                    sat+=step;
+                    sat+=(2*step);
                     current_color.setSaturation(sat);
                     j2_right = true;
                 } else {
@@ -267,15 +267,16 @@ void testApp::keyPressed(int key){
     }
     if(key == OF_KEY_LEFT){
         float sat = current_color.getSaturation();
+        cout<<sat<<" "<<step<<endl;
         if(sat>step){
-            sat-=step;
+            sat-=(2*step);
             current_color.setSaturation(sat);
         }
     }
     if(key == OF_KEY_RIGHT){
         float sat = current_color.getSaturation();
-        if(sat<255-step){
-            sat+=step;
+        if(sat<(255-step)){
+            sat+=(2*step);
             current_color.setSaturation(sat);
         }
     }
@@ -289,6 +290,14 @@ void testApp::keyPressed(int key){
         bri-=step;
         current_color.setBrightness(bri);
     }
+    if(key == 'c'){
+        line.close();
+    }
+    if(key == 'v'){
+        if(current_sides==1){
+            line.addVertex(current_point);
+        }
+    }
     if(key == 'a'){
         if((current_object) > -1){
             current_object--;
@@ -301,14 +310,6 @@ void testApp::keyPressed(int key){
             current_object++;
         } else {
             current_object = 0;
-        }
-    }
-    if(key == 'c'){
-        line.close();
-    }
-    if(key == 'v'){
-        if(current_sides==1){
-            line.addVertex(current_point);
         }
     }
     if(key == 'w'){
