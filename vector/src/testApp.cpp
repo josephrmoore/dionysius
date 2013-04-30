@@ -185,12 +185,44 @@ void testApp::draw(){
 	ofDrawBitmapString(info, 30, 30);
     if(objects.size()==0){
         preview_object.draw(false);
+        ofSetColor(current_color);
+        for(int j=1; j<line.size(); j++){
+            this->line.draw();
+            for(int i=0; i<current_radius/10;i++){
+                ofPushMatrix();
+                if(line[j].y-line[j-1].y>line[j].x-line[j-1].x){
+                    ofTranslate(0,i);
+                } else {
+                    ofTranslate(i,0);                
+                }
+                if(line.size()>1){
+                    ofLine(line[j-1],line[j]);            
+                }
+                ofPopMatrix();
+            }
+        }
     }
     for(int i=0;i<objects.size();i++){
         for(int j=0;j<zs.size();j++){
             if(zs[j]==i){
                 if(current_z==zs[j]){
                     preview_object.draw(false);
+                    ofSetColor(current_color);
+                    for(int j=1; j<line.size(); j++){
+                        this->line.draw();
+                        for(int i=0; i<current_radius/10;i++){
+                            ofPushMatrix();
+                            if(line[j].y-line[j-1].y>line[j].x-line[j-1].x){
+                                ofTranslate(0,i);
+                            } else {
+                                ofTranslate(i,0);                
+                            }
+                            if(line.size()>1){
+                                ofLine(line[j-1],line[j]);            
+                            }
+                            ofPopMatrix();
+                        }
+                    }
                 }
                 if(objects[j].object == current_object){
                     objects[j].draw(true);
@@ -201,23 +233,24 @@ void testApp::draw(){
         }
         if(current_z==zs.size()){
             preview_object.draw(false);
+            ofSetColor(current_color);
+            for(int j=1; j<line.size(); j++){
+                this->line.draw();
+                for(int i=0; i<current_radius/10;i++){
+                    ofPushMatrix();
+                    if(line[j].y-line[j-1].y>line[j].x-line[j-1].x){
+                        ofTranslate(0,i);
+                    } else {
+                        ofTranslate(i,0);                
+                    }
+                    if(line.size()>1){
+                        ofLine(line[j-1],line[j]);            
+                    }
+                    ofPopMatrix();
+                }
+            }
         }
 
-    }
-    for(int j=1; j<line.size(); j++){
-        this->line.draw();
-        for(int i=0; i<current_radius/10;i++){
-            ofPushMatrix();
-            if(line[j].y-line[j-1].y>line[j].x-line[j-1].x){
-                ofTranslate(0,i);
-            } else {
-                ofTranslate(i,0);                
-            }
-            if(line.size()>1){
-                ofLine(line[j-1],line[j]);            
-            }
-            ofPopMatrix();
-        }
     }
 }
 
