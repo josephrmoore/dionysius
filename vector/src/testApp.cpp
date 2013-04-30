@@ -32,7 +32,7 @@ void testApp::setup(){
 
 //--------------------------------------------------------------
 void testApp::update(){
-    preview_object.update_geometry(current_point, current_sides, current_radius, current_color);
+    preview_object.update_geometry(current_point, current_sides, current_radius, current_color, current_z, line);
     if(current_sides==0){
         ofBackground(current_color);
     }
@@ -403,6 +403,9 @@ void testApp::keyPressed(int key){
                 current_color = objects[current_object].color;
                 current_z = objects[current_object].z;
                 line = objects[current_object].line;
+                zs[current_object] = current_z;
+                objects.erase((objects.begin() + current_object));
+                zs.erase(zs.begin() + current_object);
                 current_object = -1;
             }
         }
@@ -414,6 +417,7 @@ void testApp::keyPressed(int key){
             objects.erase((objects.begin() + current_object));
             zs.erase(zs.begin() + current_object);
         }
+        current_object = -1;
         cout<<objects.size()<<endl;
     }
 }
