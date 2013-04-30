@@ -9,7 +9,7 @@ void testApp::setup(){
     current_radius = 10;
     current_z = current_object;
     current_color = ofColor(255,0,0);
-    preview_object.create_geometry(-2, current_point, current_sides, current_radius, current_color, current_z);
+    preview_object.create_geometry(-2, current_point, current_sides, current_radius, current_color, current_z, line);
     ofSetVerticalSync(true);
     step = 1;
     
@@ -88,7 +88,7 @@ void testApp::update(){
                 if(ofToInt(values[6]) == 1 && ok_button == false){
                     // OK button
                     geometry newgeo;
-                    newgeo.create_geometry(objects.size(), current_point, current_sides, current_radius, current_color, current_z);
+                    newgeo.create_geometry(objects.size(), current_point, current_sides, current_radius, current_color, current_z, line);
                     zs.push_back(objects.size());
                     objects.push_back(newgeo);
                     current_object = objects.size()-1;
@@ -159,14 +159,11 @@ void testApp::update(){
         if (arduino == "") continue;
         //do something with str
     } while (arduino != "");
-//    for(int i=0;i<objects.size();i++){
-//        zs[i] = objects[i].z;
-//    }
-//    if(zs.size()>objects.size()){
-//        for(int i=objects.size();i<zs.size();i++){
-//            zs[i] = -1;
-//        }
-//    }
+    if(current_sides != 1){
+        if(line.getArea() != 0){
+            line.clear();            
+        }
+    }
 }
 
 //--------------------------------------------------------------
@@ -188,12 +185,44 @@ void testApp::draw(){
 	ofDrawBitmapString(info, 30, 30);
     if(objects.size()==0){
         preview_object.draw(false);
+        ofSetColor(current_color);
+        for(int j=1; j<line.size(); j++){
+            this->line.draw();
+            for(int i=0; i<current_radius/10;i++){
+                ofPushMatrix();
+                if(line[j].y-line[j-1].y>line[j].x-line[j-1].x){
+                    ofTranslate(0,i);
+                } else {
+                    ofTranslate(i,0);                
+                }
+                if(line.size()>1){
+                    ofLine(line[j-1],line[j]);            
+                }
+                ofPopMatrix();
+            }
+        }
     }
     for(int i=0;i<objects.size();i++){
         for(int j=0;j<zs.size();j++){
             if(zs[j]==i){
                 if(current_z==zs[j]){
                     preview_object.draw(false);
+                    ofSetColor(current_color);
+                    for(int j=1; j<line.size(); j++){
+                        this->line.draw();
+                        for(int i=0; i<current_radius/10;i++){
+                            ofPushMatrix();
+                            if(line[j].y-line[j-1].y>line[j].x-line[j-1].x){
+                                ofTranslate(0,i);
+                            } else {
+                                ofTranslate(i,0);                
+                            }
+                            if(line.size()>1){
+                                ofLine(line[j-1],line[j]);            
+                            }
+                            ofPopMatrix();
+                        }
+                    }
                 }
                 if(objects[j].object == current_object){
                     objects[j].draw(true);
@@ -204,16 +233,25 @@ void testApp::draw(){
         }
         if(current_z==zs.size()){
             preview_object.draw(false);
+            ofSetColor(current_color);
+            for(int j=1; j<line.size(); j++){
+                this->line.draw();
+                for(int i=0; i<current_radius/10;i++){
+                    ofPushMatrix();
+                    if(line[j].y-line[j-1].y>line[j].x-line[j-1].x){
+                        ofTranslate(0,i);
+                    } else {
+                        ofTranslate(i,0);                
+                    }
+                    if(line.size()>1){
+                        ofLine(line[j-1],line[j]);            
+                    }
+                    ofPopMatrix();
+                }
+            }
         }
 
     }
-//    for(vector<geometry>::iterator it = objects.begin(); it != objects.end(); it++){
-//        if((*it).object == current_object){
-//            (*it).draw(true);
-//        } else {
-//            (*it).draw(false);
-//        }
-//    }
 }
 
 //--------------------------------------------------------------
@@ -260,6 +298,14 @@ void testApp::keyPressed(int key){
             current_object++;
         } else {
             current_object = 0;
+        }
+    }
+    if(key == 'c'){
+        line.close();
+    }
+    if(key == 'v'){
+        if(current_sides==1){
+            line.addVertex(current_point);
         }
     }
     if(key == 'w'){
@@ -323,7 +369,7 @@ void testApp::keyPressed(int key){
     }
     if(key == ' ' || key == OF_KEY_RETURN){
         geometry newgeo;
-        newgeo.create_geometry(objects.size(), current_point, current_sides, current_radius, current_color, current_z);
+        newgeo.create_geometry(objects.size(), current_point, current_sides, current_radius, current_color, current_z, line);
         for(int i=0;i<zs.size();i++){
             if(zs[i] >= current_z){
                 zs[i]++;
@@ -331,6 +377,7 @@ void testApp::keyPressed(int key){
         }
         zs.push_back(current_z);
         objects.push_back(newgeo);
+        line.clear();
     }
     if(key == OF_KEY_BACKSPACE){
         if(current_object>0){

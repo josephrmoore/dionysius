@@ -12,13 +12,14 @@ geometry::geometry(){
 
 }
 //------------------------------------------------------------------
-void geometry::create_geometry( int current_object, ofPoint current_point, int sides, int radius, ofColor color, int current_z){
+void geometry::create_geometry( int current_object, ofPoint current_point, int sides, int radius, ofColor color, int current_z, ofPolyline line){
     this->verticies = sides+1;
     this->radius = radius;
     this->color = color;
     this->centroid = current_point;
     this->object = current_object;
     this->z = current_object;
+    this->line = line;
 }
 void geometry::update_geometry(ofPoint current_point, int sides, int radius, ofColor color){
     this->verticies = sides+1;
@@ -57,14 +58,13 @@ void geometry::drawOutline(){
 }
 //------------------------------------------------------------------
 void geometry::draw(bool outline){
-//    cout<<this->points.size()<<endl;
     if(outline){
         ofSetColor(ofColor(0));
         ofFill();
         if(this->verticies==1){
             ofCircle(this->centroid.x, this->centroid.y, this->radius+3, this->radius+3);
         } else if (this->verticies==2){
-
+            this->line.draw();
         } else {
             ofBeginShape();
             for(int i=0; i<this->verticies;i++){
@@ -78,7 +78,21 @@ void geometry::draw(bool outline){
     if(this->verticies==1){
         ofCircle(this->centroid.x, this->centroid.y, this->radius, this->radius);
     } else if (this->verticies==2){
-        
+        this->line.draw();
+        for(int j=1; j<this->line.size(); j++){
+            for(int i=0; i<this->radius/10;i++){
+                ofPushMatrix();
+                if(this->line[j].y-this->line[j-1].y>this->line[j].x-this->line[j-1].x){
+                    ofTranslate(0,i);
+                } else {
+                    ofTranslate(i,0);
+                }
+                if(this->line.size()>1){
+                    ofLine(this->line[j-1],this->line[j]);
+                }
+                ofPopMatrix();
+            }
+        }
     } else {
         ofBeginShape();
         for(int i=0; i<this->verticies;i++){
