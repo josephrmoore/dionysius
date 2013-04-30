@@ -65,11 +65,6 @@ void geometry::draw(bool outline){
             ofCircle(this->centroid.x, this->centroid.y, this->radius+3, this->radius+3);
         } else if (this->verticies==2){
             this->line.draw();
-//            for(int i=1; i<this->line.size(); i++){ 
-//                if(this->line.size()>1){
-//                    ofLine(this->line[i-1],this->line[i]);            
-//                }
-//            } 
         } else {
             ofBeginShape();
             for(int i=0; i<this->verticies;i++){
@@ -83,7 +78,21 @@ void geometry::draw(bool outline){
     if(this->verticies==1){
         ofCircle(this->centroid.x, this->centroid.y, this->radius, this->radius);
     } else if (this->verticies==2){
-        
+        this->line.draw();
+        for(int j=1; j<this->line.size(); j++){
+            for(int i=0; i<this->radius/10;i++){
+                ofPushMatrix();
+                if(this->line[j].y-this->line[j-1].y>this->line[j].x-this->line[j-1].x){
+                    ofTranslate(0,i);
+                } else {
+                    ofTranslate(i,0);
+                }
+                if(this->line.size()>1){
+                    ofLine(this->line[j-1],this->line[j]);
+                }
+                ofPopMatrix();
+            }
+        }
     } else {
         ofBeginShape();
         for(int i=0; i<this->verticies;i++){

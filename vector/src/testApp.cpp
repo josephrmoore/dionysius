@@ -164,14 +164,6 @@ void testApp::update(){
             line.clear();            
         }
     }
-//    for(int i=0;i<objects.size();i++){
-//        zs[i] = objects[i].z;
-//    }
-//    if(zs.size()>objects.size()){
-//        for(int i=objects.size();i<zs.size();i++){
-//            zs[i] = -1;
-//        }
-//    }
 }
 
 //--------------------------------------------------------------
@@ -195,7 +187,6 @@ void testApp::draw(){
         preview_object.draw(false);
     }
     for(int i=0;i<objects.size();i++){
-        cout<<objects[i].line.getArea()<<endl;
         for(int j=0;j<zs.size();j++){
             if(zs[j]==i){
                 if(current_z==zs[j]){
@@ -213,19 +204,21 @@ void testApp::draw(){
         }
 
     }
-    line.draw();
-//    for(int i=1; i<line.size(); i++){ 
-//        if(line.size()>1){
-//            ofLine(line[i-1],line[i]);            
-//        }
-//    } 
-//    for(vector<geometry>::iterator it = objects.begin(); it != objects.end(); it++){
-//        if((*it).object == current_object){
-//            (*it).draw(true);
-//        } else {
-//            (*it).draw(false);
-//        }
-//    }
+    for(int j=1; j<line.size(); j++){
+        this->line.draw();
+        for(int i=0; i<current_radius/10;i++){
+            ofPushMatrix();
+            if(line[j].y-line[j-1].y>line[j].x-line[j-1].x){
+                ofTranslate(0,i);
+            } else {
+                ofTranslate(i,0);                
+            }
+            if(line.size()>1){
+                ofLine(line[j-1],line[j]);            
+            }
+            ofPopMatrix();
+        }
+    }
 }
 
 //--------------------------------------------------------------
