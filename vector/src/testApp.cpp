@@ -9,6 +9,8 @@ void testApp::setup(){
     current_radius = 10;
     current_z = 0;
     current_color = ofColor(255,0,0);
+    current_bk = ofColor(255,255,255);
+    current_preview = current_color;
     preview_object.create_geometry(-2, current_point, current_sides, current_radius, current_color, current_z, line);
     ofSetVerticalSync(true);
     step = 1;
@@ -34,8 +36,19 @@ void testApp::setup(){
 void testApp::update(){
     preview_object.update_geometry(current_point, current_sides, current_radius, current_color, current_z, line);
     if(current_sides==0){
-        ofBackground(current_color);
+        current_bk = current_color;
+        current_preview = ofColor(0,0,0);
+    } else {
+        cout<<"else"<<endl;
+        if(current_color.r == current_bk.r && current_color.g == current_bk.g && current_color.b == current_bk.b){
+            cout<<"2if"<<endl;
+            current_preview = ofColor(0,0,0);
+        } else {
+            cout<<"2else"<<endl;
+            current_preview = current_color;
+        }
     }
+    ofBackground(current_bk);
     do {
         arduino = ofxGetSerialString(serial,';'); //read until end of line
         if(arduino != ""){
@@ -178,6 +191,7 @@ void testApp::update(){
 //--------------------------------------------------------------
 void testApp::draw(){
     if(objects.size()==0){
+        ofSetColor(current_preview);
         preview_object.draw(false);
         ofSetColor(current_color);
         for(int j=1; j<line.size(); j++){
@@ -200,6 +214,7 @@ void testApp::draw(){
         for(int j=0;j<zs.size();j++){
             if(zs[j]==i){
                 if(current_z==zs[j]){
+                    ofSetColor(current_preview);
                     preview_object.draw(false);
                     ofSetColor(current_color);
                     for(int j=1; j<line.size(); j++){
@@ -226,6 +241,7 @@ void testApp::draw(){
             }
         }
         if(current_z==zs.size()){
+            ofSetColor(current_preview);
             preview_object.draw(false);
             ofSetColor(current_color);
             for(int j=1; j<line.size(); j++){
@@ -413,12 +429,17 @@ void testApp::keyPressed(int key){
 
     }
     if(key == OF_KEY_BACKSPACE){
-        if(current_object>0){
+        if(current_object>=0){
             objects.erase((objects.begin() + current_object));
             zs.erase(zs.begin() + current_object);
         }
-        current_object = -1;
-        cout<<objects.size()<<endl;
+//        for(int i=0;i<zs.size();i++){
+//            if(zs[i] > current_object){
+//                zs[i]--;
+//            }
+//        }
+//        current_object = -1;
+//        cout<<objects.size()<<endl;
     }
 }
 
