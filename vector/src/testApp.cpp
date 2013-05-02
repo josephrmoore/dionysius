@@ -5,7 +5,7 @@ void testApp::setup(){
     current_point.x = ofGetScreenWidth()/2;
     current_point.y = ofGetScreenHeight()/2;
     current_object = -1;
-    current_sides = 1;
+    current_sides = 2;
     current_radius = 10;
     current_z = 0;
     current_color = ofColor(255,0,0);
@@ -103,24 +103,7 @@ void testApp::update(){
                 }
                 if(ofToInt(values[6]) == 1 && ok_button == false){
                     // OK button
-                    if(current_object<0){
-                        if(current_sides!=0){
-                            geometry newgeo;
-                            newgeo.create_geometry(objects.size(), current_point, current_sides, current_radius, current_color, current_z, line);
-                            for(int i=0;i<zs.size();i++){
-                                if(zs[i] >= current_z){
-                                    zs[i]++;
-                                }
-                            }
-                            zs.push_back(current_z);
-                            objects.push_back(newgeo);
-                            line.clear();
-                        }
-                    } else {
-                        preview_object = objects[current_object];
-                        current_object = -1;
-                    }
-
+                    placeObject();
                     ok_button = true;
                 } else {
                     ok_button = false;
@@ -190,48 +173,16 @@ void testApp::update(){
 
 //--------------------------------------------------------------
 void testApp::draw(){
+    // if preview is on the bottom
     if(objects.size()==0){
-        ofSetColor(current_preview);
-        preview_object.draw(false);
-        ofSetColor(current_color);
-        for(int j=1; j<line.size(); j++){
-            this->line.draw();
-            for(int i=0; i<current_radius/10;i++){
-                ofPushMatrix();
-                if(line[j].y-line[j-1].y>line[j].x-line[j-1].x){
-                    ofTranslate(0,i);
-                } else {
-                    ofTranslate(i,0);                
-                }
-                if(line.size()>1){
-                    ofLine(line[j-1],line[j]);            
-                }
-                ofPopMatrix();
-            }
-        }
+        drawPreview();
     }
+    // draw the objects in z-index order, drawing preview where it belongs in the stack
     for(int i=0;i<objects.size();i++){
         for(int j=0;j<zs.size();j++){
             if(zs[j]==i){
                 if(current_z==zs[j]){
-                    ofSetColor(current_preview);
-                    preview_object.draw(false);
-                    ofSetColor(current_color);
-                    for(int j=1; j<line.size(); j++){
-                        this->line.draw();
-                        for(int i=0; i<current_radius/10;i++){
-                            ofPushMatrix();
-                            if(line[j].y-line[j-1].y>line[j].x-line[j-1].x){
-                                ofTranslate(0,i);
-                            } else {
-                                ofTranslate(i,0);                
-                            }
-                            if(line.size()>1){
-                                ofLine(line[j-1],line[j]);            
-                            }
-                            ofPopMatrix();
-                        }
-                    }
+                    drawPreview();
                 }
                 if(objects[j].z == current_object){
                     objects[j].draw(true);
@@ -240,45 +191,13 @@ void testApp::draw(){
                 }
             }
         }
+        // if preview is on top
         if(current_z==zs.size()){
-            ofSetColor(current_preview);
-            preview_object.draw(false);
-            ofSetColor(current_color);
-            for(int j=1; j<line.size(); j++){
-                this->line.draw();
-                for(int i=0; i<current_radius/10;i++){
-                    ofPushMatrix();
-                    if(line[j].y-line[j-1].y>line[j].x-line[j-1].x){
-                        ofTranslate(0,i);
-                    } else {
-                        ofTranslate(i,0);                
-                    }
-                    if(line.size()>1){
-                        ofLine(line[j-1],line[j]);            
-                    }
-                    ofPopMatrix();
-                }
-            }
+            drawPreview();
         }
 
     }
-    if(info_on){
-        string info = "";
-        info += "x:"+ofToString(current_point.x)+"\n"; 
-        info += "y:"+ofToString(current_point.y)+"\n";
-        info += "sides:"+ofToString(current_sides+1)+"\n";
-        info += "size:"+ofToString(current_radius)+"\n";
-        info += "color:"+ofToString(current_color)+"\n";
-        info += "hue:"+ofToString(current_color.getHue())+"\n";
-        info += "saturation:"+ofToString(current_color.getSaturation())+"\n";
-        info += "brightness:"+ofToString(current_color.getBrightness())+"\n";
-        info += "step:"+ofToString(step)+"\n";
-        info += "z:"+ofToString(current_z)+"\n";
-        info += "selected:"+ofToString(current_object)+"\n";
-        info += "serial:" + output;
-        ofSetHexColor(0x444342);
-        ofDrawBitmapString(info, 30, 30);
-    }
+    devInfo();
 }
 
 //--------------------------------------------------------------
@@ -402,46 +321,17 @@ void testApp::keyPressed(int key){
         if(current_sides!=0){
             if(current_object<0){
                 if(current_sides!=0){
-                    geometry newgeo;
-                    newgeo.create_geometry(objects.size(), current_point, current_sides, current_radius, current_color, current_z, line);
-                    for(int i=0;i<zs.size();i++){
-                        if(zs[i] >= current_z){
-                            zs[i]++;
-                        }
-                    }
-                    zs.push_back(current_z);
-                    objects.push_back(newgeo);
-                    line.clear();
+                    placeObject();
                 }
             } else {
-                current_sides = objects[current_object].verticies-1;
-                current_radius = objects[current_object].radius;
-                current_color = objects[current_object].color;
-                current_z = objects[current_object].z;
-                line = objects[current_object].line;
-                zs[current_object] = current_z;
-                objects.erase((objects.begin() + current_object));
-                zs.erase(zs.begin() + current_object);
-                current_object = -1;
+                edit();
             }
         }
         cout<<objects.size()<<endl;
 
     }
     if(key == OF_KEY_BACKSPACE){
-        cout<<objects.size()<<endl;
-        if(current_object>=0 && objects.size()>0){
-            objects.erase((objects.begin() + current_object));
-            zs.erase(zs.begin() + current_object);
-            for(int i=0;i<zs.size();i++){
-                if(zs[i] > current_object){
-                    zs[i]--;
-                    objects[i].z = zs[i];
-                }
-            }
-            current_object = -1;
-        }
-//        cout<<objects.size()<<endl;
+        deleteObject(current_object);
     }
 }
 
@@ -484,4 +374,98 @@ void testApp::gotMessage(ofMessage msg){
 //--------------------------------------------------------------
 void testApp::dragEvent(ofDragInfo dragInfo){ 
 
+}
+
+//--------------------------------------------------------------
+void testApp::drawPreview(){
+    ofSetColor(current_preview);
+    preview_object.draw(false);
+    ofSetColor(current_color);
+    for(int j=1; j<line.size(); j++){
+        this->line.draw();
+        for(int i=0; i<current_radius/10;i++){
+            ofPushMatrix();
+            if(line[j].y-line[j-1].y>line[j].x-line[j-1].x){
+                ofTranslate(0,i);
+            } else {
+                ofTranslate(i,0);                
+            }
+            if(line.size()>1){
+                ofLine(line[j-1],line[j]);            
+            }
+            ofPopMatrix();
+        }
+    }
+}
+
+//--------------------------------------------------------------
+void testApp::edit(){
+    current_sides = objects[current_object].verticies-1;
+    current_radius = objects[current_object].radius;
+    current_color = objects[current_object].color;
+    current_z = objects[current_object].z;
+    line = objects[current_object].line;
+    zs[current_object] = current_z;
+    objects.erase((objects.begin() + current_object));
+    zs.erase(zs.begin() + current_object);
+    current_object = -1;
+}
+
+//--------------------------------------------------------------
+void testApp::placeObject(){
+    geometry newgeo;
+    newgeo.create_geometry(objects.size(), current_point, current_sides, current_radius, current_color, current_z, line);
+    for(int i=0;i<zs.size();i++){
+        if(zs[i] >= current_z){
+            zs[i]++;
+        }
+    }
+    zs.push_back(current_z);
+    objects.push_back(newgeo);
+    line.clear();
+    current_z++;
+}
+
+//--------------------------------------------------------------
+void testApp::devInfo(){
+    if(info_on){
+        string info = "";
+        info += "x:"+ofToString(current_point.x)+"\n"; 
+        info += "y:"+ofToString(current_point.y)+"\n";
+        info += "sides:"+ofToString(current_sides+1)+"\n";
+        info += "size:"+ofToString(current_radius)+"\n";
+        info += "color:"+ofToString(current_color)+"\n";
+        info += "hue:"+ofToString(current_color.getHue())+"\n";
+        info += "saturation:"+ofToString(current_color.getSaturation())+"\n";
+        info += "brightness:"+ofToString(current_color.getBrightness())+"\n";
+        info += "step:"+ofToString(step)+"\n";
+        info += "z:"+ofToString(current_z)+"\n";
+        info += "selected:"+ofToString(current_object)+"\n";
+        info += "serial:" + output;
+        ofSetHexColor(0x444342);
+        ofDrawBitmapString(info, 30, 30);
+    }
+}
+
+
+void testApp::deleteObject(int index){
+    if(index>=0 && objects.size()>0){
+        objects.erase((objects.begin() + index));
+        zs.erase(zs.begin() + index);
+        if(index==0){
+            for(int i=0;i<zs.size();i++){
+                zs[i]-=1;
+                objects[i].z = zs[i];
+            }
+        } else if (index!=objects.size()-1){
+            for(int i=0;i<zs.size();i++){
+                if(zs[i]>index){
+                    zs[i]-=1;
+                    objects[i].z = zs[i];
+                }
+            }
+        }
+        current_object = -1;
+    }
+    //        cout<<objects.size()<<endl;
 }

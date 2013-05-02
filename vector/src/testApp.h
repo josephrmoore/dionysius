@@ -20,7 +20,11 @@ class testApp : public ofBaseApp{
 		void windowResized(int w, int h);
 		void dragEvent(ofDragInfo dragInfo);
 		void gotMessage(ofMessage msg);
-        
+        void drawPreview();
+        void edit();
+        void placeObject();
+    void devInfo();
+    void deleteObject(int index);
         vector <geometry> objects;
         vector <int> zs;
         geometry preview_object;
