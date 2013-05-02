@@ -39,12 +39,12 @@ void testApp::update(){
         current_bk = current_color;
         current_preview = ofColor(0,0,0);
     } else {
-        cout<<"else"<<endl;
+//        cout<<"else"<<endl;
         if(current_color.r == current_bk.r && current_color.g == current_bk.g && current_color.b == current_bk.b){
-            cout<<"2if"<<endl;
+//            cout<<"2if"<<endl;
             current_preview = ofColor(0,0,0);
         } else {
-            cout<<"2else"<<endl;
+//            cout<<"2else"<<endl;
             current_preview = current_color;
         }
     }
@@ -233,7 +233,7 @@ void testApp::draw(){
                         }
                     }
                 }
-                if(objects[j].object == current_object){
+                if(objects[j].z == current_object){
                     objects[j].draw(true);
                 } else {
                     objects[j].draw(false);
@@ -429,16 +429,18 @@ void testApp::keyPressed(int key){
 
     }
     if(key == OF_KEY_BACKSPACE){
-        if(current_object>=0){
+        cout<<objects.size()<<endl;
+        if(current_object>=0 && objects.size()>0){
             objects.erase((objects.begin() + current_object));
             zs.erase(zs.begin() + current_object);
+            for(int i=0;i<zs.size();i++){
+                if(zs[i] > current_object){
+                    zs[i]--;
+                    objects[i].z = zs[i];
+                }
+            }
+            current_object = -1;
         }
-//        for(int i=0;i<zs.size();i++){
-//            if(zs[i] > current_object){
-//                zs[i]--;
-//            }
-//        }
-//        current_object = -1;
 //        cout<<objects.size()<<endl;
     }
 }

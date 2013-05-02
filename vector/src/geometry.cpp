@@ -18,7 +18,7 @@ void geometry::create_geometry( int current_object, ofPoint current_point, int s
     this->color = color;
     this->centroid = current_point;
     this->object = current_object;
-    this->z = current_object;
+    this->z = current_z;
     this->line = line;
 }
 void geometry::update_geometry(ofPoint current_point, int sides, int radius, ofColor color, int current_z, ofPolyline line){
