@@ -245,28 +245,28 @@ void testApp::keyPressed(int key){
         }
     }
     if(key == 'a'){
-        if((current_object) > -1){
+        if((current_object) > -1 && objects.size()>0){
             current_object--;
         } else {
             current_object = (objects.size()-1);
         }
     }
     if(key == 'd'){
-        if(current_object < (objects.size()-1)){
+        if(current_object < (objects.size()-1) && objects.size()>0){
             current_object++;
         } else {
             current_object = 0;
         }
     }
     if(key == 'w'){
-        if(current_object < (objects.size()-1)){
+        if(current_object < (objects.size()-1) && objects.size()>0){
             current_object++;
         } else {
             current_object = 0;
         }
     }
     if(key == 's'){
-        if((current_object) > 0){
+        if((current_object) > 0 && objects.size()>0){
             current_object--;
         } else {
             current_object = (objects.size()-1);
@@ -468,23 +468,25 @@ void testApp::deleteObject(int index){
     cout<<"DELETE BEFORE!!!!!!"<<endl;
     print_r(objects);
     print_r(zs);
-    if(index>=0 && objects.size()>0){
-        objects.erase((objects.begin() + index));
-        zs.erase(zs.begin() + index);
+    cout<<"zs[index]: "<<zs[index]<<endl;
+    if(zs[index]>=0 && objects.size()>0){
         if(zs[index]==0){
             for(int i=0;i<zs.size();i++){
                 zs[i]-=1;
                 objects[i].z = zs[i];
             }
-        } else if (zs[index]!=objects.size()-1){
+        } else if (zs[index]!= objects.size()-1){
             for(int i=0;i<zs.size();i++){
-                if(zs[i]>index){
+                if(zs[i]>zs[index]){
                     zs[i]-=1;
                     objects[i].z = zs[i];
                 }
             }
         }
+        objects.erase((objects.begin() + index));
+        zs.erase(zs.begin() + index);
         current_object = -1;
+        current_z = objects.size();
     }
     cout<<"DELETE AFTER!!!!!!"<<endl;
     print_r(objects);
