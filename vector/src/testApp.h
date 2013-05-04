@@ -20,13 +20,19 @@ class testApp : public ofBaseApp{
 		void windowResized(int w, int h);
 		void dragEvent(ofDragInfo dragInfo);
 		void gotMessage(ofMessage msg);
-        
+        void drawPreview();
+        void edit();
+        void placeObject();
+    void devInfo();
+    void deleteObject(int index);
+    void print_r(vector <geometry> v);
+    void print_r(vector <int> v);
         vector <geometry> objects;
         vector <int> zs;
-        geometry preview_object;
+        geometry preview_object, empty_object;
         int current_object;
         ofPoint current_point;
-        ofColor current_color;
+        ofColor current_color, current_bk, current_preview;
         int current_sides, current_radius, current_z, step;
         int wheel_state; // temporary for keyboard clone
         ofPolyline line;
@@ -43,5 +49,5 @@ class testApp : public ofBaseApp{
         
         vector <string> values;
     
-        bool j1_up, j1_down, j1_left, j1_right, j1_button, j2_up, j2_down, j2_left, j2_right, j2_button, delete_button, ok_button;
+        bool j1_up, j1_down, j1_left, j1_right, j1_button, j2_up, j2_down, j2_left, j2_right, j2_button, delete_button, ok_button, info_on;
 };
