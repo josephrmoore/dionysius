@@ -17,7 +17,7 @@ void testApp::setup(){
     info_on = true;
     arduino = "";
 	serial.setup(0, 9600); //open the first device
-    
+    oskar = false;
     j1_up = false;
     j1_down = false;
     j1_left = false;
@@ -272,6 +272,9 @@ void testApp::keyPressed(int key){
             current_object = (objects.size()-1);
         }
     }
+    if(key == 'o'){
+        oskar = !oskar;
+    }
     if(key == '1'){
         wheel_state = 1;  
     }
@@ -416,9 +419,6 @@ void testApp::edit(){
 
 //--------------------------------------------------------------
 void testApp::placeObject(){
-    cout<<"PLACED BEFORE!!!!!!"<<endl;
-    print_r(objects);
-    print_r(zs);
     geometry newgeo;
     newgeo.create_geometry(objects.size(), current_point, current_sides, current_radius, current_color, current_z, line);
     for(int i=0;i<zs.size();i++){
@@ -438,9 +438,10 @@ void testApp::placeObject(){
     objects.push_back(newgeo);
     line.clear();
     current_z++;
-    cout<<"PLACED AFTER!!!!!!"<<endl;
-    print_r(objects);
-    print_r(zs);
+    if(oskar){
+        animate(current_point, current_sides, current_radius, current_color, current_z, line);
+        audio(current_point, current_sides, current_radius, current_color, current_z, line);
+    }
 }
 
 //--------------------------------------------------------------
@@ -464,12 +465,8 @@ void testApp::devInfo(){
     }
 }
 
-
+//--------------------------------------------------------------
 void testApp::deleteObject(int index){
-    cout<<"DELETE BEFORE!!!!!!"<<endl;
-    print_r(objects);
-    print_r(zs);
-    cout<<"zs[index]: "<<zs[index]<<endl;
     if(zs[index]>=0 && objects.size()>0){
         if(zs[index]==0){
             for(int i=0;i<zs.size();i++){
@@ -491,12 +488,9 @@ void testApp::deleteObject(int index){
         current_object = -1;
         current_z = objects.size();
     }
-    cout<<"DELETE AFTER!!!!!!"<<endl;
-    print_r(objects);
-    print_r(zs);
-    //        cout<<objects.size()<<endl;
 }
 
+//--------------------------------------------------------------
 void testApp::print_r(vector <geometry> v){
     if(v.size()>0){
         cout<<"==========================================="<<endl;
@@ -520,6 +514,7 @@ void testApp::print_r(vector <geometry> v){
     }
 }
 
+//--------------------------------------------------------------
 void testApp::print_r(vector <int> v){
     if(v.size()>0){
         cout<<"==========================================="<<endl;
@@ -530,4 +525,14 @@ void testApp::print_r(vector <int> v){
         }
         cout<<"==========================================="<<endl;
     }
+}
+
+//--------------------------------------------------------------
+void testApp::animate(ofPoint p, int s, int r, ofColor c, int z, ofPolyline l){
+    cout<<"animated!"<<endl;
+}
+
+//--------------------------------------------------------------
+void testApp::audio(ofPoint p, int s, int r, ofColor c, int z, ofPolyline l){
+    cout<<"audioed!"<<endl;
 }

@@ -23,10 +23,14 @@ class testApp : public ofBaseApp{
         void drawPreview();
         void edit();
         void placeObject();
-    void devInfo();
-    void deleteObject(int index);
-    void print_r(vector <geometry> v);
-    void print_r(vector <int> v);
+        void devInfo();
+        void deleteObject(int index);
+        void print_r(vector <geometry> v);
+        void print_r(vector <int> v);
+        void animate(ofPoint p, int s, int r, ofColor c, int z, ofPolyline l);
+        void audio(ofPoint p, int s, int r, ofColor c, int z, ofPolyline l);
+    
+        bool oskar;
         vector <geometry> objects;
         vector <int> zs;
         geometry preview_object, empty_object;
