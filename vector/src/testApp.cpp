@@ -331,7 +331,9 @@ void testApp::keyPressed(int key){
 
     }
     if(key == OF_KEY_BACKSPACE){
-        deleteObject(current_object);
+        if(current_object>=0){
+            deleteObject(current_object);            
+        }
     }
 }
 
@@ -413,17 +415,31 @@ void testApp::edit(){
 
 //--------------------------------------------------------------
 void testApp::placeObject(){
+    cout<<"PLACED BEFORE!!!!!!"<<endl;
+    print_r(objects);
+    print_r(zs);
     geometry newgeo;
     newgeo.create_geometry(objects.size(), current_point, current_sides, current_radius, current_color, current_z, line);
     for(int i=0;i<zs.size();i++){
+        objects[i].z = zs[i];
         if(zs[i] >= current_z){
             zs[i]++;
+        }
+    }
+    for(int i=0;i<zs.size();i++){
+        if(objects.size()==zs.size()){
+            objects[i].z = zs[i];            
+        } else {
+            cout<<"ERROR: zs & objects not the same length"<<endl;
         }
     }
     zs.push_back(current_z);
     objects.push_back(newgeo);
     line.clear();
     current_z++;
+    cout<<"PLACED AFTER!!!!!!"<<endl;
+    print_r(objects);
+    print_r(zs);
 }
 
 //--------------------------------------------------------------
@@ -449,15 +465,18 @@ void testApp::devInfo(){
 
 
 void testApp::deleteObject(int index){
+    cout<<"DELETE BEFORE!!!!!!"<<endl;
+    print_r(objects);
+    print_r(zs);
     if(index>=0 && objects.size()>0){
         objects.erase((objects.begin() + index));
         zs.erase(zs.begin() + index);
-        if(index==0){
+        if(zs[index]==0){
             for(int i=0;i<zs.size();i++){
                 zs[i]-=1;
                 objects[i].z = zs[i];
             }
-        } else if (index!=objects.size()-1){
+        } else if (zs[index]!=objects.size()-1){
             for(int i=0;i<zs.size();i++){
                 if(zs[i]>index){
                     zs[i]-=1;
@@ -467,5 +486,39 @@ void testApp::deleteObject(int index){
         }
         current_object = -1;
     }
+    cout<<"DELETE AFTER!!!!!!"<<endl;
+    print_r(objects);
+    print_r(zs);
     //        cout<<objects.size()<<endl;
+}
+
+void testApp::print_r(vector <geometry> v){
+    cout<<"==========================================="<<endl;
+    for(int i=0; i<v.size(); i++){
+        cout<<"Geometry #"<<i<<":"<<endl;
+        cout<<"  id: "<<v[i].object<<endl;
+        cout<<"  verticies: "<<v[i].verticies<<endl;
+        cout<<"  hue: "<<v[i].color.getHue()<<endl;
+        cout<<"  saturation: "<<v[i].color.getSaturation()<<endl;
+        cout<<"  brightness: "<<v[i].color.getBrightness()<<endl;
+        cout<<"  radius :"<<v[i].radius<<endl;
+        cout<<"  z-index: "<<v[i].z<<endl;
+        cout<<"  position: "<<v[i].centroid.x<<", "<<v[i].centroid.y<<endl;
+        cout<<"  line segments: "<<v[i].line.size()<<endl;
+        for(int j=0; j<v[i].line.size(); j++){
+            cout<<"    point #"<<j<<": "<<v[i].line[j].x<<", "<<v[i].line[j].y<<endl;
+        }
+        cout<<""<<endl;
+    }
+    cout<<"==========================================="<<endl;
+}
+
+void testApp::print_r(vector <int> v){
+    cout<<"==========================================="<<endl;
+    for(int i=0; i<v.size(); i++){
+        cout<<"Integer #"<<i<<":"<<endl;
+        cout<<"  z-index: "<<v[i]<<endl;
+        cout<<""<<endl;
+    }
+    cout<<"==========================================="<<endl;
 }

@@ -25,6 +25,8 @@ class testApp : public ofBaseApp{
         void placeObject();
     void devInfo();
     void deleteObject(int index);
+    void print_r(vector <geometry> v);
+    void print_r(vector <int> v);
         vector <geometry> objects;
         vector <int> zs;
         geometry preview_object;
