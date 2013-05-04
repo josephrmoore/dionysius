@@ -402,14 +402,15 @@ void testApp::drawPreview(){
 
 //--------------------------------------------------------------
 void testApp::edit(){
-    current_sides = objects[current_object].verticies-1;
-    current_radius = objects[current_object].radius;
-    current_color = objects[current_object].color;
-    current_z = objects[current_object].z;
-    line = objects[current_object].line;
-    zs[current_object] = current_z;
-    objects.erase((objects.begin() + current_object));
-    zs.erase(zs.begin() + current_object);
+    if(objects.size()>0 && current_object >= 0){
+        current_sides = objects[current_object].verticies-1;
+        current_radius = objects[current_object].radius;
+        current_color = objects[current_object].color;
+        current_z = objects[current_object].z;
+        line = objects[current_object].line;
+        zs[current_object] = current_z;
+        deleteObject(current_object);
+    }
     current_object = -1;
 }
 
@@ -484,6 +485,8 @@ void testApp::deleteObject(int index){
             }
         }
         objects.erase((objects.begin() + index));
+        objects.resize(objects.size());
+        zs.resize(zs.size());
         zs.erase(zs.begin() + index);
         current_object = -1;
         current_z = objects.size();
@@ -495,32 +498,36 @@ void testApp::deleteObject(int index){
 }
 
 void testApp::print_r(vector <geometry> v){
-    cout<<"==========================================="<<endl;
-    for(int i=0; i<v.size(); i++){
-        cout<<"Geometry #"<<i<<":"<<endl;
-        cout<<"  id: "<<v[i].object<<endl;
-        cout<<"  verticies: "<<v[i].verticies<<endl;
-        cout<<"  hue: "<<v[i].color.getHue()<<endl;
-        cout<<"  saturation: "<<v[i].color.getSaturation()<<endl;
-        cout<<"  brightness: "<<v[i].color.getBrightness()<<endl;
-        cout<<"  radius :"<<v[i].radius<<endl;
-        cout<<"  z-index: "<<v[i].z<<endl;
-        cout<<"  position: "<<v[i].centroid.x<<", "<<v[i].centroid.y<<endl;
-        cout<<"  line segments: "<<v[i].line.size()<<endl;
-        for(int j=0; j<v[i].line.size(); j++){
-            cout<<"    point #"<<j<<": "<<v[i].line[j].x<<", "<<v[i].line[j].y<<endl;
+    if(v.size()>0){
+        cout<<"==========================================="<<endl;
+        for(int i=0; i<v.size(); i++){
+            cout<<"Geometry #"<<i<<":"<<endl;
+            cout<<"  id: "<<v[i].object<<endl;
+            cout<<"  verticies: "<<v[i].verticies<<endl;
+            cout<<"  hue: "<<v[i].color.getHue()<<endl;
+            cout<<"  saturation: "<<v[i].color.getSaturation()<<endl;
+            cout<<"  brightness: "<<v[i].color.getBrightness()<<endl;
+            cout<<"  radius :"<<v[i].radius<<endl;
+            cout<<"  z-index: "<<v[i].z<<endl;
+            cout<<"  position: "<<v[i].centroid.x<<", "<<v[i].centroid.y<<endl;
+            cout<<"  line segments: "<<v[i].line.size()<<endl;
+            for(int j=0; j<v[i].line.size(); j++){
+                cout<<"    point #"<<j<<": "<<v[i].line[j].x<<", "<<v[i].line[j].y<<endl;
+            }
+            cout<<""<<endl;
         }
-        cout<<""<<endl;
+        cout<<"==========================================="<<endl;
     }
-    cout<<"==========================================="<<endl;
 }
 
 void testApp::print_r(vector <int> v){
-    cout<<"==========================================="<<endl;
-    for(int i=0; i<v.size(); i++){
-        cout<<"Integer #"<<i<<":"<<endl;
-        cout<<"  z-index: "<<v[i]<<endl;
-        cout<<""<<endl;
+    if(v.size()>0){
+        cout<<"==========================================="<<endl;
+        for(int i=0; i<v.size(); i++){
+            cout<<"Integer #"<<i<<":"<<endl;
+            cout<<"  z-index: "<<v[i]<<endl;
+            cout<<""<<endl;
+        }
+        cout<<"==========================================="<<endl;
     }
-    cout<<"==========================================="<<endl;
 }

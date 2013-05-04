@@ -29,7 +29,7 @@ class testApp : public ofBaseApp{
     void print_r(vector <int> v);
         vector <geometry> objects;
         vector <int> zs;
-        geometry preview_object;
+        geometry preview_object, empty_object;
         int current_object;
         ofPoint current_point;
         ofColor current_color, current_bk, current_preview;
