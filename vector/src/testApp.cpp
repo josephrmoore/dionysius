@@ -34,7 +34,10 @@ void testApp::setup(){
 
 //--------------------------------------------------------------
 void testApp::update(){
-    preview_object.update_geometry(current_point, current_sides, current_radius, current_color, current_z, line);
+    preview_object.update_geometry(current_point, current_sides, current_radius, current_color, current_z, line, false);
+    for(int i=0; i<objects.size(); i++){
+        objects[i].update_geometry(objects[i].centroid, objects[i].verticies-1, objects[i].radius, objects[i].color, objects[i].z, objects[i].line, true);
+    }
     if(current_sides==0){
         current_bk = current_color;
         current_preview = ofColor(0,0,0);
