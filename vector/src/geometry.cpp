@@ -18,14 +18,16 @@ void geometry::create_geometry( int current_object, ofPoint current_point, int s
     this->color = color;
     this->centroid = current_point;
     this->object = current_object;
-    this->z = current_object;
+    this->z = current_z;
     this->line = line;
 }
-void geometry::update_geometry(ofPoint current_point, int sides, int radius, ofColor color){
+void geometry::update_geometry(ofPoint current_point, int sides, int radius, ofColor color, int current_z, ofPolyline line){
     this->verticies = sides+1;
     this->radius = radius;
     this->color = color;
     this->centroid = current_point;
+    this->z = current_z;
+    this->line = line;
 }
 //------------------------------------------------------------------
 void geometry::delete_geometry(int index){
@@ -62,7 +64,7 @@ void geometry::draw(bool outline){
         ofSetColor(ofColor(0));
         ofFill();
         if(this->verticies==1){
-            
+            // do nothing
         } else if (this->verticies==2){
             this->line.draw();
         } else {
@@ -76,7 +78,7 @@ void geometry::draw(bool outline){
     ofSetColor(this->color);
     ofFill();
     if(this->verticies==1){
-        ofCircle(this->centroid.x, this->centroid.y, this->radius, this->radius);
+        // do nothing
     } else if (this->verticies==2){
         this->line.draw();
         for(int j=1; j<this->line.size(); j++){

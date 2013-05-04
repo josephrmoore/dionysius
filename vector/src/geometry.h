@@ -26,7 +26,7 @@ public:
     void updateCircle(ofPoint center, int radius, ofColor color);
 
     void create_geometry(int current_object, ofPoint current_point, int sides, int radius, ofColor color, int current_z, ofPolyline line);
-    void update_geometry(ofPoint current_point, int sides, int radius, ofColor color);
+    void update_geometry(ofPoint current_point, int sides, int radius, ofColor color, int current_z, ofPolyline line);
     void retrieve_geometry(int index);
     void delete_geometry(int index);
     void draw(bool outline);
