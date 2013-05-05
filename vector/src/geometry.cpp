@@ -33,9 +33,9 @@ void geometry::update_geometry(ofPoint current_point, int sides, int radius, ofC
     this->z = current_z;
     this->line = line;
     if(ani){
-        this->ap.update(1.0f/60.0f);
-        this->af.update(1.0f/60.0f);
-        this->ac.update(1.0f/60.0f);
+        this->ap.update(1.0f/this->frame_point);
+        this->af.update(1.0f/this->frame_float);
+        this->ac.update(1.0f/this->frame_color);
         this->centroid = this->ap.getCurrentPosition(); 
         this->radius = this->af.val(); 
         this->color = this->ac.getCurrentColor();
@@ -122,41 +122,75 @@ void geometry::draw(bool outline){
 }
 
 void geometry::pointAni(){
-    // sides = type of bounce:point, amount:color, hue:color
+//    // sides = type of bounce:point, amount:color, hue:color
+//    int bounce_point = (int)ofMap(this->verticies, 1, 21, 0, 26);
+//    // size = speed:point, distance:point, hue:color
+//    this->frame_point = ofMap(this->radius, 0, ofGetScreenWidth(), 60, 10);
+//    float dist_x_point = ofMap(this->radius, 0, ofGetScreenWidth(), ofGetScreenWidth()/2, 20);
+//    float dist_y_point = ofMap(this->radius, 0, ofGetScreenWidth(), 20, ofGetScreenWidth()/2);
+//    int hue = (int)ofMap(this->radius, 0, ofGetScreenWidth(), 0, 255);
+//    // color:
+//    //   hue = type of bounce:float
+//    int bounce_float = (int)ofMap(this->color.getHue(), 0, 255, 0, 26);
+//    //   brightness = speed:float
+//    this->frame_float = ofMap(this->color.getBrightness(), 0, 255, 20, 60);
+//    //   saturation = size:float, speed:color
+//    float size_float = ofMap(this->color.getSaturation(), 0, 255, 0, ofGetScreenWidth()/2);
+//    this->frame_color = ofMap(this->color.getSaturation(), 0, 255, 20, 60);
+//    // pos x = final point:point, saturation:color
+//    if(this->centroid.x > ofGetScreenWidth()/2){
+//        dist_x_point = -dist_x_point;
+//    }
+//    int sat = (int)ofMap(this->centroid.x, 0, ofGetScreenWidth(), 0, 255);
+//    // pos y = final point:point, brightness:color
+//    if(this->centroid.y > ofGetScreenHeight()/2){
+//        dist_y_point = -dist_y_point;
+//    }
+//    int bri = (int)ofMap(this->centroid.y, 0, ofGetScreenHeight(), 0, 255);
+//    // z-index = type of bounce:color, distance:point, size:float
+//    int bounce_color = (int)ofMap(this->z, 0, this->object, 0, 26);
+//    dist_x_point = (dist_x_point + ofMap(this->z, 0, this->object, 0, ofGetScreenWidth()/2))/2;
+//    dist_y_point = (dist_y_point + ofMap(this->z, 0, this->object, 0, ofGetScreenHeight()/2))/2;
+//    size_float = (size_float + ofMap(this->z, 0, this->object, 0, ofGetScreenHeight()/2))/2;
+//    // alpha = speed:color, speed:point, speed:float
+//    this->frame_color = (this->frame_color + ofMap(this->color.a, 0, 255, 60, 20))/2;
+//    this->frame_float = (this->frame_float + ofMap(this->color.a, 0, 255, 60, 20))/2;
+//    this->frame_point = (this->frame_point + ofMap(this->color.a, 0, 255, 60, 20))/2;
+    this->frame_point = (ofMap(this->radius, 0, ofGetScreenWidth(), 60, 10) + ofMap(this->color.a, 0, 255, 60, 20))/2;
     int bounce_point = (int)ofMap(this->verticies, 1, 21, 0, 26);
-    // size = speed:point, distance:point, hue:color
-    this->frame_point = (int)ofMap(this->radius, 0, ofGetScreenWidth(), 60, 10);
-    int dist_x = (int)ofMap(this->radius, 0, ofGetScreenWidth(), ofGetScreenWidth()/2, 20);
-    int dist_y = (int)ofMap(this->radius, 0, ofGetScreenWidth(), 20, ofGetScreenWidth()/2);
-    int hue = (int)ofMap(this->radius, 0, ofGetScreenWidth(), 0, 255);
-    // color:
-    //   hue = type of bounce:float
-    int bounce_color = (int)ofMap(this->color.getHue(), 0, 255, 0, 26);
-    //   brightness = speed:float, amount:color
-    //   saturation = size:float, speed:color
-    // pos x = final point:point, saturation:color
-    // pos y = final point:point, brightness:color
-    // z-index = type of bounce:color, distance:point, size:float
-    int bounce_float = (int)ofMap(this->z, 0, this->object, 0, 26);
-    // alpha = speed:color, speed:point, speed:float
-    
-    ofPoint p = ofPoint(0,0);
+    float dist_x_point = (ofMap(this->radius, 0, ofGetScreenWidth(), ofGetScreenWidth()/2, 20) + ofMap(this->z, 0, this->object, 0, ofGetScreenWidth()/2))/2;
+    float dist_y_point = (ofMap(this->radius, 0, ofGetScreenWidth(), 20, ofGetScreenWidth()/2) + ofMap(this->z, 0, this->object, 0, ofGetScreenHeight()/2))/2;
+    if(this->centroid.x > ofGetScreenWidth()/2){
+        dist_x_point = -dist_x_point;
+    }
+    if(this->centroid.y > ofGetScreenHeight()/2){
+        dist_y_point = -dist_y_point;
+    }
+    ofPoint p = ofPoint(ofPoint(dist_x_point, dist_y_point));
     this->ap.setRepeatType(PLAY_ONCE);
     this->ap.setCurve(AnimCurve(bounce_point));
     this->ap.animateTo(p);
 }
 
 void geometry::colorAni(){
-    int bounce_color = (int)ofMap(this->color.getHue(), 0, 255, 0, 26);
-    ofColor c = ofColor(0,0,0);
+    int hue = (int)ofMap(this->radius, 0, ofGetScreenWidth(), 0, 255);
+    int sat = (int)ofMap(this->centroid.x, 0, ofGetScreenWidth(), 0, 255);
+    int bri = (int)ofMap(this->centroid.y, 0, ofGetScreenHeight(), 0, 255);
+    int bounce_color = ((int)ofMap(this->z, 0, this->object, 0, 26) + (int)ofMap(this->color.getHue(), 0, 255, 0, 26))/2;
+    this->frame_color = (ofMap(this->color.getSaturation(), 0, 255, 20, 60) + ofMap(this->color.a, 0, 255, 60, 20))/2;
+    ofColor c = ofColor(255,0,0);
+    c.setSaturation(sat);
+    c.setBrightness(bri);
+    c.setHue(hue);
     this->ac.setRepeatType(PLAY_ONCE);
     this->ac.setCurve(AnimCurve(bounce_color));
     this->ac.animateTo(c);
 }
 
 void geometry::floatAni(){
-    int bounce_float = (int)ofMap(this->z, 0, this->object, 0, 26);
-    float f = 100;
+    int bounce_float = ((int)ofMap(this->color.getHue(), 0, 255, 0, 26) + (int)ofMap(this->z, 0, this->object, 0, 26))/2;
+    float f = (ofMap(this->color.getSaturation(), 0, 255, 0, ofGetScreenWidth()/2) + ofMap(this->z, 0, this->object, 0, ofGetScreenHeight()/2))/2;
+    this->frame_float = (ofMap(this->color.getBrightness(), 0, 255, 20, 60) + ofMap(this->color.a, 0, 255, 60, 20))/2;
     this->af.setRepeatType(PLAY_ONCE);
     this->af.setCurve(AnimCurve(bounce_float));
     this->af.animateTo(f);
