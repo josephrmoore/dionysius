@@ -34,22 +34,19 @@ void testApp::setup(){
 
 //--------------------------------------------------------------
 void testApp::update(){
-    preview_object.update_geometry(current_point, current_sides, current_radius, current_color, current_z, line, false);
-    for(int i=0; i<objects.size(); i++){
-        objects[i].update_geometry(objects[i].centroid, objects[i].verticies-1, objects[i].radius, objects[i].color, objects[i].z, objects[i].line, true);
-    }
     if(current_sides==0){
         current_bk = current_color;
         current_preview = ofColor(0,0,0);
     } else {
-//        cout<<"else"<<endl;
         if(current_color.r == current_bk.r && current_color.g == current_bk.g && current_color.b == current_bk.b){
-//            cout<<"2if"<<endl;
             current_preview = ofColor(0,0,0);
         } else {
-//            cout<<"2else"<<endl;
             current_preview = current_color;
         }
+    }
+    preview_object.update_geometry(current_point, current_sides, current_radius, current_preview, current_z, line, false);
+    for(int i=0; i<objects.size(); i++){
+        objects[i].update_geometry(objects[i].centroid, objects[i].verticies-1, objects[i].radius, objects[i].color, objects[i].z, objects[i].line, oskar);
     }
     ofBackground(current_bk);
     do {
@@ -213,7 +210,6 @@ void testApp::keyPressed(int key){
     }
     if(key == OF_KEY_LEFT){
         float sat = current_color.getSaturation();
-        cout<<sat<<" "<<step<<endl;
         if(sat>step){
             sat-=(2*step);
             current_color.setSaturation(sat);

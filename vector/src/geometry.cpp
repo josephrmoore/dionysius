@@ -23,7 +23,14 @@ void geometry::create_geometry( int current_object, ofPoint current_point, int s
     this->ap.setPosition(current_point);
     this->ap.setRepeatType(LOOP_BACK_AND_FORTH);
     this->ap.setCurve(EASE_IN_EASE_OUT);
-    this->ap.animateTo(ofPoint(current_point.x+radius, current_point.y+radius));
+    this->ap.animateTo(ofPoint(current_point.x+radius+40, current_point.y+radius+40));
+    this->ac.setColor(color);
+    this->ac.setRepeatType(LOOP_BACK_AND_FORTH);
+    this->ac.setCurve(EASE_IN_EASE_OUT);
+    this->ac.animateTo(ofColor(color.r-100, color.g+100, color.b+100));
+    this->af.setRepeatType(LOOP_BACK_AND_FORTH);
+    this->af.setCurve(EASE_IN_EASE_OUT);
+    this->af.animateTo(radius+20);
 }
 void geometry::update_geometry(ofPoint current_point, int sides, int radius, ofColor color, int current_z, ofPolyline line, bool ani){
     this->verticies = sides+1;
@@ -32,10 +39,17 @@ void geometry::update_geometry(ofPoint current_point, int sides, int radius, ofC
     this->z = current_z;
     this->line = line;
     this->ap.update(1.0f/60.0f);
+    this->af.update(1.0f/60.0f);
+    this->ac.update(1.0f/60.0f);
     if(ani){
-        this->centroid = this->ap.getCurrentPosition();        
+        this->centroid = this->ap.getCurrentPosition(); 
+        this->radius = this->af.val(); 
+        this->color = this->ac.getCurrentColor();
+        cout<<this->ac.getCurrentColor()<<endl;
     } else {
         this->centroid = current_point;
+        this->radius = radius; 
+        this->color = color;
     }
 }
 //------------------------------------------------------------------
