@@ -38,4 +38,7 @@ public:
     void delete_geometry(int index);
     void draw(bool outline);
     void drawOutline();
+    void pointAni();    
+    void colorAni();    
+    void floatAni();
 };
