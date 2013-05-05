@@ -2,12 +2,14 @@
 
 //--------------------------------------------------------------
 void testApp::setup(){
+    ofEnableAlphaBlending();
     current_point.x = ofGetScreenWidth()/2;
     current_point.y = ofGetScreenHeight()/2;
     current_object = -1;
     current_sides = 2;
     current_radius = 10;
     current_z = 0;
+    current_alpha = 255;
     current_color = ofColor(255,0,0);
     current_bk = ofColor(255,255,255);
     current_preview = current_color;
@@ -34,6 +36,7 @@ void testApp::setup(){
 
 //--------------------------------------------------------------
 void testApp::update(){
+    current_color = ofColor(current_color.r, current_color.g, current_color.b, current_alpha);
     if(current_sides==0){
         current_bk = current_color;
         current_preview = ofColor(0,0,0);
@@ -232,6 +235,16 @@ void testApp::keyPressed(int key){
         bri-=step;
         current_color.setBrightness(bri);
     }
+    if(key == 'k'){
+        if(current_alpha>0){
+            current_alpha-=step;
+        }
+    }
+    if(key == 'l'){
+        if(current_alpha<255){
+            current_alpha+=step;
+        }
+    }
     if(key == 'i'){
         info_on = !info_on;
     }
@@ -329,7 +342,6 @@ void testApp::keyPressed(int key){
                 edit();
             }
         }
-        cout<<objects.size()<<endl;
 
     }
     if(key == OF_KEY_BACKSPACE){
@@ -457,6 +469,7 @@ void testApp::devInfo(){
         info += "brightness:"+ofToString(current_color.getBrightness())+"\n";
         info += "step:"+ofToString(step)+"\n";
         info += "z:"+ofToString(current_z)+"\n";
+        info += "alpha:"+ofToString(current_alpha)+"\n";
         info += "selected:"+ofToString(current_object)+"\n";
         info += "serial:" + output;
         ofSetHexColor(0x444342);

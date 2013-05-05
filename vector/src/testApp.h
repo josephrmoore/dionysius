@@ -37,7 +37,7 @@ class testApp : public ofBaseApp{
         int current_object;
         ofPoint current_point;
         ofColor current_color, current_bk, current_preview;
-        int current_sides, current_radius, current_z, step;
+        int current_sides, current_radius, current_z, step, current_alpha;
         int wheel_state; // temporary for keyboard clone
         ofPolyline line;
     

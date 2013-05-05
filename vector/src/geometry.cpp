@@ -39,7 +39,6 @@ void geometry::update_geometry(ofPoint current_point, int sides, int radius, ofC
         this->centroid = this->ap.getCurrentPosition(); 
         this->radius = this->af.val(); 
         this->color = this->ac.getCurrentColor();
-        cout<<this->ac.getCurrentColor()<<endl;
     } else {
         this->centroid = current_point;
         this->radius = radius; 
@@ -123,22 +122,42 @@ void geometry::draw(bool outline){
 }
 
 void geometry::pointAni(){
+    // sides = type of bounce:point, amount:color, hue:color
+    int bounce_point = (int)ofMap(this->verticies, 1, 21, 0, 26);
+    // size = speed:point, distance:point, hue:color
+    this->frame_point = (int)ofMap(this->radius, 0, ofGetScreenWidth(), 60, 10);
+    int dist_x = (int)ofMap(this->radius, 0, ofGetScreenWidth(), ofGetScreenWidth()/2, 20);
+    int dist_y = (int)ofMap(this->radius, 0, ofGetScreenWidth(), 20, ofGetScreenWidth()/2);
+    int hue = (int)ofMap(this->radius, 0, ofGetScreenWidth(), 0, 255);
+    // color:
+    //   hue = type of bounce:float
+    int bounce_color = (int)ofMap(this->color.getHue(), 0, 255, 0, 26);
+    //   brightness = speed:float, amount:color
+    //   saturation = size:float, speed:color
+    // pos x = final point:point, saturation:color
+    // pos y = final point:point, brightness:color
+    // z-index = type of bounce:color, distance:point, size:float
+    int bounce_float = (int)ofMap(this->z, 0, this->object, 0, 26);
+    // alpha = speed:color, speed:point, speed:float
+    
     ofPoint p = ofPoint(0,0);
-    this->ap.setRepeatType(LOOP_BACK_AND_FORTH);
-    this->ap.setCurve(BOUNCY);
+    this->ap.setRepeatType(PLAY_ONCE);
+    this->ap.setCurve(AnimCurve(bounce_point));
     this->ap.animateTo(p);
 }
 
 void geometry::colorAni(){
+    int bounce_color = (int)ofMap(this->color.getHue(), 0, 255, 0, 26);
     ofColor c = ofColor(0,0,0);
-    this->ac.setRepeatType(LOOP_BACK_AND_FORTH);
-    this->ac.setCurve(EASE_IN_EASE_OUT);
+    this->ac.setRepeatType(PLAY_ONCE);
+    this->ac.setCurve(AnimCurve(bounce_color));
     this->ac.animateTo(c);
 }
 
 void geometry::floatAni(){
+    int bounce_float = (int)ofMap(this->z, 0, this->object, 0, 26);
     float f = 100;
-    this->af.setRepeatType(LOOP_BACK_AND_FORTH);
-    this->af.setCurve(EASE_IN_EASE_OUT);
+    this->af.setRepeatType(PLAY_ONCE);
+    this->af.setCurve(AnimCurve(bounce_float));
     this->af.animateTo(f);
 }

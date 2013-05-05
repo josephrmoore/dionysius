@@ -24,7 +24,8 @@ public:
     ofxAnimatableOfPoint ap;
     ofxAnimatableOfColor ac;
     ofxAnimatableFloat af;
-    
+    float frame_point, frame_color, frame_float;
+
     geometry();
     
     void updatePoint(ofPoint location);
