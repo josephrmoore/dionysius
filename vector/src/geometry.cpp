@@ -157,15 +157,17 @@ void geometry::pointAni(){
 //    this->frame_float = (this->frame_float + ofMap(this->color.a, 0, 255, 60, 20))/2;
 //    this->frame_point = (this->frame_point + ofMap(this->color.a, 0, 255, 60, 20))/2;
     this->frame_point = (ofMap(this->radius, 0, ofGetScreenWidth(), 60, 10) + ofMap(this->color.a, 0, 255, 60, 20))/2;
-    int bounce_point = (int)ofMap(this->verticies, 1, 21, 0, 26);
-    float dist_x_point = (ofMap(this->radius, 0, ofGetScreenWidth(), ofGetScreenWidth()/2, 20) + ofMap(this->z, 0, this->object, 0, ofGetScreenWidth()/2))/2;
-    float dist_y_point = (ofMap(this->radius, 0, ofGetScreenWidth(), 20, ofGetScreenWidth()/2) + ofMap(this->z, 0, this->object, 0, ofGetScreenHeight()/2))/2;
+    int bounce_point = (int)ofMap(this->verticies, 1, 21, 0, 12);
+    float dist_x_point = (this->centroid.x + ofMap(this->radius, 0, ofGetScreenWidth(), ofGetScreenWidth()/8, 20));
+    float dist_y_point = (this->centroid.y + ofMap(this->radius, 0, ofGetScreenWidth(), 20, ofGetScreenWidth()/8));
     if(this->centroid.x > ofGetScreenWidth()/2){
-        dist_x_point = -dist_x_point;
+        dist_x_point *= -1;
     }
     if(this->centroid.y > ofGetScreenHeight()/2){
-        dist_y_point = -dist_y_point;
+        dist_y_point *= -1;
     }
+    cout<<dist_x_point<<endl;
+    cout<<dist_y_point<<endl;
     ofPoint p = ofPoint(ofPoint(dist_x_point, dist_y_point));
     this->ap.setRepeatType(PLAY_ONCE);
     this->ap.setCurve(AnimCurve(bounce_point));
@@ -176,21 +178,23 @@ void geometry::colorAni(){
     int hue = (int)ofMap(this->radius, 0, ofGetScreenWidth(), 0, 255);
     int sat = (int)ofMap(this->centroid.x, 0, ofGetScreenWidth(), 0, 255);
     int bri = (int)ofMap(this->centroid.y, 0, ofGetScreenHeight(), 0, 255);
-    int bounce_color = ((int)ofMap(this->z, 0, this->object, 0, 26) + (int)ofMap(this->color.getHue(), 0, 255, 0, 26))/2;
+    int bounce_color = ((int)ofMap(this->z, 0, this->object, 0, 12) + (int)ofMap(this->color.getHue(), 0, 255, 0, 12))/2;
     this->frame_color = (ofMap(this->color.getSaturation(), 0, 255, 20, 60) + ofMap(this->color.a, 0, 255, 60, 20))/2;
     ofColor c = ofColor(255,0,0);
     c.setSaturation(sat);
     c.setBrightness(bri);
     c.setHue(hue);
+    cout<<bounce_color<<endl;
     this->ac.setRepeatType(PLAY_ONCE);
     this->ac.setCurve(AnimCurve(bounce_color));
     this->ac.animateTo(c);
 }
 
 void geometry::floatAni(){
-    int bounce_float = ((int)ofMap(this->color.getHue(), 0, 255, 0, 26) + (int)ofMap(this->z, 0, this->object, 0, 26))/2;
-    float f = (ofMap(this->color.getSaturation(), 0, 255, 0, ofGetScreenWidth()/2) + ofMap(this->z, 0, this->object, 0, ofGetScreenHeight()/2))/2;
+    int bounce_float = ((int)ofMap(this->color.getHue(), 0, 255, 0, 12) + (int)ofMap(this->z, 0, this->object, 0, 12))/2;
+    float f = (ofMap(this->color.getSaturation(), 0, 255, 0, ofGetScreenWidth()/4) + ofMap(this->z, 0, this->object, 0, ofGetScreenHeight()/4))/2;
     this->frame_float = (ofMap(this->color.getBrightness(), 0, 255, 20, 60) + ofMap(this->color.a, 0, 255, 60, 20))/2;
+    cout<<bounce_float<<endl;
     this->af.setRepeatType(PLAY_ONCE);
     this->af.setCurve(AnimCurve(bounce_float));
     this->af.animateTo(f);

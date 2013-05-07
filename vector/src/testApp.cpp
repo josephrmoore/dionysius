@@ -15,7 +15,7 @@ void testApp::setup(){
     current_preview = current_color;
     preview_object.create_geometry(-2, current_point, current_sides, current_radius, current_color, current_z, line);
     ofSetVerticalSync(true);
-    step = 1;
+    step = 5;
     info_on = true;
     arduino = "";
 	serial.setup(0, 9600); //open the first device
@@ -32,6 +32,8 @@ void testApp::setup(){
     j2_button = false;
     delete_button = false;
     ok_button = false;
+    vertex = false;
+    close = false;
 }
 
 //--------------------------------------------------------------
@@ -57,12 +59,12 @@ void testApp::update(){
         if(arduino != ""){
             output = arduino;
             values = ofSplitString(output, " ", true, true); // trues are ignoreempty & trim
-            if(values.size()==16){
+            if(values.size()==20){
                 current_point.x += ofToInt(values[0]);
-                current_point.y += ofToInt(values[1]);
-                if(ofToInt(values[8]) == 0 && j1_up == false){
+                current_point.y += -ofToInt(values[1]);
+                if(ofToInt(values[2]) == 1 && j1_up == false){
                     // J1 UP
-                    if(current_object < (objects.size()-1)){
+                    if(current_object < (objects.size()-1) && objects.size()>0){
                         current_object++;
                     } else {
                         current_object = 0;
@@ -71,9 +73,9 @@ void testApp::update(){
                 } else {
                     j1_up = false;
                 }
-                if(ofToInt(values[9]) == 0 && j1_down == false){
+                if(ofToInt(values[3]) == 1 && j1_down == false){
                     // J1 DOWN
-                    if((current_object) > 0){
+                    if((current_object) > -1 && objects.size()>0){
                         current_object--;
                     } else {
                         current_object = (objects.size()-1);
@@ -82,9 +84,9 @@ void testApp::update(){
                 } else {
                     j1_down = false;
                 }
-                if(ofToInt(values[10]) == 0 && j1_left == false){
+                if(ofToInt(values[4]) == 1 && j1_left == false){
                     // J1 LEFT
-                    if((current_object) > 0){
+                    if((current_object) > -1 && objects.size()>0){
                         current_object--;
                     } else {
                         current_object = (objects.size()-1);
@@ -93,9 +95,9 @@ void testApp::update(){
                 } else {
                     j1_left = false;
                 }
-                if(ofToInt(values[11]) == 0 && j1_right == false){
+                if(ofToInt(values[5]) == 1 && j1_right == false){
                     // J1 RIGHT
-                    if(current_object < (objects.size()-1)){
+                    if(current_object < (objects.size()-1) && objects.size()>0){
                         current_object++;
                     } else {
                         current_object = 0;
@@ -104,14 +106,22 @@ void testApp::update(){
                 } else {
                     j1_right = false;
                 }
-                if(ofToInt(values[6]) == 1 && ok_button == false){
+                if(ofToInt(values[6]) == 0 && ok_button == false){
                     // OK button
-                    placeObject();
+                    if(current_sides!=0){
+                        if(current_object<0){
+                            if(current_sides!=0){
+                                placeObject();
+                            }
+                        } else {
+                            edit();
+                        }
+                    }
                     ok_button = true;
                 } else {
                     ok_button = false;
                 }
-                if(values[2] == "1" && j2_up == false){
+                if(values[8] == "0" && j2_up == false){                    
                     // J2 UP
                     float bri = current_color.getBrightness();
                     bri+=step;
@@ -120,7 +130,7 @@ void testApp::update(){
                 } else {
                     j2_up = false;
                 }
-                if(values[3] == "1" && j2_down == false){
+                if(values[9] == "0" && j2_down == false){
                     // J2 DOWN
                     float bri = current_color.getBrightness();
                     bri-=step;
@@ -129,39 +139,64 @@ void testApp::update(){
                 } else {
                     j2_down = false;
                 }
-                if(values[4] == "1" && j2_left == false){
+                if(values[10] == "0" && j2_left == false){
                     // J1 LEFT
                     float sat = current_color.getSaturation();
-                    sat-=(2*step);
-                    current_color.setSaturation(sat);
-                    sat = current_color.getSaturation();
+                    if(sat>step){
+                        sat-=(2*step);
+                        current_color.setSaturation(sat);
+                    }
                     j2_left = true;
                 } else {
                     j2_left = false;
                 }
-                if(values[5] == "1" && j2_right == false){
+                if(values[11] == "0" && j2_right == false){
                     // J2 RIGHT
                     float sat = current_color.getSaturation();
-                    sat+=(2*step);
-                    current_color.setSaturation(sat);
+                    if(sat<(255-step)){
+                        sat+=(2*step);
+                        current_color.setSaturation(sat);
+                    }
                     j2_right = true;
                 } else {
                     j2_right = false;
                 }
                 if(ofToInt(values[7]) == 0 && delete_button == false){
                     // DELETE
-                    if(current_object>0){
-                        objects.erase(objects.begin() + current_object);
-                        zs.erase(zs.begin() + current_object);
+                    if(current_object>=0){
+                        deleteObject(current_object);            
                     }
                     delete_button = true;
                 } else {
                     delete_button = false;
                 }
+                if(ofToInt(values[18]) == 0 && delete_button == false){
+                    // VERTEX
+                    if(current_sides==1){
+                        line.addVertex(current_point);
+                    }
+                    vertex = true;
+                } else {
+                    vertex = false;
+                }
+                if(ofToInt(values[17]) == 0 && delete_button == false){
+                    // CLOSE SHAPE
+                    line.close();
+                    close = true;
+                } else {
+                    close = false;
+                }
+                if(ofToInt(values[19]) == 0){
+                    // OSKAR MODE
+                    oskar = false;
+                } else {
+                    oskar = true;
+                }
                 current_color.setHue(ofMap(ofToInt(values[14]), 5, 685, 0, 255));
-                current_sides = ofMap(ofToInt(values[13]), 5, 685, 0, 20);
-                current_radius = ofMap(ofToInt(values[12]), 5, 685, 0, ofGetScreenWidth()/2);
+                current_sides = ofMap(ofToInt(values[12]), 5, 685, 0, 20);
+                current_radius = ofMap(ofToInt(values[13]), 5, 685, 0, ofGetScreenWidth()/2);
                 current_z = ofMap(ofToInt(values[15]), 5, 685, 0, objects.size());
+                current_alpha = ofMap(ofToInt(values[16]), 5, 685, 0, 255);
             }
         }
         if (arduino == "") continue;
@@ -358,8 +393,10 @@ void testApp::keyReleased(int key){
 
 //--------------------------------------------------------------
 void testApp::mouseMoved(int x, int y ){
-    current_point.x = x;
-    current_point.y = y;
+    if(arduino == ""){
+        current_point.x = x;
+        current_point.y = y;
+    }
 }
 
 //--------------------------------------------------------------
