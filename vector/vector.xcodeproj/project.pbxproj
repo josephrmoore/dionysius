@@ -10,6 +10,10 @@
 		33541B67170FEA0600B7C0E8 /* geometry.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 33541B66170FEA0600B7C0E8 /* geometry.cpp */; };
 		335AC6FF17193BDA0080ECCB /* ofxExtras.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 335AC6FD17193BDA0080ECCB /* ofxExtras.cpp */; };
 		335AC70117193FEB0080ECCB /* QuartzCore.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 335AC70017193FEB0080ECCB /* QuartzCore.framework */; };
+		337D0B5D1734CE6D00D2689F /* ofxAnimatable.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 337D0B531734CE6D00D2689F /* ofxAnimatable.cpp */; };
+		337D0B5E1734CE6D00D2689F /* ofxAnimatableFloat.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 337D0B551734CE6D00D2689F /* ofxAnimatableFloat.cpp */; };
+		337D0B5F1734CE6D00D2689F /* ofxAnimatableOfColor.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 337D0B571734CE6D00D2689F /* ofxAnimatableOfColor.cpp */; };
+		337D0B601734CE6D00D2689F /* ofxAnimatableOfPoint.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 337D0B591734CE6D00D2689F /* ofxAnimatableOfPoint.cpp */; };
 		BBAB23CB13894F3D00AA2426 /* GLUT.framework in CopyFiles */ = {isa = PBXBuildFile; fileRef = BBAB23BE13894E4700AA2426 /* GLUT.framework */; };
 		E4328149138ABC9F0047C5CB /* openFrameworksDebug.a in Frameworks */ = {isa = PBXBuildFile; fileRef = E4328148138ABC890047C5CB /* openFrameworksDebug.a */; };
 		E45BE97B0E8CC7DD009D7055 /* AGL.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E45BE9710E8CC7DD009D7055 /* AGL.framework */; };
@@ -91,6 +95,40 @@
 		335AC6FD17193BDA0080ECCB /* ofxExtras.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = ofxExtras.cpp; sourceTree = "<group>"; };
 		335AC6FE17193BDA0080ECCB /* ofxExtras.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ofxExtras.h; sourceTree = "<group>"; };
 		335AC70017193FEB0080ECCB /* QuartzCore.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = QuartzCore.framework; sourceTree = "<group>"; };
+		337D0B271734CE6D00D2689F /* config */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = config; sourceTree = "<group>"; };
+		337D0B281734CE6D00D2689F /* description */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = description; sourceTree = "<group>"; };
+		337D0B291734CE6D00D2689F /* FETCH_HEAD */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = FETCH_HEAD; sourceTree = "<group>"; };
+		337D0B2A1734CE6D00D2689F /* HEAD */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = HEAD; sourceTree = "<group>"; };
+		337D0B2C1734CE6D00D2689F /* applypatch-msg.sample */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.script.sh; path = "applypatch-msg.sample"; sourceTree = "<group>"; };
+		337D0B2D1734CE6D00D2689F /* commit-msg.sample */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.script.sh; path = "commit-msg.sample"; sourceTree = "<group>"; };
+		337D0B2E1734CE6D00D2689F /* post-commit.sample */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.script.sh; path = "post-commit.sample"; sourceTree = "<group>"; };
+		337D0B2F1734CE6D00D2689F /* post-receive.sample */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.script.sh; path = "post-receive.sample"; sourceTree = "<group>"; };
+		337D0B301734CE6D00D2689F /* post-update.sample */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.script.sh; path = "post-update.sample"; sourceTree = "<group>"; };
+		337D0B311734CE6D00D2689F /* pre-applypatch.sample */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.script.sh; path = "pre-applypatch.sample"; sourceTree = "<group>"; };
+		337D0B321734CE6D00D2689F /* pre-commit.sample */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.script.sh; path = "pre-commit.sample"; sourceTree = "<group>"; };
+		337D0B331734CE6D00D2689F /* pre-rebase.sample */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.script.sh; path = "pre-rebase.sample"; sourceTree = "<group>"; };
+		337D0B341734CE6D00D2689F /* prepare-commit-msg.sample */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.script.sh; path = "prepare-commit-msg.sample"; sourceTree = "<group>"; };
+		337D0B351734CE6D00D2689F /* update.sample */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.script.sh; path = update.sample; sourceTree = "<group>"; };
+		337D0B361734CE6D00D2689F /* index */ = {isa = PBXFileReference; lastKnownFileType = file; path = index; sourceTree = "<group>"; };
+		337D0B381734CE6D00D2689F /* exclude */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = exclude; sourceTree = "<group>"; };
+		337D0B3A1734CE6D00D2689F /* HEAD */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = HEAD; sourceTree = "<group>"; };
+		337D0B3D1734CE6D00D2689F /* master */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = master; sourceTree = "<group>"; };
+		337D0B411734CE6D00D2689F /* pack-2f3624ac88e09ba98f9bdff2b35c6f86689b1e9f.idx */ = {isa = PBXFileReference; lastKnownFileType = file; path = "pack-2f3624ac88e09ba98f9bdff2b35c6f86689b1e9f.idx"; sourceTree = "<group>"; };
+		337D0B421734CE6D00D2689F /* pack-2f3624ac88e09ba98f9bdff2b35c6f86689b1e9f.pack */ = {isa = PBXFileReference; lastKnownFileType = file; path = "pack-2f3624ac88e09ba98f9bdff2b35c6f86689b1e9f.pack"; sourceTree = "<group>"; };
+		337D0B431734CE6D00D2689F /* ORIG_HEAD */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = ORIG_HEAD; sourceTree = "<group>"; };
+		337D0B441734CE6D00D2689F /* packed-refs */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = "packed-refs"; sourceTree = "<group>"; };
+		337D0B471734CE6D00D2689F /* master */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = master; sourceTree = "<group>"; };
+		337D0B4A1734CE6D00D2689F /* HEAD */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = HEAD; sourceTree = "<group>"; };
+		337D0B501734CE6D00D2689F /* install.xml */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.xml; path = install.xml; sourceTree = "<group>"; };
+		337D0B511734CE6D00D2689F /* ReadMe.md */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = ReadMe.md; sourceTree = "<group>"; };
+		337D0B531734CE6D00D2689F /* ofxAnimatable.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = ofxAnimatable.cpp; sourceTree = "<group>"; };
+		337D0B541734CE6D00D2689F /* ofxAnimatable.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ofxAnimatable.h; sourceTree = "<group>"; };
+		337D0B551734CE6D00D2689F /* ofxAnimatableFloat.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = ofxAnimatableFloat.cpp; sourceTree = "<group>"; };
+		337D0B561734CE6D00D2689F /* ofxAnimatableFloat.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ofxAnimatableFloat.h; sourceTree = "<group>"; };
+		337D0B571734CE6D00D2689F /* ofxAnimatableOfColor.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = ofxAnimatableOfColor.cpp; sourceTree = "<group>"; };
+		337D0B581734CE6D00D2689F /* ofxAnimatableOfColor.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ofxAnimatableOfColor.h; sourceTree = "<group>"; };
+		337D0B591734CE6D00D2689F /* ofxAnimatableOfPoint.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = ofxAnimatableOfPoint.cpp; sourceTree = "<group>"; };
+		337D0B5A1734CE6D00D2689F /* ofxAnimatableOfPoint.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ofxAnimatableOfPoint.h; sourceTree = "<group>"; };
 		BBAB23BE13894E4700AA2426 /* GLUT.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = GLUT.framework; path = ../../../libs/glut/lib/osx/GLUT.framework; sourceTree = "<group>"; };
 		E4328143138ABC890047C5CB /* openFrameworksLib.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = openFrameworksLib.xcodeproj; path = ../../../libs/openFrameworksCompiled/project/osx/openFrameworksLib.xcodeproj; sourceTree = SOURCE_ROOT; };
 		E45BE9710E8CC7DD009D7055 /* AGL.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AGL.framework; path = /System/Library/Frameworks/AGL.framework; sourceTree = "<absolute>"; };
@@ -306,9 +344,179 @@
 			path = src;
 			sourceTree = "<group>";
 		};
+		337D0B241734CE6D00D2689F /* ofxAnimatable */ = {
+			isa = PBXGroup;
+			children = (
+				337D0B251734CE6D00D2689F /* .git */,
+				337D0B501734CE6D00D2689F /* install.xml */,
+				337D0B511734CE6D00D2689F /* ReadMe.md */,
+				337D0B521734CE6D00D2689F /* src */,
+			);
+			path = ofxAnimatable;
+			sourceTree = "<group>";
+		};
+		337D0B251734CE6D00D2689F /* .git */ = {
+			isa = PBXGroup;
+			children = (
+				337D0B261734CE6D00D2689F /* branches */,
+				337D0B271734CE6D00D2689F /* config */,
+				337D0B281734CE6D00D2689F /* description */,
+				337D0B291734CE6D00D2689F /* FETCH_HEAD */,
+				337D0B2A1734CE6D00D2689F /* HEAD */,
+				337D0B2B1734CE6D00D2689F /* hooks */,
+				337D0B361734CE6D00D2689F /* index */,
+				337D0B371734CE6D00D2689F /* info */,
+				337D0B391734CE6D00D2689F /* logs */,
+				337D0B3E1734CE6D00D2689F /* objects */,
+				337D0B431734CE6D00D2689F /* ORIG_HEAD */,
+				337D0B441734CE6D00D2689F /* packed-refs */,
+				337D0B451734CE6D00D2689F /* refs */,
+			);
+			path = .git;
+			sourceTree = "<group>";
+		};
+		337D0B261734CE6D00D2689F /* branches */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = branches;
+			sourceTree = "<group>";
+		};
+		337D0B2B1734CE6D00D2689F /* hooks */ = {
+			isa = PBXGroup;
+			children = (
+				337D0B2C1734CE6D00D2689F /* applypatch-msg.sample */,
+				337D0B2D1734CE6D00D2689F /* commit-msg.sample */,
+				337D0B2E1734CE6D00D2689F /* post-commit.sample */,
+				337D0B2F1734CE6D00D2689F /* post-receive.sample */,
+				337D0B301734CE6D00D2689F /* post-update.sample */,
+				337D0B311734CE6D00D2689F /* pre-applypatch.sample */,
+				337D0B321734CE6D00D2689F /* pre-commit.sample */,
+				337D0B331734CE6D00D2689F /* pre-rebase.sample */,
+				337D0B341734CE6D00D2689F /* prepare-commit-msg.sample */,
+				337D0B351734CE6D00D2689F /* update.sample */,
+			);
+			path = hooks;
+			sourceTree = "<group>";
+		};
+		337D0B371734CE6D00D2689F /* info */ = {
+			isa = PBXGroup;
+			children = (
+				337D0B381734CE6D00D2689F /* exclude */,
+			);
+			path = info;
+			sourceTree = "<group>";
+		};
+		337D0B391734CE6D00D2689F /* logs */ = {
+			isa = PBXGroup;
+			children = (
+				337D0B3A1734CE6D00D2689F /* HEAD */,
+				337D0B3B1734CE6D00D2689F /* refs */,
+			);
+			path = logs;
+			sourceTree = "<group>";
+		};
+		337D0B3B1734CE6D00D2689F /* refs */ = {
+			isa = PBXGroup;
+			children = (
+				337D0B3C1734CE6D00D2689F /* heads */,
+			);
+			path = refs;
+			sourceTree = "<group>";
+		};
+		337D0B3C1734CE6D00D2689F /* heads */ = {
+			isa = PBXGroup;
+			children = (
+				337D0B3D1734CE6D00D2689F /* master */,
+			);
+			path = heads;
+			sourceTree = "<group>";
+		};
+		337D0B3E1734CE6D00D2689F /* objects */ = {
+			isa = PBXGroup;
+			children = (
+				337D0B3F1734CE6D00D2689F /* info */,
+				337D0B401734CE6D00D2689F /* pack */,
+			);
+			path = objects;
+			sourceTree = "<group>";
+		};
+		337D0B3F1734CE6D00D2689F /* info */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = info;
+			sourceTree = "<group>";
+		};
+		337D0B401734CE6D00D2689F /* pack */ = {
+			isa = PBXGroup;
+			children = (
+				337D0B411734CE6D00D2689F /* pack-2f3624ac88e09ba98f9bdff2b35c6f86689b1e9f.idx */,
+				337D0B421734CE6D00D2689F /* pack-2f3624ac88e09ba98f9bdff2b35c6f86689b1e9f.pack */,
+			);
+			path = pack;
+			sourceTree = "<group>";
+		};
+		337D0B451734CE6D00D2689F /* refs */ = {
+			isa = PBXGroup;
+			children = (
+				337D0B461734CE6D00D2689F /* heads */,
+				337D0B481734CE6D00D2689F /* remotes */,
+				337D0B4B1734CE6D00D2689F /* tags */,
+			);
+			path = refs;
+			sourceTree = "<group>";
+		};
+		337D0B461734CE6D00D2689F /* heads */ = {
+			isa = PBXGroup;
+			children = (
+				337D0B471734CE6D00D2689F /* master */,
+			);
+			path = heads;
+			sourceTree = "<group>";
+		};
+		337D0B481734CE6D00D2689F /* remotes */ = {
+			isa = PBXGroup;
+			children = (
+				337D0B491734CE6D00D2689F /* origin */,
+			);
+			path = remotes;
+			sourceTree = "<group>";
+		};
+		337D0B491734CE6D00D2689F /* origin */ = {
+			isa = PBXGroup;
+			children = (
+				337D0B4A1734CE6D00D2689F /* HEAD */,
+			);
+			path = origin;
+			sourceTree = "<group>";
+		};
+		337D0B4B1734CE6D00D2689F /* tags */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = tags;
+			sourceTree = "<group>";
+		};
+		337D0B521734CE6D00D2689F /* src */ = {
+			isa = PBXGroup;
+			children = (
+				337D0B531734CE6D00D2689F /* ofxAnimatable.cpp */,
+				337D0B541734CE6D00D2689F /* ofxAnimatable.h */,
+				337D0B551734CE6D00D2689F /* ofxAnimatableFloat.cpp */,
+				337D0B561734CE6D00D2689F /* ofxAnimatableFloat.h */,
+				337D0B571734CE6D00D2689F /* ofxAnimatableOfColor.cpp */,
+				337D0B581734CE6D00D2689F /* ofxAnimatableOfColor.h */,
+				337D0B591734CE6D00D2689F /* ofxAnimatableOfPoint.cpp */,
+				337D0B5A1734CE6D00D2689F /* ofxAnimatableOfPoint.h */,
+			);
+			path = src;
+			sourceTree = "<group>";
+		};
 		BB4B014C10F69532006C3DED /* addons */ = {
 			isa = PBXGroup;
 			children = (
+				337D0B241734CE6D00D2689F /* ofxAnimatable */,
 				335AC6D517193BDA0080ECCB /* ofxExtras */,
 			);
 			name = addons;
@@ -484,6 +692,10 @@
 				33541B67170FEA0600B7C0E8 /* geometry.cpp in Sources */,
 				E4B69E200A3A1BDC003C02F2 /* main.cpp in Sources */,
 				E4B69E210A3A1BDC003C02F2 /* testApp.cpp in Sources */,
+				337D0B5D1734CE6D00D2689F /* ofxAnimatable.cpp in Sources */,
+				337D0B5E1734CE6D00D2689F /* ofxAnimatableFloat.cpp in Sources */,
+				337D0B5F1734CE6D00D2689F /* ofxAnimatableOfColor.cpp in Sources */,
+				337D0B601734CE6D00D2689F /* ofxAnimatableOfPoint.cpp in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -562,6 +774,7 @@
 		E4B69B600A3A1757003C02F2 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = YES;
 				COPY_PHASE_STRIP = NO;
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
@@ -651,6 +864,7 @@
 		E4B69B610A3A1757003C02F2 /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = YES;
 				COPY_PHASE_STRIP = YES;
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",

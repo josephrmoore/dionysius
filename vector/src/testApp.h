@@ -2,14 +2,14 @@
 
 #include "ofxExtras.h"
 #include "geometry.h"
-#include "ofMain.h"
+
 
 class testApp : public ofBaseApp{
 
 	public:
 		void setup();
 		void update();
-		void draw();
+		void draw(); 
 
 		void keyPressed  (int key);
 		void keyReleased(int key);
@@ -23,17 +23,21 @@ class testApp : public ofBaseApp{
         void drawPreview();
         void edit();
         void placeObject();
-    void devInfo();
-    void deleteObject(int index);
-    void print_r(vector <geometry> v);
-    void print_r(vector <int> v);
+        void devInfo();
+        void deleteObject(int index);
+        void print_r(vector <geometry> v);
+        void print_r(vector <int> v);
+        void animate(ofPoint p, int s, int r, ofColor c, int z, ofPolyline l);
+        void audio(ofPoint p, int s, int r, ofColor c, int z, ofPolyline l);
+    
+        bool oskar;
         vector <geometry> objects;
         vector <int> zs;
         geometry preview_object, empty_object;
         int current_object;
         ofPoint current_point;
         ofColor current_color, current_bk, current_preview;
-        int current_sides, current_radius, current_z, step;
+        int current_sides, current_radius, current_z, step, current_alpha;
         int wheel_state; // temporary for keyboard clone
         ofPolyline line;
     
@@ -49,5 +53,5 @@ class testApp : public ofBaseApp{
         
         vector <string> values;
     
-        bool j1_up, j1_down, j1_left, j1_right, j1_button, j2_up, j2_down, j2_left, j2_right, j2_button, delete_button, ok_button, info_on;
+        bool j1_up, j1_down, j1_left, j1_right, j1_button, j2_up, j2_down, j2_left, j2_right, j2_button, delete_button, ok_button, info_on, vertex, close;
 };

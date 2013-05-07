@@ -2,15 +2,19 @@ Tvector
 v3
 r1
 cCheck dependencies
-cProcessInfoPlistFile /Users/josephmoore/OF/apps/Studio/vector/bin/vectorDebug.app/Contents/Info.plist openFrameworks-Info.plist
-cProcessPCH++ /var/folders/Dc/DcObbznzEJyqvLZguF+Lwk+++TI/-Caches-/com.apple.Xcode.501/SharedPrecompiledHeaders/Carbon-elbzneltbpgvelfozhdnvsjtscyu/Carbon.h.gch /Developer/SDKs/MacOSX10.6.sdk/System/Library/Frameworks/Carbon.framework/Headers/Carbon.h normal i386 c++ com.apple.compilers.llvmgcc42
-cCompileC build/vector.build/Debug/vector.build/Objects-normal/i386/main.o /Users/josephmoore/OF/apps/Studio/vector/src/main.cpp normal i386 c++ com.apple.compilers.llvmgcc42
-cCompileC build/vector.build/Debug/vector.build/Objects-normal/i386/testApp.o /Users/josephmoore/OF/apps/Studio/vector/src/testApp.cpp normal i386 c++ com.apple.compilers.llvmgcc42
-cCompileC build/vector.build/Debug/vector.build/Objects-normal/i386/geometry.o /Users/josephmoore/OF/apps/Studio/vector/src/geometry.cpp normal i386 c++ com.apple.compilers.llvmgcc42
-cLd /Users/josephmoore/OF/apps/Studio/vector/bin/vectorDebug.app/Contents/MacOS/vectorDebug normal i386
-cPhaseScriptExecution "Run Script" /Users/josephmoore/OF/apps/Studio/vector/build/vector.build/Debug/vector.build/Script-E4B6FFFD0C3F9AB9008CF71C.sh
-cPBXCp ../../../libs/glut/lib/osx/GLUT.framework bin/vectorDebug.app/Contents/Frameworks/GLUT.framework
-cTouch /Users/josephmoore/OF/apps/Studio/vector/bin/vectorDebug.app
+cProcessInfoPlistFile /Users/josephmoore/OF/apps/dionysius/vector/bin/vectorDebug.app/Contents/Info.plist openFrameworks-Info.plist
+cProcessPCH++ /var/folders/Dc/DcObbznzEJyqvLZguF+Lwk+++TI/-Caches-/com.apple.Xcode.501/SharedPrecompiledHeaders/Carbon-bmjrktjmoyvpxagbylvcnybmvztq/Carbon.h.gch /Developer/SDKs/MacOSX10.6.sdk/System/Library/Frameworks/Carbon.framework/Headers/Carbon.h normal i386 c++ com.apple.compilers.llvmgcc42
+cCompileC build/vector.build/Debug/vector.build/Objects-normal/i386/ofxExtras.o /Users/josephmoore/OF/apps/dionysius/vector/ofxExtras/src/ofxExtras.cpp normal i386 c++ com.apple.compilers.llvmgcc42
+cCompileC build/vector.build/Debug/vector.build/Objects-normal/i386/geometry.o /Users/josephmoore/OF/apps/dionysius/vector/src/geometry.cpp normal i386 c++ com.apple.compilers.llvmgcc42
+cCompileC build/vector.build/Debug/vector.build/Objects-normal/i386/main-82227D70F1DD098B.o /Users/josephmoore/OF/apps/dionysius/vector/src/main.cpp normal i386 c++ com.apple.compilers.llvmgcc42
+cCompileC build/vector.build/Debug/vector.build/Objects-normal/i386/testApp-FAA3DC9B2355198C.o /Users/josephmoore/OF/apps/dionysius/vector/src/testApp.cpp normal i386 c++ com.apple.compilers.llvmgcc42
+cCompileC build/vector.build/Debug/vector.build/Objects-normal/i386/main-22684E7332B74F77.o /Users/josephmoore/OF/apps/dionysius/vector/ofxAnimatable/example/main.cpp normal i386 c++ com.apple.compilers.llvmgcc42
+cCompileC build/vector.build/Debug/vector.build/Objects-normal/i386/testApp-9AE9AD9D642F5F78.o /Users/josephmoore/OF/apps/dionysius/vector/ofxAnimatable/example/testApp.cpp normal i386 c++ com.apple.compilers.llvmgcc42
+cCompileC build/vector.build/Debug/vector.build/Objects-normal/i386/ofxAnimatable.o /Users/josephmoore/OF/apps/dionysius/vector/ofxAnimatable/src/ofxAnimatable.cpp normal i386 c++ com.apple.compilers.llvmgcc42
+cCompileC build/vector.build/Debug/vector.build/Objects-normal/i386/ofxAnimatableFloat.o /Users/josephmoore/OF/apps/dionysius/vector/ofxAnimatable/src/ofxAnimatableFloat.cpp normal i386 c++ com.apple.compilers.llvmgcc42
+cCompileC build/vector.build/Debug/vector.build/Objects-normal/i386/ofxAnimatableOfColor.o /Users/josephmoore/OF/apps/dionysius/vector/ofxAnimatable/src/ofxAnimatableOfColor.cpp normal i386 c++ com.apple.compilers.llvmgcc42
+cCompileC build/vector.build/Debug/vector.build/Objects-normal/i386/ofxAnimatableOfPoint.o /Users/josephmoore/OF/apps/dionysius/vector/ofxAnimatable/src/ofxAnimatableOfPoint.cpp normal i386 c++ com.apple.compilers.llvmgcc42
+cLd /Users/josephmoore/OF/apps/dionysius/vector/bin/vectorDebug.app/Contents/MacOS/vectorDebug normal i386
 
 N/Developer/SDKs/MacOSX10.6.sdk
 c000000004D812BED00000000000000EE
@@ -82,6 +86,11 @@ c000000004A8D4DF700000000000031E9
 t1250774519
 s12777
 
+N/Developer/SDKs/MacOSX10.6.sdk/usr/include/arpa/inet.h
+c000000004BBD2CC60000000000001533
+t1270688966
+s5427
+
 N/Developer/SDKs/MacOSX10.6.sdk/usr/include/errno.h
 c000000004BBD2CE900000000000003EB
 t1270689001
@@ -96,6 +105,31 @@ N/Developer/SDKs/MacOSX10.6.sdk/usr/include/libkern/OSAtomic.h
 c000000004BBD2CE90000000000002519
 t1270689001
 s9497
+
+N/Developer/SDKs/MacOSX10.6.sdk/usr/include/math.h
+c000000004AC599B500000000000004F1
+t1254463925
+s1265
+
+N/Developer/SDKs/MacOSX10.6.sdk/usr/include/net/if.h
+c000000004CC3DE6400000000000035E3
+t1287904868
+s13795
+
+N/Developer/SDKs/MacOSX10.6.sdk/usr/include/netdb.h
+c000000004BBD2D1D000000000000307F
+t1270689053
+s12415
+
+N/Developer/SDKs/MacOSX10.6.sdk/usr/include/netinet/in.h
+c000000004CC3DE650000000000005414
+t1287904869
+s21524
+
+N/Developer/SDKs/MacOSX10.6.sdk/usr/include/netinet/tcp.h
+c000000004CC3DE65000000000000202F
+t1287904869
+s8239
 
 N/Developer/SDKs/MacOSX10.6.sdk/usr/include/pthread.h
 c000000004BBD2CE900000000000038F0
@@ -127,10 +161,40 @@ c000000004CC3DE680000000000001845
 t1287904872
 s6213
 
+N/Developer/SDKs/MacOSX10.6.sdk/usr/include/sys/filio.h
+c000000004CC3DE660000000000001073
+t1287904870
+s4211
+
+N/Developer/SDKs/MacOSX10.6.sdk/usr/include/sys/ioctl.h
+c000000004CC3DE66000000000000116C
+t1287904870
+s4460
+
 N/Developer/SDKs/MacOSX10.6.sdk/usr/include/sys/select.h
 c000000004CC3DE6700000000000016A2
 t1287904871
 s5794
+
+N/Developer/SDKs/MacOSX10.6.sdk/usr/include/sys/socket.h
+c000000004CC3DE6800000000000059BC
+t1287904872
+s22972
+
+N/Developer/SDKs/MacOSX10.6.sdk/usr/include/sys/sockio.h
+c000000004CC3DE680000000000002252
+t1287904872
+s8786
+
+N/Developer/SDKs/MacOSX10.6.sdk/usr/include/sys/stat.h
+c000000004CC3DE680000000000004A1D
+t1287904872
+s18973
+
+N/Developer/SDKs/MacOSX10.6.sdk/usr/include/sys/types.h
+c000000004CC3DE680000000000002905
+t1287904872
+s10501
 
 N/Developer/SDKs/MacOSX10.6.sdk/usr/include/termios.h
 c000000004BBD2CE900000000000004D4
@@ -250,58 +314,91 @@ c0000000051237D480000000000093570
 t1361280328
 s603504
 
+N/Users/josephmoore/OF/apps/Studio/vector/QuartzCore.framework/QuartzCore
+c000000004D66164500000000000A3C74
+t1298536005
+s670836
+
 N/Users/josephmoore/OF/apps/Studio/vector/bin/vectorDebug.app
-t2
-s0
+t1366750673
+s102
 
 N/Users/josephmoore/OF/apps/Studio/vector/bin/vectorDebug.app/Contents/Frameworks/GLUT.framework
-t2
-s0
+t1365614552
+s204
 
 N/Users/josephmoore/OF/apps/Studio/vector/bin/vectorDebug.app/Contents/Info.plist
-t2
-s0
+t1365614542
+s1010
 
 N/Users/josephmoore/OF/apps/Studio/vector/bin/vectorDebug.app/Contents/MacOS/vectorDebug
-t2
-s0
+t1366750673
+s5556272
 
 N/Users/josephmoore/OF/apps/Studio/vector/bin/vectorDebug.app/Contents/PkgInfo
-t2
-s0
+t1365614542
+s8
 
 N/Users/josephmoore/OF/apps/Studio/vector/build/vector.build/Debug/vector.build/Objects-normal/i386/geometry.o
-t2
-s0
+t1365837945
+s48304
 
 N/Users/josephmoore/OF/apps/Studio/vector/build/vector.build/Debug/vector.build/Objects-normal/i386/main.o
-t2
-s0
+t1365890620
+s101780
+
+N/Users/josephmoore/OF/apps/Studio/vector/build/vector.build/Debug/vector.build/Objects-normal/i386/ofxExtras.o
+t1365839503
+s746564
 
 N/Users/josephmoore/OF/apps/Studio/vector/build/vector.build/Debug/vector.build/Objects-normal/i386/testApp.o
-t2
-s0
+t1366747820
+s211280
 
 N/Users/josephmoore/OF/apps/Studio/vector/build/vector.build/Debug/vector.build/Objects-normal/i386/vectorDebug.LinkFileList
-c0000000051659FCE0000000000000145
-t1365614542
-s325
+c0000000051690FC500000000000001B4
+t1365839813
+s436
 
 N/Users/josephmoore/OF/apps/Studio/vector/build/vector.build/Debug/vector.build/Script-E4B6FFFD0C3F9AB9008CF71C.sh
 c0000000051659FCE0000000000000114
 t1365614542
 s276
 
+N/Users/josephmoore/OF/apps/Studio/vector/ofxExtras/src/ofxExtras.cpp
+c0000000051690E600000000000007B3C
+t1365839456
+s31548
+i<sys/stat.h>
+i"ofxExtras.h"
+
+N/Users/josephmoore/OF/apps/Studio/vector/ofxExtras/src/ofxExtras.h
+c0000000051690E840000000000001D50
+t1365839492
+s7504
+i"ofAppGlutWindow.h"
+i"ofMain.h"
+i"Poco/Exception.h"
+i"Poco/Net/HTTPBasicCredentials.h"
+i"Poco/Net/HTTPClientSession.h"
+i"Poco/Net/HTTPRequest.h"
+i"Poco/Net/HTTPResponse.h"
+i"Poco/Net/HTTPStreamFactory.h"
+i"Poco/Path.h"
+i"Poco/StreamCopier.h"
+i"Poco/URI.h"
+i"Poco/URIStreamOpener.h"
+
 N/Users/josephmoore/OF/apps/Studio/vector/src/geometry.cpp
-c0000000051659FC200000000000005E4
-t1365614530
-s1508
+c000000005165B3CA0000000000000914
+t1365619658
+s2324
 i"geometry.h"
 
 N/Users/josephmoore/OF/apps/Studio/vector/src/geometry.h
-c0000000051659BF400000000000002EF
-t1365613556
-s751
+c000000005165AD680000000000000346
+t1365618024
+s838
 i"ofMain.h"
 
 N/Users/josephmoore/OF/apps/Studio/vector/src/main.cpp
@@ -313,16 +410,245 @@ i"testApp.h"
 i"ofAppGlutWindow.h"
 
 N/Users/josephmoore/OF/apps/Studio/vector/src/testApp.cpp
-c0000000051659F8000000000000009DF
-t1365614464
-s2527
+c000000005176EAAA000000000000299D
+t1366747818
+s10653
 i"testApp.h"
 
 N/Users/josephmoore/OF/apps/Studio/vector/src/testApp.h
-c00000000516540C900000000000002AF
-t1365590217
-s687
+c000000005169CF6B00000000000005B3
+t1365888875
+s1459
+i"ofxExtras.h"
+i"geometry.h"
 i"ofMain.h"
+
+N/Users/josephmoore/OF/apps/dionysius/vector/../../../libs/glut/lib/osx/GLUT.framework
+c0000000051237D4800000000000000CC
+t1361280328
+s204
+
+N/Users/josephmoore/OF/apps/dionysius/vector/../../../libs/glut/lib/osx/GLUT.framework/GLUT
+c0000000051237D480000000000093570
+t1361280328
+s603504
+
+N/Users/josephmoore/OF/apps/dionysius/vector/QuartzCore.framework/QuartzCore
+c000000004D66164500000000000A3C74
+t1298536005
+s670836
+
+N/Users/josephmoore/OF/apps/dionysius/vector/bin/vectorDebug.app
+t2
+s0
+
+N/Users/josephmoore/OF/apps/dionysius/vector/bin/vectorDebug.app/Contents/Frameworks/GLUT.framework
+t2
+s0
+
+N/Users/josephmoore/OF/apps/dionysius/vector/bin/vectorDebug.app/Contents/Info.plist
+t2
+s0
+
+N/Users/josephmoore/OF/apps/dionysius/vector/bin/vectorDebug.app/Contents/MacOS/vectorDebug
+t2
+s0
+
+N/Users/josephmoore/OF/apps/dionysius/vector/bin/vectorDebug.app/Contents/PkgInfo
+t2
+s0
+
+N/Users/josephmoore/OF/apps/dionysius/vector/build/vector.build/Debug/vector.build/Objects-normal/i386/geometry.o
+t2
+s0
+
+N/Users/josephmoore/OF/apps/dionysius/vector/build/vector.build/Debug/vector.build/Objects-normal/i386/main-22684E7332B74F77.o
+t2
+s0
+
+N/Users/josephmoore/OF/apps/dionysius/vector/build/vector.build/Debug/vector.build/Objects-normal/i386/main-82227D70F1DD098B.o
+t2
+s0
+
+N/Users/josephmoore/OF/apps/dionysius/vector/build/vector.build/Debug/vector.build/Objects-normal/i386/main.o
+t1367640192
+s161700
+
+N/Users/josephmoore/OF/apps/dionysius/vector/build/vector.build/Debug/vector.build/Objects-normal/i386/ofxAnimatable.o
+t2
+s0
+
+N/Users/josephmoore/OF/apps/dionysius/vector/build/vector.build/Debug/vector.build/Objects-normal/i386/ofxAnimatableFloat.o
+t2
+s0
+
+N/Users/josephmoore/OF/apps/dionysius/vector/build/vector.build/Debug/vector.build/Objects-normal/i386/ofxAnimatableOfColor.o
+t2
+s0
+
+N/Users/josephmoore/OF/apps/dionysius/vector/build/vector.build/Debug/vector.build/Objects-normal/i386/ofxAnimatableOfPoint.o
+t2
+s0
+
+N/Users/josephmoore/OF/apps/dionysius/vector/build/vector.build/Debug/vector.build/Objects-normal/i386/ofxExtras.o
+t2
+s0
+
+N/Users/josephmoore/OF/apps/dionysius/vector/build/vector.build/Debug/vector.build/Objects-normal/i386/testApp-9AE9AD9D642F5F78.o
+t2
+s0
+
+N/Users/josephmoore/OF/apps/dionysius/vector/build/vector.build/Debug/vector.build/Objects-normal/i386/testApp-FAA3DC9B2355198C.o
+t2
+s0
+
+N/Users/josephmoore/OF/apps/dionysius/vector/build/vector.build/Debug/vector.build/Objects-normal/i386/testApp.o
+t1367640340
+s449048
+
+N/Users/josephmoore/OF/apps/dionysius/vector/build/vector.build/Debug/vector.build/Objects-normal/i386/vectorDebug.LinkFileList
+c000000005184A84100000000000004CC
+t1367648321
+s1228
+
+N/Users/josephmoore/OF/apps/dionysius/vector/build/vector.build/Debug/vector.build/Script-E4B6FFFD0C3F9AB9008CF71C.sh
+c000000005184A8410000000000000114
+t1367648321
+s276
+
+N/Users/josephmoore/OF/apps/dionysius/vector/ofxAnimatable/example/main.cpp
+c0000000051849694000000000000019F
+t1367643796
+s415
+i"ofMain.h"
+i"testApp.h"
+i"ofAppGlutWindow.h"
+
+N/Users/josephmoore/OF/apps/dionysius/vector/ofxAnimatable/example/testApp.cpp
+c00000000518496940000000000000E9D
+t1367643796
+s3741
+i"testApp.h"
+
+N/Users/josephmoore/OF/apps/dionysius/vector/ofxAnimatable/example/testApp.h
+c00000000518496940000000000000268
+t1367643796
+s616
+i"ofMain.h"
+i"ofxAnimatableFloat.h"
+i"ofxAnimatableOfPoint.h"
+i"ofxAnimatableOfColor.h"
+
+N/Users/josephmoore/OF/apps/dionysius/vector/ofxAnimatable/src/ofxAnimatable.cpp
+c00000000518496940000000000002C9F
+t1367643796
+s11423
+i"ofxAnimatable.h"
+
+N/Users/josephmoore/OF/apps/dionysius/vector/ofxAnimatable/src/ofxAnimatable.h
+c000000005184A7ED0000000000000E81
+t1367648237
+s3713
+i<iostream>
+i<Math.h>
+i"ofMain.h"
+
+N/Users/josephmoore/OF/apps/dionysius/vector/ofxAnimatable/src/ofxAnimatableFloat.cpp
+c000000005184969400000000000005F9
+t1367643796
+s1529
+i"ofxAnimatableFloat.h"
+
+N/Users/josephmoore/OF/apps/dionysius/vector/ofxAnimatable/src/ofxAnimatableFloat.h
+c00000000518496940000000000000598
+t1367643796
+s1432
+i"ofxAnimatable.h"
+
+N/Users/josephmoore/OF/apps/dionysius/vector/ofxAnimatable/src/ofxAnimatableOfColor.cpp
+c00000000518496940000000000000AE2
+t1367643796
+s2786
+i"ofxAnimatableOfColor.h"
+
+N/Users/josephmoore/OF/apps/dionysius/vector/ofxAnimatable/src/ofxAnimatableOfColor.h
+c000000005184A63900000000000005AA
+t1367647801
+s1450
+i"ofxAnimatable.h"
+i"ofMain.h"
+
+N/Users/josephmoore/OF/apps/dionysius/vector/ofxAnimatable/src/ofxAnimatableOfPoint.cpp
+c000000005184969400000000000008CA
+t1367643796
+s2250
+i"ofxAnimatableOfPoint.h"
+
+N/Users/josephmoore/OF/apps/dionysius/vector/ofxAnimatable/src/ofxAnimatableOfPoint.h
+c000000005184A63D0000000000000520
+t1367647805
+s1312
+i"ofxAnimatable.h"
+i"ofMain.h"
+
+N/Users/josephmoore/OF/apps/dionysius/vector/ofxExtras/src/ofxExtras.cpp
+c0000000051690E600000000000007B3C
+t1365839456
+s31548
+i<sys/stat.h>
+i"ofxExtras.h"
+
+N/Users/josephmoore/OF/apps/dionysius/vector/ofxExtras/src/ofxExtras.h
+c000000005184A5EA0000000000001D50
+t1367647722
+s7504
+i"ofAppGlutWindow.h"
+i"ofMain.h"
+i"Poco/Exception.h"
+i"Poco/Net/HTTPBasicCredentials.h"
+i"Poco/Net/HTTPClientSession.h"
+i"Poco/Net/HTTPRequest.h"
+i"Poco/Net/HTTPResponse.h"
+i"Poco/Net/HTTPStreamFactory.h"
+i"Poco/Path.h"
+i"Poco/StreamCopier.h"
+i"Poco/URI.h"
+i"Poco/URIStreamOpener.h"
+
+N/Users/josephmoore/OF/apps/dionysius/vector/src/geometry.cpp
+c0000000051849FB50000000000000EA7
+t1367646133
+s3751
+i"geometry.h"
+
+N/Users/josephmoore/OF/apps/dionysius/vector/src/geometry.h
+c000000005184A65600000000000004B5
+t1367647830
+s1205
+i"ofxAnimatable.h"
+i"ofxAnimatableFloat.h"
+i"ofxAnimatableOfPoint.h"
+i"ofxAnimatableOfColor.h"
+
+N/Users/josephmoore/OF/apps/dionysius/vector/src/main.cpp
+c00000000515E5C57000000000000019E
+t1365138519
+s414
+i"ofMain.h"
+i"testApp.h"
+i"ofAppGlutWindow.h"
+
+N/Users/josephmoore/OF/apps/dionysius/vector/src/testApp.cpp
+c0000000051849EC3000000000000433F
+t1367645891
+s17215
+i"testApp.h"
+
+N/Users/josephmoore/OF/apps/dionysius/vector/src/testApp.h
+c000000005184A5FF0000000000000799
+t1367647743
+s1945
+i"ofxExtras.h"
 i"geometry.h"
 
 N/Users/josephmoore/OF/libs/cairo/include/cairo/cairo-deprecated.h
@@ -1136,8 +1462,8 @@ i"ofQTKitPlayer.h"
 i"ofiPhoneVideoPlayer.h"
 
 N/Users/josephmoore/OF/libs/openFrameworksCompiled/lib/osx/openFrameworksDebug.a
-c00000000515B80A80000000001548978
-t1364951208
+c000000005184A8400000000001548978
+t1367648320
 s22317432
 
 N/Users/josephmoore/OF/libs/poco/include/Poco/AbstractDelegate.h
@@ -1196,6 +1522,20 @@ s2343
 i"Poco/Foundation.h"
 i"Poco/ThreadPool.h"
 i"Poco/ActiveRunnable.h"
+
+N/Users/josephmoore/OF/libs/poco/include/Poco/Any.h
+c0000000051237D4A00000000000020E8
+t1361280330
+s8424
+i"Poco/Exception.h"
+i<algorithm>
+i<typeinfo>
+
+N/Users/josephmoore/OF/libs/poco/include/Poco/Ascii.h
+c0000000051237D4A000000000000173A
+t1361280330
+s5946
+i"Poco/Foundation.h"
 
 N/Users/josephmoore/OF/libs/poco/include/Poco/AtomicCounter.h
 c0000000051237D4A0000000000002138
@@ -1441,11 +1781,177 @@ i"Poco/Foundation.h"
 i"Poco/Exception.h"
 i"Poco/UnWindows.h"
 
+N/Users/josephmoore/OF/libs/poco/include/Poco/Net/HTTPBasicCredentials.h
+c0000000051237D4A0000000000000FA6
+t1361280330
+s4006
+i"Poco/Net/Net.h"
+
+N/Users/josephmoore/OF/libs/poco/include/Poco/Net/HTTPClientSession.h
+c0000000051237D4A0000000000002D6E
+t1361280330
+s11630
+i"Poco/Net/Net.h"
+i"Poco/Net/HTTPSession.h"
+i"Poco/Net/SocketAddress.h"
+i<istream>
+i<ostream>
+
+N/Users/josephmoore/OF/libs/poco/include/Poco/Net/HTTPCookie.h
+c0000000051237D4A0000000000001D40
+t1361280330
+s7488
+i"Poco/Net/Net.h"
+
+N/Users/josephmoore/OF/libs/poco/include/Poco/Net/HTTPMessage.h
+c0000000051237D4A00000000000017A8
+t1361280330
+s6056
+i"Poco/Net/Net.h"
+i"Poco/Net/MessageHeader.h"
+
+N/Users/josephmoore/OF/libs/poco/include/Poco/Net/HTTPRequest.h
+c0000000051237D4A000000000000151E
+t1361280330
+s5406
+i"Poco/Net/Net.h"
+i"Poco/Net/HTTPMessage.h"
+
+N/Users/josephmoore/OF/libs/poco/include/Poco/Net/HTTPResponse.h
+c0000000051237D4A000000000000243C
+t1361280330
+s9276
+i"Poco/Net/Net.h"
+i"Poco/Net/HTTPMessage.h"
+i"Poco/Net/HTTPCookie.h"
+i"Poco/Timestamp.h"
+i<vector>
+
+N/Users/josephmoore/OF/libs/poco/include/Poco/Net/HTTPSession.h
+c0000000051237D4A0000000000001B28
+t1361280330
+s6952
+i"Poco/Net/Net.h"
+i"Poco/Net/StreamSocket.h"
+i"Poco/Timespan.h"
+i"Poco/Exception.h"
+i"Poco/Any.h"
+i<ios>
+
+N/Users/josephmoore/OF/libs/poco/include/Poco/Net/HTTPStreamFactory.h
+c0000000051237D4A0000000000000F0D
+t1361280330
+s3853
+i"Poco/Net/Net.h"
+i"Poco/Net/HTTPSession.h"
+i"Poco/URIStreamFactory.h"
+
+N/Users/josephmoore/OF/libs/poco/include/Poco/Net/IPAddress.h
+c0000000051237D4A0000000000003299
+t1361280330
+s12953
+i"Poco/Net/Net.h"
+i"Poco/Net/SocketDefs.h"
+
+N/Users/josephmoore/OF/libs/poco/include/Poco/Net/MessageHeader.h
+c0000000051237D4A00000000000017F9
+t1361280330
+s6137
+i"Poco/Net/Net.h"
+i"Poco/Net/NameValueCollection.h"
+i<ostream>
+i<istream>
+i<vector>
+
+N/Users/josephmoore/OF/libs/poco/include/Poco/Net/NameValueCollection.h
+c0000000051237D4A000000000000134B
+t1361280330
+s4939
+i"Poco/Net/Net.h"
+i"Poco/String.h"
+i<map>
+
+N/Users/josephmoore/OF/libs/poco/include/Poco/Net/Net.h
+c0000000051237D4A0000000000000BF9
+t1361280330
+s3065
+i"Poco/Foundation.h"
+
+N/Users/josephmoore/OF/libs/poco/include/Poco/Net/Socket.h
+c0000000051237D4A0000000000003A69
+t1361280330
+s14953
+i"Poco/Net/Net.h"
+i"Poco/Net/SocketImpl.h"
+i<vector>
+
+N/Users/josephmoore/OF/libs/poco/include/Poco/Net/SocketAddress.h
+c0000000051237D4A0000000000001584
+t1361280330
+s5508
+i"Poco/Net/Net.h"
+i"Poco/Net/SocketDefs.h"
+i"Poco/Net/IPAddress.h"
+
+N/Users/josephmoore/OF/libs/poco/include/Poco/Net/SocketDefs.h
+c0000000051237D4A0000000000002451
+t1361280330
+s9297
+i"Poco/UnWindows.h"
+i<winsock2.h>
+i<ws2tcpip.h>
+i<hostLib.h>
+i<ifLib.h>
+i<inetLib.h>
+i<ioLib.h>
+i<resolvLib.h>
+i<types.h>
+i<socket.h>
+i<netinet/tcp.h>
+i<unistd.h>
+i<errno.h>
+i<sys/types.h>
+i<sys/socket.h>
+i<sys/select.h>
+i<sys/ioctl.h>
+i<inet.h>
+i<arpa/inet.h>
+i<netinet/in.h>
+i<netinet/tcp.h>
+i<netdb.h>
+i<net/if.h>
+i<sys/sockio.h>
+i<sys/filio.h>
+
+N/Users/josephmoore/OF/libs/poco/include/Poco/Net/SocketImpl.h
+c0000000051237D4A0000000000003BEA
+t1361280330
+s15338
+i"Poco/Net/Net.h"
+i"Poco/Net/SocketDefs.h"
+i"Poco/Net/SocketAddress.h"
+i"Poco/RefCountedObject.h"
+i"Poco/Timespan.h"
+
+N/Users/josephmoore/OF/libs/poco/include/Poco/Net/StreamSocket.h
+c0000000051237D4A0000000000001617
+t1361280330
+s5655
+i"Poco/Net/Net.h"
+i"Poco/Net/Socket.h"
+
 N/Users/josephmoore/OF/libs/poco/include/Poco/NotificationStrategy.h
 c0000000051237D4A0000000000000F3F
 t1361280330
 s3903
 i"Poco/Foundation.h"
+
+N/Users/josephmoore/OF/libs/poco/include/Poco/Path.h
+c0000000051237D4A00000000000036A0
+t1361280330
+s13984
+i"Poco/Foundation.h"
+i<vector>
 
 N/Users/josephmoore/OF/libs/poco/include/Poco/Platform.h
 c0000000051237D4A0000000000001CBD
@@ -1521,6 +2027,23 @@ s2663
 i"Poco/Foundation.h"
 i"Poco/Mutex.h"
 
+N/Users/josephmoore/OF/libs/poco/include/Poco/StreamCopier.h
+c0000000051237D4A0000000000000FB0
+t1361280330
+s4016
+i"Poco/Foundation.h"
+i<istream>
+i<ostream>
+i<cstddef>
+
+N/Users/josephmoore/OF/libs/poco/include/Poco/String.h
+c0000000051237D4A0000000000003B3C
+t1361280330
+s15164
+i"Poco/Foundation.h"
+i"Poco/Ascii.h"
+i<cstring>
+
 N/Users/josephmoore/OF/libs/poco/include/Poco/Thread.h
 c0000000051237D4A0000000000001E48
 t1361280330
@@ -1586,6 +2109,13 @@ i"Poco/Foundation.h"
 i"Poco/Runnable.h"
 i"Poco/UnWindows.h"
 
+N/Users/josephmoore/OF/libs/poco/include/Poco/Timespan.h
+c0000000051237D4A0000000000001D3D
+t1361280330
+s7485
+i"Poco/Foundation.h"
+i"Poco/Timestamp.h"
+
 N/Users/josephmoore/OF/libs/poco/include/Poco/Timestamp.h
 c0000000051237D4A0000000000001A41
 t1361280330
@@ -1599,6 +2129,29 @@ t1361280330
 s6846
 i"Poco/Foundation.h"
 
+N/Users/josephmoore/OF/libs/poco/include/Poco/URI.h
+c0000000051237D4A0000000000002E0B
+t1361280330
+s11787
+i"Poco/Foundation.h"
+i<vector>
+
+N/Users/josephmoore/OF/libs/poco/include/Poco/URIStreamFactory.h
+c0000000051237D4A0000000000000D31
+t1361280330
+s3377
+i"Poco/Foundation.h"
+i<istream>
+
+N/Users/josephmoore/OF/libs/poco/include/Poco/URIStreamOpener.h
+c0000000051237D4A0000000000001553
+t1361280330
+s5459
+i"Poco/Foundation.h"
+i"Poco/Mutex.h"
+i<istream>
+i<map>
+
 N/Users/josephmoore/OF/libs/poco/include/Poco/UnWindows.h
 c0000000051237D4A0000000000000FC3
 t1361280330
@@ -1611,14 +2164,25 @@ t1361280336
 s7267
 i<TargetConditionals.h>
 
-N/var/folders/Dc/DcObbznzEJyqvLZguF+Lwk+++TI/-Caches-/com.apple.Xcode.501/SharedPrecompiledHeaders/Carbon-elbzneltbpgvelfozhdnvsjtscyu/Carbon.h.gch
+N/var/folders/Dc/DcObbznzEJyqvLZguF+Lwk+++TI/-Caches-/com.apple.Xcode.501/SharedPrecompiledHeaders/Carbon-bgjtnldsaokiwiauzhagwxvrdtof/Carbon.h.gch
+t1365837940
+s39900912
+
+N/var/folders/Dc/DcObbznzEJyqvLZguF+Lwk+++TI/-Caches-/com.apple.Xcode.501/SharedPrecompiledHeaders/Carbon-bmjrktjmoyvpxagbylvcnybmvztq/Carbon.h.gch
 t2
 s0
+
+N/var/folders/Dc/DcObbznzEJyqvLZguF+Lwk+++TI/-Caches-/com.apple.Xcode.501/SharedPrecompiledHeaders/Carbon-elbzneltbpgvelfozhdnvsjtscyu/Carbon.h.gch
+t1365614546
+s39900912
 
 NopenFrameworks-Info.plist
 c00000000515E5C570000000000000277
 t1365138519
 s631
+
+CBuild AST from /Users/josephmoore/OF/apps/Studio/vector/ofxExtras/src/ofxExtras.cpp
+r0
 
 CBuild AST from /Users/josephmoore/OF/apps/Studio/vector/src/geometry.cpp
 r0
@@ -1629,13 +2193,43 @@ r0
 CBuild AST from /Users/josephmoore/OF/apps/Studio/vector/src/testApp.cpp
 r0
 
+CBuild AST from /Users/josephmoore/OF/apps/dionysius/vector/ofxAnimatable/example/main.cpp
+r0
+
+CBuild AST from /Users/josephmoore/OF/apps/dionysius/vector/ofxAnimatable/example/testApp.cpp
+r0
+
+CBuild AST from /Users/josephmoore/OF/apps/dionysius/vector/ofxAnimatable/src/ofxAnimatable.cpp
+r0
+
+CBuild AST from /Users/josephmoore/OF/apps/dionysius/vector/ofxAnimatable/src/ofxAnimatableFloat.cpp
+r0
+
+CBuild AST from /Users/josephmoore/OF/apps/dionysius/vector/ofxAnimatable/src/ofxAnimatableOfColor.cpp
+r0
+
+CBuild AST from /Users/josephmoore/OF/apps/dionysius/vector/ofxAnimatable/src/ofxAnimatableOfPoint.cpp
+r0
+
+CBuild AST from /Users/josephmoore/OF/apps/dionysius/vector/ofxExtras/src/ofxExtras.cpp
+r0
+
+CBuild AST from /Users/josephmoore/OF/apps/dionysius/vector/src/geometry.cpp
+r0
+
+CBuild AST from /Users/josephmoore/OF/apps/dionysius/vector/src/main.cpp
+r0
+
+CBuild AST from /Users/josephmoore/OF/apps/dionysius/vector/src/testApp.cpp
+r0
+
 CCheck dependencies
 r0
-lSLF03#21%IDEActivityLogSection1@2#32"com.apple.dt.IDE.BuildLogSection18"Check dependencies7a00834dd715b741^5d70124ed715b741^---0#1#0#--18"Check dependencies
+lSLF03#21%IDEActivityLogSection1@2#32"com.apple.dt.IDE.BuildLogSection18"Check dependencies2bbd16c1df34b741^7bdc2fc1df34b741^---0#1#0#--18"Check dependencies
 
 CCompileC build/vector.build/Debug/vector.build/Objects-normal/i386/geometry.o /Users/josephmoore/OF/apps/Studio/vector/src/geometry.cpp normal i386 c++ com.apple.compilers.llvmgcc42
-s387307347.774139
-e387307349.170065
+s387530743.597728
+e387530745.305303
 r1
 xCompileC
 xbuild/vector.build/Debug/vector.build/Objects-normal/i386/geometry.o
@@ -1645,11 +2239,53 @@ xi386
 xc++
 xcom.apple.compilers.llvmgcc42
 oi686-apple-darwin10-llvm-gcc-4.2: -lpthread: linker input file unused because linking not done
-lSLF03#21%IDEActivityLogSection1@2#32"com.apple.dt.IDE.BuildLogSection65"Compile /Users/josephmoore/OF/apps/Studio/vector/src/geometry.cpp7e55c653d715b741^03932b55d715b741^-95"i686-apple-darwin10-llvm-gcc-4.2: -lpthread: linker input file unused because linking not done-0#0#0#-19%DVTDocumentLocation2@73"file://localhost/Users/josephmoore/OF/apps/Studio/vector/src/geometry.cpp0000000000000000^2035"CompileC build/vector.build/Debug/vector.build/Objects-normal/i386/geometry.o src/geometry.cpp normal i386 c++ com.apple.compilers.llvmgcc42    cd /Users/josephmoore/OF/apps/Studio/vector    setenv LANG en_US.US-ASCII    /Developer/usr/bin/llvm-gcc-4.2 -x c++ -arch i386 -fmessage-length=0 -pipe -Wno-trigraphs -fpascal-strings -O0 -isysroot /Developer/SDKs/MacOSX10.6.sdk -fasm-blocks -Wno-invalid-offsetof -mmacosx-version-min=10.6 -gdwarf-2 -msse3 -mssse3 -I/Users/josephmoore/OF/apps/Studio/vector/build/vector.build/Debug/vector.build/vectorDebug.hmap -I/Users/josephmoore/OF/apps/Studio/vector/bin/include -I../../../libs/openFrameworks -I../../../libs/openFrameworks/3d -I../../../libs/openFrameworks/app -I../../../libs/openFrameworks/communication -I../../../libs/openFrameworks/events -I../../../libs/openFrameworks/gl -I../../../libs/openFrameworks/graphics -I../../../libs/openFrameworks/math -I../../../libs/openFrameworks/sound -I../../../libs/openFrameworks/types -I../../../libs/openFrameworks/utils -I../../../libs/openFrameworks/video -I../../../libs/poco/include -I../../../libs/freetype/include -I../../../libs/freetype/include/freetype2 -I../../../libs/fmodex/include -I../../../libs/glew/include -I../../../libs/FreeImage/include -I../../../libs/tess2/include -I../../../libs/cairo/include/cairo -I../../../libs/rtAudio/include -I/Users/josephmoore/OF/apps/Studio/vector/build/vector.build/Debug/vector.build/DerivedSources/i386 -I/Users/josephmoore/OF/apps/Studio/vector/build/vector.build/Debug/vector.build/DerivedSources -F/Users/josephmoore/OF/apps/Studio/vector/bin -F/Users/josephmoore/OF/apps/Studio/vector/../../../libs/glut/lib/osx -D__MACOSX_CORE__ -lpthread -mtune=native -include /var/folders/Dc/DcObbznzEJyqvLZguF+Lwk+++TI/-Caches-/com.apple.Xcode.501/SharedPrecompiledHeaders/Carbon-elbzneltbpgvelfozhdnvsjtscyu/Carbon.h -c /Users/josephmoore/OF/apps/Studio/vector/src/geometry.cpp -o /Users/josephmoore/OF/apps/Studio/vector/build/vector.build/Debug/vector.build/Objects-normal/i386/geometry.o
+lSLF03#21%IDEActivityLogSection1@2#32"com.apple.dt.IDE.BuildLogSection65"Compile /Users/josephmoore/OF/apps/Studio/vector/src/geometry.cppc23399f73f19b741^4d324ef93f19b741^-95"i686-apple-darwin10-llvm-gcc-4.2: -lpthread: linker input file unused because linking not done-0#0#0#-19%DVTDocumentLocation2@73"file://localhost/Users/josephmoore/OF/apps/Studio/vector/src/geometry.cpp0000000000000000^2078"CompileC build/vector.build/Debug/vector.build/Objects-normal/i386/geometry.o src/geometry.cpp normal i386 c++ com.apple.compilers.llvmgcc42    cd /Users/josephmoore/OF/apps/Studio/vector    setenv LANG en_US.US-ASCII    /Developer/usr/bin/llvm-gcc-4.2 -x c++ -arch i386 -fmessage-length=0 -pipe -Wno-trigraphs -fpascal-strings -O0 -isysroot /Developer/SDKs/MacOSX10.6.sdk -fasm-blocks -Wno-invalid-offsetof -mmacosx-version-min=10.6 -gdwarf-2 -msse3 -mssse3 -I/Users/josephmoore/OF/apps/Studio/vector/build/vector.build/Debug/vector.build/vectorDebug.hmap -I/Users/josephmoore/OF/apps/Studio/vector/bin/include -I../../../libs/openFrameworks -I../../../libs/openFrameworks/3d -I../../../libs/openFrameworks/app -I../../../libs/openFrameworks/communication -I../../../libs/openFrameworks/events -I../../../libs/openFrameworks/gl -I../../../libs/openFrameworks/graphics -I../../../libs/openFrameworks/math -I../../../libs/openFrameworks/sound -I../../../libs/openFrameworks/types -I../../../libs/openFrameworks/utils -I../../../libs/openFrameworks/video -I../../../libs/poco/include -I../../../libs/freetype/include -I../../../libs/freetype/include/freetype2 -I../../../libs/fmodex/include -I../../../libs/glew/include -I../../../libs/FreeImage/include -I../../../libs/tess2/include -I../../../libs/cairo/include/cairo -I../../../libs/rtAudio/include -I/Users/josephmoore/OF/apps/Studio/vector/build/vector.build/Debug/vector.build/DerivedSources/i386 -I/Users/josephmoore/OF/apps/Studio/vector/build/vector.build/Debug/vector.build/DerivedSources -F/Users/josephmoore/OF/apps/Studio/vector/bin -F/Users/josephmoore/OF/apps/Studio/vector/../../../libs/glut/lib/osx -F/Users/josephmoore/OF/apps/Studio/vector -D__MACOSX_CORE__ -lpthread -mtune=native -include /var/folders/Dc/DcObbznzEJyqvLZguF+Lwk+++TI/-Caches-/com.apple.Xcode.501/SharedPrecompiledHeaders/Carbon-bgjtnldsaokiwiauzhagwxvrdtof/Carbon.h -c /Users/josephmoore/OF/apps/Studio/vector/src/geometry.cpp -o /Users/josephmoore/OF/apps/Studio/vector/build/vector.build/Debug/vector.build/Objects-normal/i386/geometry.o
+
+CCompileC build/vector.build/Debug/vector.build/Objects-normal/i386/geometry.o /Users/josephmoore/OF/apps/dionysius/vector/src/geometry.cpp normal i386 c++ com.apple.compilers.llvmgcc42
+s389341124.448150
+e389341126.668488
+r1
+xCompileC
+xbuild/vector.build/Debug/vector.build/Objects-normal/i386/geometry.o
+x/Users/josephmoore/OF/apps/dionysius/vector/src/geometry.cpp
+xnormal
+xi386
+xc++
+xcom.apple.compilers.llvmgcc42
+oi686-apple-darwin10-llvm-gcc-4.2: -lpthread: linker input file unused because linking not done
+lSLF03#21%IDEActivityLogSection1@2#32"com.apple.dt.IDE.BuildLogSection68"Compile /Users/josephmoore/OF/apps/dionysius/vector/src/geometry.cppdcd672c4df34b741^e621abc6df34b741^-95"i686-apple-darwin10-llvm-gcc-4.2: -lpthread: linker input file unused because linking not done-0#0#0#-19%DVTDocumentLocation2@76"file://localhost/Users/josephmoore/OF/apps/dionysius/vector/src/geometry.cpp0000000000000000^2108"CompileC build/vector.build/Debug/vector.build/Objects-normal/i386/geometry.o src/geometry.cpp normal i386 c++ com.apple.compilers.llvmgcc42    cd /Users/josephmoore/OF/apps/dionysius/vector    setenv LANG en_US.US-ASCII    /Developer/usr/bin/llvm-gcc-4.2 -x c++ -arch i386 -fmessage-length=0 -pipe -Wno-trigraphs -fpascal-strings -O0 -isysroot /Developer/SDKs/MacOSX10.6.sdk -fasm-blocks -Wno-invalid-offsetof -mmacosx-version-min=10.6 -gdwarf-2 -msse3 -mssse3 -I/Users/josephmoore/OF/apps/dionysius/vector/build/vector.build/Debug/vector.build/vectorDebug.hmap -I/Users/josephmoore/OF/apps/dionysius/vector/bin/include -I../../../libs/openFrameworks -I../../../libs/openFrameworks/3d -I../../../libs/openFrameworks/app -I../../../libs/openFrameworks/communication -I../../../libs/openFrameworks/events -I../../../libs/openFrameworks/gl -I../../../libs/openFrameworks/graphics -I../../../libs/openFrameworks/math -I../../../libs/openFrameworks/sound -I../../../libs/openFrameworks/types -I../../../libs/openFrameworks/utils -I../../../libs/openFrameworks/video -I../../../libs/poco/include -I../../../libs/freetype/include -I../../../libs/freetype/include/freetype2 -I../../../libs/fmodex/include -I../../../libs/glew/include -I../../../libs/FreeImage/include -I../../../libs/tess2/include -I../../../libs/cairo/include/cairo -I../../../libs/rtAudio/include -I/Users/josephmoore/OF/apps/dionysius/vector/build/vector.build/Debug/vector.build/DerivedSources/i386 -I/Users/josephmoore/OF/apps/dionysius/vector/build/vector.build/Debug/vector.build/DerivedSources -F/Users/josephmoore/OF/apps/dionysius/vector/bin -F/Users/josephmoore/OF/apps/dionysius/vector/../../../libs/glut/lib/osx -F/Users/josephmoore/OF/apps/dionysius/vector -D__MACOSX_CORE__ -lpthread -mtune=native -include /var/folders/Dc/DcObbznzEJyqvLZguF+Lwk+++TI/-Caches-/com.apple.Xcode.501/SharedPrecompiledHeaders/Carbon-bmjrktjmoyvpxagbylvcnybmvztq/Carbon.h -c /Users/josephmoore/OF/apps/dionysius/vector/src/geometry.cpp -o /Users/josephmoore/OF/apps/dionysius/vector/build/vector.build/Debug/vector.build/Objects-normal/i386/geometry.o
+
+CCompileC build/vector.build/Debug/vector.build/Objects-normal/i386/main-22684E7332B74F77.o /Users/josephmoore/OF/apps/dionysius/vector/ofxAnimatable/example/main.cpp normal i386 c++ com.apple.compilers.llvmgcc42
+s389341129.017691
+e389341130.999324
+r1
+xCompileC
+xbuild/vector.build/Debug/vector.build/Objects-normal/i386/main-22684E7332B74F77.o
+x/Users/josephmoore/OF/apps/dionysius/vector/ofxAnimatable/example/main.cpp
+xnormal
+xi386
+xc++
+xcom.apple.compilers.llvmgcc42
+oi686-apple-darwin10-llvm-gcc-4.2: -lpthread: linker input file unused because linking not done
+lSLF03#21%IDEActivityLogSection1@2#32"com.apple.dt.IDE.BuildLogSection82"Compile /Users/josephmoore/OF/apps/dionysius/vector/ofxAnimatable/example/main.cpp40a304c9df34b741^b3d3ffcadf34b741^-95"i686-apple-darwin10-llvm-gcc-4.2: -lpthread: linker input file unused because linking not done-0#0#0#-19%DVTDocumentLocation2@90"file://localhost/Users/josephmoore/OF/apps/dionysius/vector/ofxAnimatable/example/main.cpp0000000000000000^2162"CompileC build/vector.build/Debug/vector.build/Objects-normal/i386/main-22684E7332B74F77.o ofxAnimatable/example/main.cpp normal i386 c++ com.apple.compilers.llvmgcc42    cd /Users/josephmoore/OF/apps/dionysius/vector    setenv LANG en_US.US-ASCII    /Developer/usr/bin/llvm-gcc-4.2 -x c++ -arch i386 -fmessage-length=0 -pipe -Wno-trigraphs -fpascal-strings -O0 -isysroot /Developer/SDKs/MacOSX10.6.sdk -fasm-blocks -Wno-invalid-offsetof -mmacosx-version-min=10.6 -gdwarf-2 -msse3 -mssse3 -I/Users/josephmoore/OF/apps/dionysius/vector/build/vector.build/Debug/vector.build/vectorDebug.hmap -I/Users/josephmoore/OF/apps/dionysius/vector/bin/include -I../../../libs/openFrameworks -I../../../libs/openFrameworks/3d -I../../../libs/openFrameworks/app -I../../../libs/openFrameworks/communication -I../../../libs/openFrameworks/events -I../../../libs/openFrameworks/gl -I../../../libs/openFrameworks/graphics -I../../../libs/openFrameworks/math -I../../../libs/openFrameworks/sound -I../../../libs/openFrameworks/types -I../../../libs/openFrameworks/utils -I../../../libs/openFrameworks/video -I../../../libs/poco/include -I../../../libs/freetype/include -I../../../libs/freetype/include/freetype2 -I../../../libs/fmodex/include -I../../../libs/glew/include -I../../../libs/FreeImage/include -I../../../libs/tess2/include -I../../../libs/cairo/include/cairo -I../../../libs/rtAudio/include -I/Users/josephmoore/OF/apps/dionysius/vector/build/vector.build/Debug/vector.build/DerivedSources/i386 -I/Users/josephmoore/OF/apps/dionysius/vector/build/vector.build/Debug/vector.build/DerivedSources -F/Users/josephmoore/OF/apps/dionysius/vector/bin -F/Users/josephmoore/OF/apps/dionysius/vector/../../../libs/glut/lib/osx -F/Users/josephmoore/OF/apps/dionysius/vector -D__MACOSX_CORE__ -lpthread -mtune=native -include /var/folders/Dc/DcObbznzEJyqvLZguF+Lwk+++TI/-Caches-/com.apple.Xcode.501/SharedPrecompiledHeaders/Carbon-bmjrktjmoyvpxagbylvcnybmvztq/Carbon.h -c /Users/josephmoore/OF/apps/dionysius/vector/ofxAnimatable/example/main.cpp -o /Users/josephmoore/OF/apps/dionysius/vector/build/vector.build/Debug/vector.build/Objects-normal/i386/main-22684E7332B74F77.o
+
+CCompileC build/vector.build/Debug/vector.build/Objects-normal/i386/main-82227D70F1DD098B.o /Users/josephmoore/OF/apps/dionysius/vector/src/main.cpp normal i386 c++ com.apple.compilers.llvmgcc42
+s389341126.669673
+e389341129.016506
+r1
+xCompileC
+xbuild/vector.build/Debug/vector.build/Objects-normal/i386/main-82227D70F1DD098B.o
+x/Users/josephmoore/OF/apps/dionysius/vector/src/main.cpp
+xnormal
+xi386
+xc++
+xcom.apple.compilers.llvmgcc42
+oi686-apple-darwin10-llvm-gcc-4.2: -lpthread: linker input file unused because linking not done
+lSLF03#21%IDEActivityLogSection1@2#32"com.apple.dt.IDE.BuildLogSection64"Compile /Users/josephmoore/OF/apps/dionysius/vector/src/main.cpp768cabc6df34b741^a64204c9df34b741^-95"i686-apple-darwin10-llvm-gcc-4.2: -lpthread: linker input file unused because linking not done-0#0#0#-19%DVTDocumentLocation2@72"file://localhost/Users/josephmoore/OF/apps/dionysius/vector/src/main.cpp0000000000000000^2126"CompileC build/vector.build/Debug/vector.build/Objects-normal/i386/main-82227D70F1DD098B.o src/main.cpp normal i386 c++ com.apple.compilers.llvmgcc42    cd /Users/josephmoore/OF/apps/dionysius/vector    setenv LANG en_US.US-ASCII    /Developer/usr/bin/llvm-gcc-4.2 -x c++ -arch i386 -fmessage-length=0 -pipe -Wno-trigraphs -fpascal-strings -O0 -isysroot /Developer/SDKs/MacOSX10.6.sdk -fasm-blocks -Wno-invalid-offsetof -mmacosx-version-min=10.6 -gdwarf-2 -msse3 -mssse3 -I/Users/josephmoore/OF/apps/dionysius/vector/build/vector.build/Debug/vector.build/vectorDebug.hmap -I/Users/josephmoore/OF/apps/dionysius/vector/bin/include -I../../../libs/openFrameworks -I../../../libs/openFrameworks/3d -I../../../libs/openFrameworks/app -I../../../libs/openFrameworks/communication -I../../../libs/openFrameworks/events -I../../../libs/openFrameworks/gl -I../../../libs/openFrameworks/graphics -I../../../libs/openFrameworks/math -I../../../libs/openFrameworks/sound -I../../../libs/openFrameworks/types -I../../../libs/openFrameworks/utils -I../../../libs/openFrameworks/video -I../../../libs/poco/include -I../../../libs/freetype/include -I../../../libs/freetype/include/freetype2 -I../../../libs/fmodex/include -I../../../libs/glew/include -I../../../libs/FreeImage/include -I../../../libs/tess2/include -I../../../libs/cairo/include/cairo -I../../../libs/rtAudio/include -I/Users/josephmoore/OF/apps/dionysius/vector/build/vector.build/Debug/vector.build/DerivedSources/i386 -I/Users/josephmoore/OF/apps/dionysius/vector/build/vector.build/Debug/vector.build/DerivedSources -F/Users/josephmoore/OF/apps/dionysius/vector/bin -F/Users/josephmoore/OF/apps/dionysius/vector/../../../libs/glut/lib/osx -F/Users/josephmoore/OF/apps/dionysius/vector -D__MACOSX_CORE__ -lpthread -mtune=native -include /var/folders/Dc/DcObbznzEJyqvLZguF+Lwk+++TI/-Caches-/com.apple.Xcode.501/SharedPrecompiledHeaders/Carbon-bmjrktjmoyvpxagbylvcnybmvztq/Carbon.h -c /Users/josephmoore/OF/apps/dionysius/vector/src/main.cpp -o /Users/josephmoore/OF/apps/dionysius/vector/build/vector.build/Debug/vector.build/Objects-normal/i386/main-82227D70F1DD098B.o
 
 CCompileC build/vector.build/Debug/vector.build/Objects-normal/i386/main.o /Users/josephmoore/OF/apps/Studio/vector/src/main.cpp normal i386 c++ com.apple.compilers.llvmgcc42
-s387307346.122657
-e387307347.772945
+s387583386.971305
+e387583420.285395
 r1
 xCompileC
 xbuild/vector.build/Debug/vector.build/Objects-normal/i386/main.o
@@ -1659,11 +2295,137 @@ xi386
 xc++
 xcom.apple.compilers.llvmgcc42
 oi686-apple-darwin10-llvm-gcc-4.2: -lpthread: linker input file unused because linking not done
-lSLF03#21%IDEActivityLogSection1@2#32"com.apple.dt.IDE.BuildLogSection61"Compile /Users/josephmoore/OF/apps/Studio/vector/src/main.cpp5a831f52d715b741^0ce8c553d715b741^-95"i686-apple-darwin10-llvm-gcc-4.2: -lpthread: linker input file unused because linking not done-0#0#0#-19%DVTDocumentLocation2@69"file://localhost/Users/josephmoore/OF/apps/Studio/vector/src/main.cpp0000000000000000^2019"CompileC build/vector.build/Debug/vector.build/Objects-normal/i386/main.o src/main.cpp normal i386 c++ com.apple.compilers.llvmgcc42    cd /Users/josephmoore/OF/apps/Studio/vector    setenv LANG en_US.US-ASCII    /Developer/usr/bin/llvm-gcc-4.2 -x c++ -arch i386 -fmessage-length=0 -pipe -Wno-trigraphs -fpascal-strings -O0 -isysroot /Developer/SDKs/MacOSX10.6.sdk -fasm-blocks -Wno-invalid-offsetof -mmacosx-version-min=10.6 -gdwarf-2 -msse3 -mssse3 -I/Users/josephmoore/OF/apps/Studio/vector/build/vector.build/Debug/vector.build/vectorDebug.hmap -I/Users/josephmoore/OF/apps/Studio/vector/bin/include -I../../../libs/openFrameworks -I../../../libs/openFrameworks/3d -I../../../libs/openFrameworks/app -I../../../libs/openFrameworks/communication -I../../../libs/openFrameworks/events -I../../../libs/openFrameworks/gl -I../../../libs/openFrameworks/graphics -I../../../libs/openFrameworks/math -I../../../libs/openFrameworks/sound -I../../../libs/openFrameworks/types -I../../../libs/openFrameworks/utils -I../../../libs/openFrameworks/video -I../../../libs/poco/include -I../../../libs/freetype/include -I../../../libs/freetype/include/freetype2 -I../../../libs/fmodex/include -I../../../libs/glew/include -I../../../libs/FreeImage/include -I../../../libs/tess2/include -I../../../libs/cairo/include/cairo -I../../../libs/rtAudio/include -I/Users/josephmoore/OF/apps/Studio/vector/build/vector.build/Debug/vector.build/DerivedSources/i386 -I/Users/josephmoore/OF/apps/Studio/vector/build/vector.build/Debug/vector.build/DerivedSources -F/Users/josephmoore/OF/apps/Studio/vector/bin -F/Users/josephmoore/OF/apps/Studio/vector/../../../libs/glut/lib/osx -D__MACOSX_CORE__ -lpthread -mtune=native -include /var/folders/Dc/DcObbznzEJyqvLZguF+Lwk+++TI/-Caches-/com.apple.Xcode.501/SharedPrecompiledHeaders/Carbon-elbzneltbpgvelfozhdnvsjtscyu/Carbon.h -c /Users/josephmoore/OF/apps/Studio/vector/src/main.cpp -o /Users/josephmoore/OF/apps/Studio/vector/build/vector.build/Debug/vector.build/Objects-normal/i386/main.o
+lSLF03#21%IDEActivityLogSection1@2#32"com.apple.dt.IDE.BuildLogSection61"Compile /Users/josephmoore/OF/apps/Studio/vector/src/main.cpp32c9f89a0d1ab741^171149bc0d1ab741^-95"i686-apple-darwin10-llvm-gcc-4.2: -lpthread: linker input file unused because linking not done-0#0#0#-19%DVTDocumentLocation2@69"file://localhost/Users/josephmoore/OF/apps/Studio/vector/src/main.cpp0000000000000000^2062"CompileC build/vector.build/Debug/vector.build/Objects-normal/i386/main.o src/main.cpp normal i386 c++ com.apple.compilers.llvmgcc42    cd /Users/josephmoore/OF/apps/Studio/vector    setenv LANG en_US.US-ASCII    /Developer/usr/bin/llvm-gcc-4.2 -x c++ -arch i386 -fmessage-length=0 -pipe -Wno-trigraphs -fpascal-strings -O0 -isysroot /Developer/SDKs/MacOSX10.6.sdk -fasm-blocks -Wno-invalid-offsetof -mmacosx-version-min=10.6 -gdwarf-2 -msse3 -mssse3 -I/Users/josephmoore/OF/apps/Studio/vector/build/vector.build/Debug/vector.build/vectorDebug.hmap -I/Users/josephmoore/OF/apps/Studio/vector/bin/include -I../../../libs/openFrameworks -I../../../libs/openFrameworks/3d -I../../../libs/openFrameworks/app -I../../../libs/openFrameworks/communication -I../../../libs/openFrameworks/events -I../../../libs/openFrameworks/gl -I../../../libs/openFrameworks/graphics -I../../../libs/openFrameworks/math -I../../../libs/openFrameworks/sound -I../../../libs/openFrameworks/types -I../../../libs/openFrameworks/utils -I../../../libs/openFrameworks/video -I../../../libs/poco/include -I../../../libs/freetype/include -I../../../libs/freetype/include/freetype2 -I../../../libs/fmodex/include -I../../../libs/glew/include -I../../../libs/FreeImage/include -I../../../libs/tess2/include -I../../../libs/cairo/include/cairo -I../../../libs/rtAudio/include -I/Users/josephmoore/OF/apps/Studio/vector/build/vector.build/Debug/vector.build/DerivedSources/i386 -I/Users/josephmoore/OF/apps/Studio/vector/build/vector.build/Debug/vector.build/DerivedSources -F/Users/josephmoore/OF/apps/Studio/vector/bin -F/Users/josephmoore/OF/apps/Studio/vector/../../../libs/glut/lib/osx -F/Users/josephmoore/OF/apps/Studio/vector -D__MACOSX_CORE__ -lpthread -mtune=native -include /var/folders/Dc/DcObbznzEJyqvLZguF+Lwk+++TI/-Caches-/com.apple.Xcode.501/SharedPrecompiledHeaders/Carbon-bgjtnldsaokiwiauzhagwxvrdtof/Carbon.h -c /Users/josephmoore/OF/apps/Studio/vector/src/main.cpp -o /Users/josephmoore/OF/apps/Studio/vector/build/vector.build/Debug/vector.build/Objects-normal/i386/main.o
+
+CCompileC build/vector.build/Debug/vector.build/Objects-normal/i386/main.o /Users/josephmoore/OF/apps/dionysius/vector/src/main.cpp normal i386 c++ com.apple.compilers.llvmgcc42
+s389332982.892668
+e389332992.982542
+r1
+xCompileC
+xbuild/vector.build/Debug/vector.build/Objects-normal/i386/main.o
+x/Users/josephmoore/OF/apps/dionysius/vector/src/main.cpp
+xnormal
+xi386
+xc++
+xcom.apple.compilers.llvmgcc42
+oi686-apple-darwin10-llvm-gcc-4.2: -lpthread: linker input file unused because linking not done
+lSLF03#21%IDEActivityLogSection1@2#32"com.apple.dt.IDE.BuildLogSection64"Compile /Users/josephmoore/OF/apps/dionysius/vector/src/main.cpp31b2e4f6bf34b741^be87fb00c034b741^-95"i686-apple-darwin10-llvm-gcc-4.2: -lpthread: linker input file unused because linking not done-0#0#0#-19%DVTDocumentLocation2@72"file://localhost/Users/josephmoore/OF/apps/dionysius/vector/src/main.cpp0000000000000000^2092"CompileC build/vector.build/Debug/vector.build/Objects-normal/i386/main.o src/main.cpp normal i386 c++ com.apple.compilers.llvmgcc42    cd /Users/josephmoore/OF/apps/dionysius/vector    setenv LANG en_US.US-ASCII    /Developer/usr/bin/llvm-gcc-4.2 -x c++ -arch i386 -fmessage-length=0 -pipe -Wno-trigraphs -fpascal-strings -O0 -isysroot /Developer/SDKs/MacOSX10.6.sdk -fasm-blocks -Wno-invalid-offsetof -mmacosx-version-min=10.6 -gdwarf-2 -msse3 -mssse3 -I/Users/josephmoore/OF/apps/dionysius/vector/build/vector.build/Debug/vector.build/vectorDebug.hmap -I/Users/josephmoore/OF/apps/dionysius/vector/bin/include -I../../../libs/openFrameworks -I../../../libs/openFrameworks/3d -I../../../libs/openFrameworks/app -I../../../libs/openFrameworks/communication -I../../../libs/openFrameworks/events -I../../../libs/openFrameworks/gl -I../../../libs/openFrameworks/graphics -I../../../libs/openFrameworks/math -I../../../libs/openFrameworks/sound -I../../../libs/openFrameworks/types -I../../../libs/openFrameworks/utils -I../../../libs/openFrameworks/video -I../../../libs/poco/include -I../../../libs/freetype/include -I../../../libs/freetype/include/freetype2 -I../../../libs/fmodex/include -I../../../libs/glew/include -I../../../libs/FreeImage/include -I../../../libs/tess2/include -I../../../libs/cairo/include/cairo -I../../../libs/rtAudio/include -I/Users/josephmoore/OF/apps/dionysius/vector/build/vector.build/Debug/vector.build/DerivedSources/i386 -I/Users/josephmoore/OF/apps/dionysius/vector/build/vector.build/Debug/vector.build/DerivedSources -F/Users/josephmoore/OF/apps/dionysius/vector/bin -F/Users/josephmoore/OF/apps/dionysius/vector/../../../libs/glut/lib/osx -F/Users/josephmoore/OF/apps/dionysius/vector -D__MACOSX_CORE__ -lpthread -mtune=native -include /var/folders/Dc/DcObbznzEJyqvLZguF+Lwk+++TI/-Caches-/com.apple.Xcode.501/SharedPrecompiledHeaders/Carbon-bmjrktjmoyvpxagbylvcnybmvztq/Carbon.h -c /Users/josephmoore/OF/apps/dionysius/vector/src/main.cpp -o /Users/josephmoore/OF/apps/dionysius/vector/build/vector.build/Debug/vector.build/Objects-normal/i386/main.o
+
+CCompileC build/vector.build/Debug/vector.build/Objects-normal/i386/ofxAnimatable.o /Users/josephmoore/OF/apps/dionysius/vector/ofxAnimatable/src/ofxAnimatable.cpp normal i386 c++ com.apple.compilers.llvmgcc42
+s389341131.000507
+e389341132.996352
+r1
+xCompileC
+xbuild/vector.build/Debug/vector.build/Objects-normal/i386/ofxAnimatable.o
+x/Users/josephmoore/OF/apps/dionysius/vector/ofxAnimatable/src/ofxAnimatable.cpp
+xnormal
+xi386
+xc++
+xcom.apple.compilers.llvmgcc42
+oi686-apple-darwin10-llvm-gcc-4.2: -lpthread: linker input file unused because linking not done
+lSLF03#21%IDEActivityLogSection1@2#32"com.apple.dt.IDE.BuildLogSection87"Compile /Users/josephmoore/OF/apps/dionysius/vector/ofxAnimatable/src/ofxAnimatable.cppee3d00cbdf34b741^cb10ffccdf34b741^-95"i686-apple-darwin10-llvm-gcc-4.2: -lpthread: linker input file unused because linking not done-0#0#0#-19%DVTDocumentLocation2@95"file://localhost/Users/josephmoore/OF/apps/dionysius/vector/ofxAnimatable/src/ofxAnimatable.cpp0000000000000000^2156"CompileC build/vector.build/Debug/vector.build/Objects-normal/i386/ofxAnimatable.o ofxAnimatable/src/ofxAnimatable.cpp normal i386 c++ com.apple.compilers.llvmgcc42    cd /Users/josephmoore/OF/apps/dionysius/vector    setenv LANG en_US.US-ASCII    /Developer/usr/bin/llvm-gcc-4.2 -x c++ -arch i386 -fmessage-length=0 -pipe -Wno-trigraphs -fpascal-strings -O0 -isysroot /Developer/SDKs/MacOSX10.6.sdk -fasm-blocks -Wno-invalid-offsetof -mmacosx-version-min=10.6 -gdwarf-2 -msse3 -mssse3 -I/Users/josephmoore/OF/apps/dionysius/vector/build/vector.build/Debug/vector.build/vectorDebug.hmap -I/Users/josephmoore/OF/apps/dionysius/vector/bin/include -I../../../libs/openFrameworks -I../../../libs/openFrameworks/3d -I../../../libs/openFrameworks/app -I../../../libs/openFrameworks/communication -I../../../libs/openFrameworks/events -I../../../libs/openFrameworks/gl -I../../../libs/openFrameworks/graphics -I../../../libs/openFrameworks/math -I../../../libs/openFrameworks/sound -I../../../libs/openFrameworks/types -I../../../libs/openFrameworks/utils -I../../../libs/openFrameworks/video -I../../../libs/poco/include -I../../../libs/freetype/include -I../../../libs/freetype/include/freetype2 -I../../../libs/fmodex/include -I../../../libs/glew/include -I../../../libs/FreeImage/include -I../../../libs/tess2/include -I../../../libs/cairo/include/cairo -I../../../libs/rtAudio/include -I/Users/josephmoore/OF/apps/dionysius/vector/build/vector.build/Debug/vector.build/DerivedSources/i386 -I/Users/josephmoore/OF/apps/dionysius/vector/build/vector.build/Debug/vector.build/DerivedSources -F/Users/josephmoore/OF/apps/dionysius/vector/bin -F/Users/josephmoore/OF/apps/dionysius/vector/../../../libs/glut/lib/osx -F/Users/josephmoore/OF/apps/dionysius/vector -D__MACOSX_CORE__ -lpthread -mtune=native -include /var/folders/Dc/DcObbznzEJyqvLZguF+Lwk+++TI/-Caches-/com.apple.Xcode.501/SharedPrecompiledHeaders/Carbon-bmjrktjmoyvpxagbylvcnybmvztq/Carbon.h -c /Users/josephmoore/OF/apps/dionysius/vector/ofxAnimatable/src/ofxAnimatable.cpp -o /Users/josephmoore/OF/apps/dionysius/vector/build/vector.build/Debug/vector.build/Objects-normal/i386/ofxAnimatable.o
+
+CCompileC build/vector.build/Debug/vector.build/Objects-normal/i386/ofxAnimatableFloat.o /Users/josephmoore/OF/apps/dionysius/vector/ofxAnimatable/src/ofxAnimatableFloat.cpp normal i386 c++ com.apple.compilers.llvmgcc42
+s389341132.811612
+e389341134.707115
+r1
+xCompileC
+xbuild/vector.build/Debug/vector.build/Objects-normal/i386/ofxAnimatableFloat.o
+x/Users/josephmoore/OF/apps/dionysius/vector/ofxAnimatable/src/ofxAnimatableFloat.cpp
+xnormal
+xi386
+xc++
+xcom.apple.compilers.llvmgcc42
+oi686-apple-darwin10-llvm-gcc-4.2: -lpthread: linker input file unused because linking not done
+lSLF03#21%IDEActivityLogSection1@2#32"com.apple.dt.IDE.BuildLogSection92"Compile /Users/josephmoore/OF/apps/dionysius/vector/ofxAnimatable/src/ofxAnimatableFloat.cpp50e2cfccdf34b741^8d0db5cedf34b741^-95"i686-apple-darwin10-llvm-gcc-4.2: -lpthread: linker input file unused because linking not done-0#0#0#-19%DVTDocumentLocation2@100"file://localhost/Users/josephmoore/OF/apps/dionysius/vector/ofxAnimatable/src/ofxAnimatableFloat.cpp0000000000000000^2176"CompileC build/vector.build/Debug/vector.build/Objects-normal/i386/ofxAnimatableFloat.o ofxAnimatable/src/ofxAnimatableFloat.cpp normal i386 c++ com.apple.compilers.llvmgcc42    cd /Users/josephmoore/OF/apps/dionysius/vector    setenv LANG en_US.US-ASCII    /Developer/usr/bin/llvm-gcc-4.2 -x c++ -arch i386 -fmessage-length=0 -pipe -Wno-trigraphs -fpascal-strings -O0 -isysroot /Developer/SDKs/MacOSX10.6.sdk -fasm-blocks -Wno-invalid-offsetof -mmacosx-version-min=10.6 -gdwarf-2 -msse3 -mssse3 -I/Users/josephmoore/OF/apps/dionysius/vector/build/vector.build/Debug/vector.build/vectorDebug.hmap -I/Users/josephmoore/OF/apps/dionysius/vector/bin/include -I../../../libs/openFrameworks -I../../../libs/openFrameworks/3d -I../../../libs/openFrameworks/app -I../../../libs/openFrameworks/communication -I../../../libs/openFrameworks/events -I../../../libs/openFrameworks/gl -I../../../libs/openFrameworks/graphics -I../../../libs/openFrameworks/math -I../../../libs/openFrameworks/sound -I../../../libs/openFrameworks/types -I../../../libs/openFrameworks/utils -I../../../libs/openFrameworks/video -I../../../libs/poco/include -I../../../libs/freetype/include -I../../../libs/freetype/include/freetype2 -I../../../libs/fmodex/include -I../../../libs/glew/include -I../../../libs/FreeImage/include -I../../../libs/tess2/include -I../../../libs/cairo/include/cairo -I../../../libs/rtAudio/include -I/Users/josephmoore/OF/apps/dionysius/vector/build/vector.build/Debug/vector.build/DerivedSources/i386 -I/Users/josephmoore/OF/apps/dionysius/vector/build/vector.build/Debug/vector.build/DerivedSources -F/Users/josephmoore/OF/apps/dionysius/vector/bin -F/Users/josephmoore/OF/apps/dionysius/vector/../../../libs/glut/lib/osx -F/Users/josephmoore/OF/apps/dionysius/vector -D__MACOSX_CORE__ -lpthread -mtune=native -include /var/folders/Dc/DcObbznzEJyqvLZguF+Lwk+++TI/-Caches-/com.apple.Xcode.501/SharedPrecompiledHeaders/Carbon-bmjrktjmoyvpxagbylvcnybmvztq/Carbon.h -c /Users/josephmoore/OF/apps/dionysius/vector/ofxAnimatable/src/ofxAnimatableFloat.cpp -o /Users/josephmoore/OF/apps/dionysius/vector/build/vector.build/Debug/vector.build/Objects-normal/i386/ofxAnimatableFloat.o
+
+CCompileC build/vector.build/Debug/vector.build/Objects-normal/i386/ofxAnimatableOfColor.o /Users/josephmoore/OF/apps/dionysius/vector/ofxAnimatable/src/ofxAnimatableOfColor.cpp normal i386 c++ com.apple.compilers.llvmgcc42
+s389341132.998374
+e389341134.875634
+r1
+xCompileC
+xbuild/vector.build/Debug/vector.build/Objects-normal/i386/ofxAnimatableOfColor.o
+x/Users/josephmoore/OF/apps/dionysius/vector/ofxAnimatable/src/ofxAnimatableOfColor.cpp
+xnormal
+xi386
+xc++
+xcom.apple.compilers.llvmgcc42
+oi686-apple-darwin10-llvm-gcc-4.2: -lpthread: linker input file unused because linking not done
+lSLF03#21%IDEActivityLogSection1@2#32"com.apple.dt.IDE.BuildLogSection94"Compile /Users/josephmoore/OF/apps/dionysius/vector/ofxAnimatable/src/ofxAnimatableOfColor.cppccb6ffccdf34b741^f628e0cedf34b741^-95"i686-apple-darwin10-llvm-gcc-4.2: -lpthread: linker input file unused because linking not done-0#0#0#-19%DVTDocumentLocation2@102"file://localhost/Users/josephmoore/OF/apps/dionysius/vector/ofxAnimatable/src/ofxAnimatableOfColor.cpp0000000000000000^2184"CompileC build/vector.build/Debug/vector.build/Objects-normal/i386/ofxAnimatableOfColor.o ofxAnimatable/src/ofxAnimatableOfColor.cpp normal i386 c++ com.apple.compilers.llvmgcc42    cd /Users/josephmoore/OF/apps/dionysius/vector    setenv LANG en_US.US-ASCII    /Developer/usr/bin/llvm-gcc-4.2 -x c++ -arch i386 -fmessage-length=0 -pipe -Wno-trigraphs -fpascal-strings -O0 -isysroot /Developer/SDKs/MacOSX10.6.sdk -fasm-blocks -Wno-invalid-offsetof -mmacosx-version-min=10.6 -gdwarf-2 -msse3 -mssse3 -I/Users/josephmoore/OF/apps/dionysius/vector/build/vector.build/Debug/vector.build/vectorDebug.hmap -I/Users/josephmoore/OF/apps/dionysius/vector/bin/include -I../../../libs/openFrameworks -I../../../libs/openFrameworks/3d -I../../../libs/openFrameworks/app -I../../../libs/openFrameworks/communication -I../../../libs/openFrameworks/events -I../../../libs/openFrameworks/gl -I../../../libs/openFrameworks/graphics -I../../../libs/openFrameworks/math -I../../../libs/openFrameworks/sound -I../../../libs/openFrameworks/types -I../../../libs/openFrameworks/utils -I../../../libs/openFrameworks/video -I../../../libs/poco/include -I../../../libs/freetype/include -I../../../libs/freetype/include/freetype2 -I../../../libs/fmodex/include -I../../../libs/glew/include -I../../../libs/FreeImage/include -I../../../libs/tess2/include -I../../../libs/cairo/include/cairo -I../../../libs/rtAudio/include -I/Users/josephmoore/OF/apps/dionysius/vector/build/vector.build/Debug/vector.build/DerivedSources/i386 -I/Users/josephmoore/OF/apps/dionysius/vector/build/vector.build/Debug/vector.build/DerivedSources -F/Users/josephmoore/OF/apps/dionysius/vector/bin -F/Users/josephmoore/OF/apps/dionysius/vector/../../../libs/glut/lib/osx -F/Users/josephmoore/OF/apps/dionysius/vector -D__MACOSX_CORE__ -lpthread -mtune=native -include /var/folders/Dc/DcObbznzEJyqvLZguF+Lwk+++TI/-Caches-/com.apple.Xcode.501/SharedPrecompiledHeaders/Carbon-bmjrktjmoyvpxagbylvcnybmvztq/Carbon.h -c /Users/josephmoore/OF/apps/dionysius/vector/ofxAnimatable/src/ofxAnimatableOfColor.cpp -o /Users/josephmoore/OF/apps/dionysius/vector/build/vector.build/Debug/vector.build/Objects-normal/i386/ofxAnimatableOfColor.o
+
+CCompileC build/vector.build/Debug/vector.build/Objects-normal/i386/ofxAnimatableOfPoint.o /Users/josephmoore/OF/apps/dionysius/vector/ofxAnimatable/src/ofxAnimatableOfPoint.cpp normal i386 c++ com.apple.compilers.llvmgcc42
+s389341134.708297
+e389341136.290856
+r1
+xCompileC
+xbuild/vector.build/Debug/vector.build/Objects-normal/i386/ofxAnimatableOfPoint.o
+x/Users/josephmoore/OF/apps/dionysius/vector/ofxAnimatable/src/ofxAnimatableOfPoint.cpp
+xnormal
+xi386
+xc++
+xcom.apple.compilers.llvmgcc42
+oi686-apple-darwin10-llvm-gcc-4.2: -lpthread: linker input file unused because linking not done
+lSLF03#21%IDEActivityLogSection1@2#32"com.apple.dt.IDE.BuildLogSection94"Compile /Users/josephmoore/OF/apps/dionysius/vector/ofxAnimatable/src/ofxAnimatableOfPoint.cpp116fb5cedf34b741^9c8c4ad0df34b741^-95"i686-apple-darwin10-llvm-gcc-4.2: -lpthread: linker input file unused because linking not done-0#0#0#-19%DVTDocumentLocation2@102"file://localhost/Users/josephmoore/OF/apps/dionysius/vector/ofxAnimatable/src/ofxAnimatableOfPoint.cpp0000000000000000^2184"CompileC build/vector.build/Debug/vector.build/Objects-normal/i386/ofxAnimatableOfPoint.o ofxAnimatable/src/ofxAnimatableOfPoint.cpp normal i386 c++ com.apple.compilers.llvmgcc42    cd /Users/josephmoore/OF/apps/dionysius/vector    setenv LANG en_US.US-ASCII    /Developer/usr/bin/llvm-gcc-4.2 -x c++ -arch i386 -fmessage-length=0 -pipe -Wno-trigraphs -fpascal-strings -O0 -isysroot /Developer/SDKs/MacOSX10.6.sdk -fasm-blocks -Wno-invalid-offsetof -mmacosx-version-min=10.6 -gdwarf-2 -msse3 -mssse3 -I/Users/josephmoore/OF/apps/dionysius/vector/build/vector.build/Debug/vector.build/vectorDebug.hmap -I/Users/josephmoore/OF/apps/dionysius/vector/bin/include -I../../../libs/openFrameworks -I../../../libs/openFrameworks/3d -I../../../libs/openFrameworks/app -I../../../libs/openFrameworks/communication -I../../../libs/openFrameworks/events -I../../../libs/openFrameworks/gl -I../../../libs/openFrameworks/graphics -I../../../libs/openFrameworks/math -I../../../libs/openFrameworks/sound -I../../../libs/openFrameworks/types -I../../../libs/openFrameworks/utils -I../../../libs/openFrameworks/video -I../../../libs/poco/include -I../../../libs/freetype/include -I../../../libs/freetype/include/freetype2 -I../../../libs/fmodex/include -I../../../libs/glew/include -I../../../libs/FreeImage/include -I../../../libs/tess2/include -I../../../libs/cairo/include/cairo -I../../../libs/rtAudio/include -I/Users/josephmoore/OF/apps/dionysius/vector/build/vector.build/Debug/vector.build/DerivedSources/i386 -I/Users/josephmoore/OF/apps/dionysius/vector/build/vector.build/Debug/vector.build/DerivedSources -F/Users/josephmoore/OF/apps/dionysius/vector/bin -F/Users/josephmoore/OF/apps/dionysius/vector/../../../libs/glut/lib/osx -F/Users/josephmoore/OF/apps/dionysius/vector -D__MACOSX_CORE__ -lpthread -mtune=native -include /var/folders/Dc/DcObbznzEJyqvLZguF+Lwk+++TI/-Caches-/com.apple.Xcode.501/SharedPrecompiledHeaders/Carbon-bmjrktjmoyvpxagbylvcnybmvztq/Carbon.h -c /Users/josephmoore/OF/apps/dionysius/vector/ofxAnimatable/src/ofxAnimatableOfPoint.cpp -o /Users/josephmoore/OF/apps/dionysius/vector/build/vector.build/Debug/vector.build/Objects-normal/i386/ofxAnimatableOfPoint.o
+
+CCompileC build/vector.build/Debug/vector.build/Objects-normal/i386/ofxExtras.o /Users/josephmoore/OF/apps/Studio/vector/ofxExtras/src/ofxExtras.cpp normal i386 c++ com.apple.compilers.llvmgcc42
+s387532300.479282
+e387532303.161313
+r1
+xCompileC
+xbuild/vector.build/Debug/vector.build/Objects-normal/i386/ofxExtras.o
+x/Users/josephmoore/OF/apps/Studio/vector/ofxExtras/src/ofxExtras.cpp
+xnormal
+xi386
+xc++
+xcom.apple.compilers.llvmgcc42
+oi686-apple-darwin10-llvm-gcc-4.2: -lpthread: linker input file unused because linking not done
+lSLF03#21%IDEActivityLogSection1@2#32"com.apple.dt.IDE.BuildLogSection76"Compile /Users/josephmoore/OF/apps/Studio/vector/ofxExtras/src/ofxExtras.cppf2d17a0c4619b741^a451290f4619b741^-95"i686-apple-darwin10-llvm-gcc-4.2: -lpthread: linker input file unused because linking not done-0#0#0#-19%DVTDocumentLocation2@84"file://localhost/Users/josephmoore/OF/apps/Studio/vector/ofxExtras/src/ofxExtras.cpp0000000000000000^2102"CompileC build/vector.build/Debug/vector.build/Objects-normal/i386/ofxExtras.o ofxExtras/src/ofxExtras.cpp normal i386 c++ com.apple.compilers.llvmgcc42    cd /Users/josephmoore/OF/apps/Studio/vector    setenv LANG en_US.US-ASCII    /Developer/usr/bin/llvm-gcc-4.2 -x c++ -arch i386 -fmessage-length=0 -pipe -Wno-trigraphs -fpascal-strings -O0 -isysroot /Developer/SDKs/MacOSX10.6.sdk -fasm-blocks -Wno-invalid-offsetof -mmacosx-version-min=10.6 -gdwarf-2 -msse3 -mssse3 -I/Users/josephmoore/OF/apps/Studio/vector/build/vector.build/Debug/vector.build/vectorDebug.hmap -I/Users/josephmoore/OF/apps/Studio/vector/bin/include -I../../../libs/openFrameworks -I../../../libs/openFrameworks/3d -I../../../libs/openFrameworks/app -I../../../libs/openFrameworks/communication -I../../../libs/openFrameworks/events -I../../../libs/openFrameworks/gl -I../../../libs/openFrameworks/graphics -I../../../libs/openFrameworks/math -I../../../libs/openFrameworks/sound -I../../../libs/openFrameworks/types -I../../../libs/openFrameworks/utils -I../../../libs/openFrameworks/video -I../../../libs/poco/include -I../../../libs/freetype/include -I../../../libs/freetype/include/freetype2 -I../../../libs/fmodex/include -I../../../libs/glew/include -I../../../libs/FreeImage/include -I../../../libs/tess2/include -I../../../libs/cairo/include/cairo -I../../../libs/rtAudio/include -I/Users/josephmoore/OF/apps/Studio/vector/build/vector.build/Debug/vector.build/DerivedSources/i386 -I/Users/josephmoore/OF/apps/Studio/vector/build/vector.build/Debug/vector.build/DerivedSources -F/Users/josephmoore/OF/apps/Studio/vector/bin -F/Users/josephmoore/OF/apps/Studio/vector/../../../libs/glut/lib/osx -F/Users/josephmoore/OF/apps/Studio/vector -D__MACOSX_CORE__ -lpthread -mtune=native -include /var/folders/Dc/DcObbznzEJyqvLZguF+Lwk+++TI/-Caches-/com.apple.Xcode.501/SharedPrecompiledHeaders/Carbon-bgjtnldsaokiwiauzhagwxvrdtof/Carbon.h -c /Users/josephmoore/OF/apps/Studio/vector/ofxExtras/src/ofxExtras.cpp -o /Users/josephmoore/OF/apps/Studio/vector/build/vector.build/Debug/vector.build/Objects-normal/i386/ofxExtras.o
+
+CCompileC build/vector.build/Debug/vector.build/Objects-normal/i386/ofxExtras.o /Users/josephmoore/OF/apps/dionysius/vector/ofxExtras/src/ofxExtras.cpp normal i386 c++ com.apple.compilers.llvmgcc42
+s389341124.448146
+e389341127.966799
+r1
+xCompileC
+xbuild/vector.build/Debug/vector.build/Objects-normal/i386/ofxExtras.o
+x/Users/josephmoore/OF/apps/dionysius/vector/ofxExtras/src/ofxExtras.cpp
+xnormal
+xi386
+xc++
+xcom.apple.compilers.llvmgcc42
+oi686-apple-darwin10-llvm-gcc-4.2: -lpthread: linker input file unused because linking not done
+lSLF03#21%IDEActivityLogSection1@2#32"com.apple.dt.IDE.BuildLogSection79"Compile /Users/josephmoore/OF/apps/dionysius/vector/ofxExtras/src/ofxExtras.cppaad672c4df34b741^2480f7c7df34b741^-95"i686-apple-darwin10-llvm-gcc-4.2: -lpthread: linker input file unused because linking not done-0#0#0#-19%DVTDocumentLocation2@87"file://localhost/Users/josephmoore/OF/apps/dionysius/vector/ofxExtras/src/ofxExtras.cpp0000000000000000^2132"CompileC build/vector.build/Debug/vector.build/Objects-normal/i386/ofxExtras.o ofxExtras/src/ofxExtras.cpp normal i386 c++ com.apple.compilers.llvmgcc42    cd /Users/josephmoore/OF/apps/dionysius/vector    setenv LANG en_US.US-ASCII    /Developer/usr/bin/llvm-gcc-4.2 -x c++ -arch i386 -fmessage-length=0 -pipe -Wno-trigraphs -fpascal-strings -O0 -isysroot /Developer/SDKs/MacOSX10.6.sdk -fasm-blocks -Wno-invalid-offsetof -mmacosx-version-min=10.6 -gdwarf-2 -msse3 -mssse3 -I/Users/josephmoore/OF/apps/dionysius/vector/build/vector.build/Debug/vector.build/vectorDebug.hmap -I/Users/josephmoore/OF/apps/dionysius/vector/bin/include -I../../../libs/openFrameworks -I../../../libs/openFrameworks/3d -I../../../libs/openFrameworks/app -I../../../libs/openFrameworks/communication -I../../../libs/openFrameworks/events -I../../../libs/openFrameworks/gl -I../../../libs/openFrameworks/graphics -I../../../libs/openFrameworks/math -I../../../libs/openFrameworks/sound -I../../../libs/openFrameworks/types -I../../../libs/openFrameworks/utils -I../../../libs/openFrameworks/video -I../../../libs/poco/include -I../../../libs/freetype/include -I../../../libs/freetype/include/freetype2 -I../../../libs/fmodex/include -I../../../libs/glew/include -I../../../libs/FreeImage/include -I../../../libs/tess2/include -I../../../libs/cairo/include/cairo -I../../../libs/rtAudio/include -I/Users/josephmoore/OF/apps/dionysius/vector/build/vector.build/Debug/vector.build/DerivedSources/i386 -I/Users/josephmoore/OF/apps/dionysius/vector/build/vector.build/Debug/vector.build/DerivedSources -F/Users/josephmoore/OF/apps/dionysius/vector/bin -F/Users/josephmoore/OF/apps/dionysius/vector/../../../libs/glut/lib/osx -F/Users/josephmoore/OF/apps/dionysius/vector -D__MACOSX_CORE__ -lpthread -mtune=native -include /var/folders/Dc/DcObbznzEJyqvLZguF+Lwk+++TI/-Caches-/com.apple.Xcode.501/SharedPrecompiledHeaders/Carbon-bmjrktjmoyvpxagbylvcnybmvztq/Carbon.h -c /Users/josephmoore/OF/apps/dionysius/vector/ofxExtras/src/ofxExtras.cpp -o /Users/josephmoore/OF/apps/dionysius/vector/build/vector.build/Debug/vector.build/Objects-normal/i386/ofxExtras.o
+
+CCompileC build/vector.build/Debug/vector.build/Objects-normal/i386/testApp-9AE9AD9D642F5F78.o /Users/josephmoore/OF/apps/dionysius/vector/ofxAnimatable/example/testApp.cpp normal i386 c++ com.apple.compilers.llvmgcc42
+s389341130.767494
+e389341132.810212
+r1
+xCompileC
+xbuild/vector.build/Debug/vector.build/Objects-normal/i386/testApp-9AE9AD9D642F5F78.o
+x/Users/josephmoore/OF/apps/dionysius/vector/ofxAnimatable/example/testApp.cpp
+xnormal
+xi386
+xc++
+xcom.apple.compilers.llvmgcc42
+oi686-apple-darwin10-llvm-gcc-4.2: -lpthread: linker input file unused because linking not done
+lSLF03#21%IDEActivityLogSection1@2#32"com.apple.dt.IDE.BuildLogSection85"Compile /Users/josephmoore/OF/apps/dionysius/vector/ofxAnimatable/example/testApp.cpp5f98c4cadf34b741^ec69cfccdf34b741^-95"i686-apple-darwin10-llvm-gcc-4.2: -lpthread: linker input file unused because linking not done-0#0#0#-19%DVTDocumentLocation2@93"file://localhost/Users/josephmoore/OF/apps/dionysius/vector/ofxAnimatable/example/testApp.cpp0000000000000000^2174"CompileC build/vector.build/Debug/vector.build/Objects-normal/i386/testApp-9AE9AD9D642F5F78.o ofxAnimatable/example/testApp.cpp normal i386 c++ com.apple.compilers.llvmgcc42    cd /Users/josephmoore/OF/apps/dionysius/vector    setenv LANG en_US.US-ASCII    /Developer/usr/bin/llvm-gcc-4.2 -x c++ -arch i386 -fmessage-length=0 -pipe -Wno-trigraphs -fpascal-strings -O0 -isysroot /Developer/SDKs/MacOSX10.6.sdk -fasm-blocks -Wno-invalid-offsetof -mmacosx-version-min=10.6 -gdwarf-2 -msse3 -mssse3 -I/Users/josephmoore/OF/apps/dionysius/vector/build/vector.build/Debug/vector.build/vectorDebug.hmap -I/Users/josephmoore/OF/apps/dionysius/vector/bin/include -I../../../libs/openFrameworks -I../../../libs/openFrameworks/3d -I../../../libs/openFrameworks/app -I../../../libs/openFrameworks/communication -I../../../libs/openFrameworks/events -I../../../libs/openFrameworks/gl -I../../../libs/openFrameworks/graphics -I../../../libs/openFrameworks/math -I../../../libs/openFrameworks/sound -I../../../libs/openFrameworks/types -I../../../libs/openFrameworks/utils -I../../../libs/openFrameworks/video -I../../../libs/poco/include -I../../../libs/freetype/include -I../../../libs/freetype/include/freetype2 -I../../../libs/fmodex/include -I../../../libs/glew/include -I../../../libs/FreeImage/include -I../../../libs/tess2/include -I../../../libs/cairo/include/cairo -I../../../libs/rtAudio/include -I/Users/josephmoore/OF/apps/dionysius/vector/build/vector.build/Debug/vector.build/DerivedSources/i386 -I/Users/josephmoore/OF/apps/dionysius/vector/build/vector.build/Debug/vector.build/DerivedSources -F/Users/josephmoore/OF/apps/dionysius/vector/bin -F/Users/josephmoore/OF/apps/dionysius/vector/../../../libs/glut/lib/osx -F/Users/josephmoore/OF/apps/dionysius/vector -D__MACOSX_CORE__ -lpthread -mtune=native -include /var/folders/Dc/DcObbznzEJyqvLZguF+Lwk+++TI/-Caches-/com.apple.Xcode.501/SharedPrecompiledHeaders/Carbon-bmjrktjmoyvpxagbylvcnybmvztq/Carbon.h -c /Users/josephmoore/OF/apps/dionysius/vector/ofxAnimatable/example/testApp.cpp -o /Users/josephmoore/OF/apps/dionysius/vector/build/vector.build/Debug/vector.build/Objects-normal/i386/testApp-9AE9AD9D642F5F78.o
+
+CCompileC build/vector.build/Debug/vector.build/Objects-normal/i386/testApp-FAA3DC9B2355198C.o /Users/josephmoore/OF/apps/dionysius/vector/src/testApp.cpp normal i386 c++ com.apple.compilers.llvmgcc42
+s389341127.967996
+e389341130.766294
+r1
+xCompileC
+xbuild/vector.build/Debug/vector.build/Objects-normal/i386/testApp-FAA3DC9B2355198C.o
+x/Users/josephmoore/OF/apps/dionysius/vector/src/testApp.cpp
+xnormal
+xi386
+xc++
+xcom.apple.compilers.llvmgcc42
+oi686-apple-darwin10-llvm-gcc-4.2: -lpthread: linker input file unused because linking not done
+lSLF03#21%IDEActivityLogSection1@2#32"com.apple.dt.IDE.BuildLogSection67"Compile /Users/josephmoore/OF/apps/dionysius/vector/src/testApp.cppc0ebf7c7df34b741^a034c4cadf34b741^-95"i686-apple-darwin10-llvm-gcc-4.2: -lpthread: linker input file unused because linking not done-0#0#0#-19%DVTDocumentLocation2@75"file://localhost/Users/josephmoore/OF/apps/dionysius/vector/src/testApp.cpp0000000000000000^2138"CompileC build/vector.build/Debug/vector.build/Objects-normal/i386/testApp-FAA3DC9B2355198C.o src/testApp.cpp normal i386 c++ com.apple.compilers.llvmgcc42    cd /Users/josephmoore/OF/apps/dionysius/vector    setenv LANG en_US.US-ASCII    /Developer/usr/bin/llvm-gcc-4.2 -x c++ -arch i386 -fmessage-length=0 -pipe -Wno-trigraphs -fpascal-strings -O0 -isysroot /Developer/SDKs/MacOSX10.6.sdk -fasm-blocks -Wno-invalid-offsetof -mmacosx-version-min=10.6 -gdwarf-2 -msse3 -mssse3 -I/Users/josephmoore/OF/apps/dionysius/vector/build/vector.build/Debug/vector.build/vectorDebug.hmap -I/Users/josephmoore/OF/apps/dionysius/vector/bin/include -I../../../libs/openFrameworks -I../../../libs/openFrameworks/3d -I../../../libs/openFrameworks/app -I../../../libs/openFrameworks/communication -I../../../libs/openFrameworks/events -I../../../libs/openFrameworks/gl -I../../../libs/openFrameworks/graphics -I../../../libs/openFrameworks/math -I../../../libs/openFrameworks/sound -I../../../libs/openFrameworks/types -I../../../libs/openFrameworks/utils -I../../../libs/openFrameworks/video -I../../../libs/poco/include -I../../../libs/freetype/include -I../../../libs/freetype/include/freetype2 -I../../../libs/fmodex/include -I../../../libs/glew/include -I../../../libs/FreeImage/include -I../../../libs/tess2/include -I../../../libs/cairo/include/cairo -I../../../libs/rtAudio/include -I/Users/josephmoore/OF/apps/dionysius/vector/build/vector.build/Debug/vector.build/DerivedSources/i386 -I/Users/josephmoore/OF/apps/dionysius/vector/build/vector.build/Debug/vector.build/DerivedSources -F/Users/josephmoore/OF/apps/dionysius/vector/bin -F/Users/josephmoore/OF/apps/dionysius/vector/../../../libs/glut/lib/osx -F/Users/josephmoore/OF/apps/dionysius/vector -D__MACOSX_CORE__ -lpthread -mtune=native -include /var/folders/Dc/DcObbznzEJyqvLZguF+Lwk+++TI/-Caches-/com.apple.Xcode.501/SharedPrecompiledHeaders/Carbon-bmjrktjmoyvpxagbylvcnybmvztq/Carbon.h -c /Users/josephmoore/OF/apps/dionysius/vector/src/testApp.cpp -o /Users/josephmoore/OF/apps/dionysius/vector/build/vector.build/Debug/vector.build/Objects-normal/i386/testApp-FAA3DC9B2355198C.o
 
 CCompileC build/vector.build/Debug/vector.build/Objects-normal/i386/testApp.o /Users/josephmoore/OF/apps/Studio/vector/src/testApp.cpp normal i386 c++ com.apple.compilers.llvmgcc42
-s387307346.122853
-e387307347.797473
+s388440618.938808
+e388440620.808374
 r1
 xCompileC
 xbuild/vector.build/Debug/vector.build/Objects-normal/i386/testApp.o
@@ -1673,17 +2435,43 @@ xi386
 xc++
 xcom.apple.compilers.llvmgcc42
 oi686-apple-darwin10-llvm-gcc-4.2: -lpthread: linker input file unused because linking not done
-lSLF03#21%IDEActivityLogSection1@2#32"com.apple.dt.IDE.BuildLogSection64"Compile /Users/josephmoore/OF/apps/Studio/vector/src/testApp.cpp6d8e1f52d715b741^4227cc53d715b741^-95"i686-apple-darwin10-llvm-gcc-4.2: -lpthread: linker input file unused because linking not done-0#0#0#-19%DVTDocumentLocation2@72"file://localhost/Users/josephmoore/OF/apps/Studio/vector/src/testApp.cpp0000000000000000^2031"CompileC build/vector.build/Debug/vector.build/Objects-normal/i386/testApp.o src/testApp.cpp normal i386 c++ com.apple.compilers.llvmgcc42    cd /Users/josephmoore/OF/apps/Studio/vector    setenv LANG en_US.US-ASCII    /Developer/usr/bin/llvm-gcc-4.2 -x c++ -arch i386 -fmessage-length=0 -pipe -Wno-trigraphs -fpascal-strings -O0 -isysroot /Developer/SDKs/MacOSX10.6.sdk -fasm-blocks -Wno-invalid-offsetof -mmacosx-version-min=10.6 -gdwarf-2 -msse3 -mssse3 -I/Users/josephmoore/OF/apps/Studio/vector/build/vector.build/Debug/vector.build/vectorDebug.hmap -I/Users/josephmoore/OF/apps/Studio/vector/bin/include -I../../../libs/openFrameworks -I../../../libs/openFrameworks/3d -I../../../libs/openFrameworks/app -I../../../libs/openFrameworks/communication -I../../../libs/openFrameworks/events -I../../../libs/openFrameworks/gl -I../../../libs/openFrameworks/graphics -I../../../libs/openFrameworks/math -I../../../libs/openFrameworks/sound -I../../../libs/openFrameworks/types -I../../../libs/openFrameworks/utils -I../../../libs/openFrameworks/video -I../../../libs/poco/include -I../../../libs/freetype/include -I../../../libs/freetype/include/freetype2 -I../../../libs/fmodex/include -I../../../libs/glew/include -I../../../libs/FreeImage/include -I../../../libs/tess2/include -I../../../libs/cairo/include/cairo -I../../../libs/rtAudio/include -I/Users/josephmoore/OF/apps/Studio/vector/build/vector.build/Debug/vector.build/DerivedSources/i386 -I/Users/josephmoore/OF/apps/Studio/vector/build/vector.build/Debug/vector.build/DerivedSources -F/Users/josephmoore/OF/apps/Studio/vector/bin -F/Users/josephmoore/OF/apps/Studio/vector/../../../libs/glut/lib/osx -D__MACOSX_CORE__ -lpthread -mtune=native -include /var/folders/Dc/DcObbznzEJyqvLZguF+Lwk+++TI/-Caches-/com.apple.Xcode.501/SharedPrecompiledHeaders/Carbon-elbzneltbpgvelfozhdnvsjtscyu/Carbon.h -c /Users/josephmoore/OF/apps/Studio/vector/src/testApp.cpp -o /Users/josephmoore/OF/apps/Studio/vector/build/vector.build/Debug/vector.build/Objects-normal/i386/testApp.o
+lSLF03#21%IDEActivityLogSection1@2#32"com.apple.dt.IDE.BuildLogSection64"Compile /Users/josephmoore/OF/apps/Studio/vector/src/testApp.cppef6ff02a2227b741^b5fece2c2227b741^-95"i686-apple-darwin10-llvm-gcc-4.2: -lpthread: linker input file unused because linking not done-0#0#0#-19%DVTDocumentLocation2@72"file://localhost/Users/josephmoore/OF/apps/Studio/vector/src/testApp.cpp0000000000000000^2074"CompileC build/vector.build/Debug/vector.build/Objects-normal/i386/testApp.o src/testApp.cpp normal i386 c++ com.apple.compilers.llvmgcc42    cd /Users/josephmoore/OF/apps/Studio/vector    setenv LANG en_US.US-ASCII    /Developer/usr/bin/llvm-gcc-4.2 -x c++ -arch i386 -fmessage-length=0 -pipe -Wno-trigraphs -fpascal-strings -O0 -isysroot /Developer/SDKs/MacOSX10.6.sdk -fasm-blocks -Wno-invalid-offsetof -mmacosx-version-min=10.6 -gdwarf-2 -msse3 -mssse3 -I/Users/josephmoore/OF/apps/Studio/vector/build/vector.build/Debug/vector.build/vectorDebug.hmap -I/Users/josephmoore/OF/apps/Studio/vector/bin/include -I../../../libs/openFrameworks -I../../../libs/openFrameworks/3d -I../../../libs/openFrameworks/app -I../../../libs/openFrameworks/communication -I../../../libs/openFrameworks/events -I../../../libs/openFrameworks/gl -I../../../libs/openFrameworks/graphics -I../../../libs/openFrameworks/math -I../../../libs/openFrameworks/sound -I../../../libs/openFrameworks/types -I../../../libs/openFrameworks/utils -I../../../libs/openFrameworks/video -I../../../libs/poco/include -I../../../libs/freetype/include -I../../../libs/freetype/include/freetype2 -I../../../libs/fmodex/include -I../../../libs/glew/include -I../../../libs/FreeImage/include -I../../../libs/tess2/include -I../../../libs/cairo/include/cairo -I../../../libs/rtAudio/include -I/Users/josephmoore/OF/apps/Studio/vector/build/vector.build/Debug/vector.build/DerivedSources/i386 -I/Users/josephmoore/OF/apps/Studio/vector/build/vector.build/Debug/vector.build/DerivedSources -F/Users/josephmoore/OF/apps/Studio/vector/bin -F/Users/josephmoore/OF/apps/Studio/vector/../../../libs/glut/lib/osx -F/Users/josephmoore/OF/apps/Studio/vector -D__MACOSX_CORE__ -lpthread -mtune=native -include /var/folders/Dc/DcObbznzEJyqvLZguF+Lwk+++TI/-Caches-/com.apple.Xcode.501/SharedPrecompiledHeaders/Carbon-bgjtnldsaokiwiauzhagwxvrdtof/Carbon.h -c /Users/josephmoore/OF/apps/Studio/vector/src/testApp.cpp -o /Users/josephmoore/OF/apps/Studio/vector/build/vector.build/Debug/vector.build/Objects-normal/i386/testApp.o
+
+CCompileC build/vector.build/Debug/vector.build/Objects-normal/i386/testApp.o /Users/josephmoore/OF/apps/dionysius/vector/src/testApp.cpp normal i386 c++ com.apple.compilers.llvmgcc42
+s389333131.474026
+e389333141.016869
+r1
+xCompileC
+xbuild/vector.build/Debug/vector.build/Objects-normal/i386/testApp.o
+x/Users/josephmoore/OF/apps/dionysius/vector/src/testApp.cpp
+xnormal
+xi386
+xc++
+xcom.apple.compilers.llvmgcc42
+oi686-apple-darwin10-llvm-gcc-4.2: -lpthread: linker input file unused because linking not done
+lSLF03#21%IDEActivityLogSection1@2#32"com.apple.dt.IDE.BuildLogSection67"Compile /Users/josephmoore/OF/apps/dionysius/vector/src/testApp.cpp6f84798bc034b741^df500495c034b741^-95"i686-apple-darwin10-llvm-gcc-4.2: -lpthread: linker input file unused because linking not done-0#0#0#-19%DVTDocumentLocation2@75"file://localhost/Users/josephmoore/OF/apps/dionysius/vector/src/testApp.cpp0000000000000000^2104"CompileC build/vector.build/Debug/vector.build/Objects-normal/i386/testApp.o src/testApp.cpp normal i386 c++ com.apple.compilers.llvmgcc42    cd /Users/josephmoore/OF/apps/dionysius/vector    setenv LANG en_US.US-ASCII    /Developer/usr/bin/llvm-gcc-4.2 -x c++ -arch i386 -fmessage-length=0 -pipe -Wno-trigraphs -fpascal-strings -O0 -isysroot /Developer/SDKs/MacOSX10.6.sdk -fasm-blocks -Wno-invalid-offsetof -mmacosx-version-min=10.6 -gdwarf-2 -msse3 -mssse3 -I/Users/josephmoore/OF/apps/dionysius/vector/build/vector.build/Debug/vector.build/vectorDebug.hmap -I/Users/josephmoore/OF/apps/dionysius/vector/bin/include -I../../../libs/openFrameworks -I../../../libs/openFrameworks/3d -I../../../libs/openFrameworks/app -I../../../libs/openFrameworks/communication -I../../../libs/openFrameworks/events -I../../../libs/openFrameworks/gl -I../../../libs/openFrameworks/graphics -I../../../libs/openFrameworks/math -I../../../libs/openFrameworks/sound -I../../../libs/openFrameworks/types -I../../../libs/openFrameworks/utils -I../../../libs/openFrameworks/video -I../../../libs/poco/include -I../../../libs/freetype/include -I../../../libs/freetype/include/freetype2 -I../../../libs/fmodex/include -I../../../libs/glew/include -I../../../libs/FreeImage/include -I../../../libs/tess2/include -I../../../libs/cairo/include/cairo -I../../../libs/rtAudio/include -I/Users/josephmoore/OF/apps/dionysius/vector/build/vector.build/Debug/vector.build/DerivedSources/i386 -I/Users/josephmoore/OF/apps/dionysius/vector/build/vector.build/Debug/vector.build/DerivedSources -F/Users/josephmoore/OF/apps/dionysius/vector/bin -F/Users/josephmoore/OF/apps/dionysius/vector/../../../libs/glut/lib/osx -F/Users/josephmoore/OF/apps/dionysius/vector -D__MACOSX_CORE__ -lpthread -mtune=native -include /var/folders/Dc/DcObbznzEJyqvLZguF+Lwk+++TI/-Caches-/com.apple.Xcode.501/SharedPrecompiledHeaders/Carbon-bmjrktjmoyvpxagbylvcnybmvztq/Carbon.h -c /Users/josephmoore/OF/apps/dionysius/vector/src/testApp.cpp -o /Users/josephmoore/OF/apps/dionysius/vector/build/vector.build/Debug/vector.build/Objects-normal/i386/testApp.o
 
 CLd /Users/josephmoore/OF/apps/Studio/vector/bin/vectorDebug.app/Contents/MacOS/vectorDebug normal i386
-s387307349.171490
-e387307351.899424
+s388440620.809942
+e388440621.436424
 r1
 xLd
 x/Users/josephmoore/OF/apps/Studio/vector/bin/vectorDebug.app/Contents/MacOS/vectorDebug
 xnormal
 xi386
-lSLF03#21%IDEActivityLogSection1@2#32"com.apple.dt.IDE.BuildLogSection92"Link /Users/josephmoore/OF/apps/Studio/vector/bin/vectorDebug.app/Contents/MacOS/vectorDebug7e192c55d715b741^9241e657d715b741^---0#0#0#--1754"Ld bin/vectorDebug.app/Contents/MacOS/vectorDebug normal i386    cd /Users/josephmoore/OF/apps/Studio/vector    setenv MACOSX_DEPLOYMENT_TARGET 10.6    /Developer/usr/bin/llvm-g++-4.2 -arch i386 -isysroot /Developer/SDKs/MacOSX10.6.sdk -L/Users/josephmoore/OF/apps/Studio/vector/bin -F/Users/josephmoore/OF/apps/Studio/vector/bin -F/Users/josephmoore/OF/apps/Studio/vector/../../../libs/glut/lib/osx -filelist /Users/josephmoore/OF/apps/Studio/vector/build/vector.build/Debug/vector.build/Objects-normal/i386/vectorDebug.LinkFileList -mmacosx-version-min=10.6 -dead_strip ../../../libs/poco/lib/osx/PocoCrypto.a ../../../libs/poco/lib/osx/PocoData.a ../../../libs/poco/lib/osx/PocoDataODBC.a ../../../libs/poco/lib/osx/PocoDataSQLite.a ../../../libs/poco/lib/osx/PocoFoundation.a ../../../libs/poco/lib/osx/PocoNet.a ../../../libs/poco/lib/osx/PocoNetSSL.a ../../../libs/poco/lib/osx/PocoUtil.a ../../../libs/poco/lib/osx/PocoXML.a ../../../libs/poco/lib/osx/PocoZip.a ../../../libs/tess2/lib/osx/tess2.a ../../../libs/glew/lib/osx/glew.a ../../../libs/cairo/lib/osx/cairo-script-interpreter.a ../../../libs/cairo/lib/osx/cairo.a ../../../libs/cairo/lib/osx/pixman-1.a ../../../libs/fmodex/lib/osx/libfmodex.dylib ../../../libs/rtAudio/lib/osx/rtAudio.a -framework Accelerate -framework QTKit -framework GLUT /Users/josephmoore/OF/libs/openFrameworksCompiled/lib/osx/openFrameworksDebug.a -framework AGL -framework ApplicationServices -framework AudioToolbox -framework Carbon -framework CoreAudio -framework CoreFoundation -framework CoreServices -framework OpenGL -framework QuickTime -framework AppKit -framework Cocoa -framework IOKit -framework CoreVideo -o /Users/josephmoore/OF/apps/Studio/vector/bin/vectorDebug.app/Contents/MacOS/vectorDebug
+lSLF03#21%IDEActivityLogSection1@2#32"com.apple.dt.IDE.BuildLogSection92"Link /Users/josephmoore/OF/apps/Studio/vector/bin/vectorDebug.app/Contents/MacOS/vectorDebugf981cf2c2227b741^56ba6f2d2227b741^---0#0#0#--1819"Ld bin/vectorDebug.app/Contents/MacOS/vectorDebug normal i386    cd /Users/josephmoore/OF/apps/Studio/vector    setenv MACOSX_DEPLOYMENT_TARGET 10.6    /Developer/usr/bin/llvm-g++-4.2 -arch i386 -isysroot /Developer/SDKs/MacOSX10.6.sdk -L/Users/josephmoore/OF/apps/Studio/vector/bin -F/Users/josephmoore/OF/apps/Studio/vector/bin -F/Users/josephmoore/OF/apps/Studio/vector/../../../libs/glut/lib/osx -F/Users/josephmoore/OF/apps/Studio/vector -filelist /Users/josephmoore/OF/apps/Studio/vector/build/vector.build/Debug/vector.build/Objects-normal/i386/vectorDebug.LinkFileList -mmacosx-version-min=10.6 -dead_strip ../../../libs/poco/lib/osx/PocoCrypto.a ../../../libs/poco/lib/osx/PocoData.a ../../../libs/poco/lib/osx/PocoDataODBC.a ../../../libs/poco/lib/osx/PocoDataSQLite.a ../../../libs/poco/lib/osx/PocoFoundation.a ../../../libs/poco/lib/osx/PocoNet.a ../../../libs/poco/lib/osx/PocoNetSSL.a ../../../libs/poco/lib/osx/PocoUtil.a ../../../libs/poco/lib/osx/PocoXML.a ../../../libs/poco/lib/osx/PocoZip.a ../../../libs/tess2/lib/osx/tess2.a ../../../libs/glew/lib/osx/glew.a ../../../libs/cairo/lib/osx/cairo-script-interpreter.a ../../../libs/cairo/lib/osx/cairo.a ../../../libs/cairo/lib/osx/pixman-1.a ../../../libs/fmodex/lib/osx/libfmodex.dylib ../../../libs/rtAudio/lib/osx/rtAudio.a -framework Accelerate -framework QTKit -framework GLUT /Users/josephmoore/OF/libs/openFrameworksCompiled/lib/osx/openFrameworksDebug.a -framework AGL -framework ApplicationServices -framework AudioToolbox -framework Carbon -framework CoreAudio -framework CoreFoundation -framework CoreServices -framework OpenGL -framework QuickTime -framework AppKit -framework Cocoa -framework IOKit -framework CoreVideo -framework QuartzCore -o /Users/josephmoore/OF/apps/Studio/vector/bin/vectorDebug.app/Contents/MacOS/vectorDebug
+
+CLd /Users/josephmoore/OF/apps/dionysius/vector/bin/vectorDebug.app/Contents/MacOS/vectorDebug normal i386
+s389341136.292364
+e389341136.613628
+r0
+xLd
+x/Users/josephmoore/OF/apps/dionysius/vector/bin/vectorDebug.app/Contents/MacOS/vectorDebug
+xnormal
+xi386
+old: duplicate symbol _main in /Users/josephmoore/OF/apps/dionysius/vector/build/vector.build/Debug/vector.build/Objects-normal/i386/main-22684E7332B74F77.o and /Users/josephmoore/OF/apps/dionysius/vector/build/vector.build/Debug/vector.build/Objects-normal/i386/main-82227D70F1DD098B.o for architecture i386
+ocollect2: ld returned 1 exit status
+lSLF03#21%IDEActivityLogSection1@2#32"com.apple.dt.IDE.BuildLogSection95"Link /Users/josephmoore/OF/apps/dionysius/vector/bin/vectorDebug.app/Contents/MacOS/vectorDebug12f54ad0df34b741^bc029dd0df34b741^-408"ld: duplicate symbol _main in /Users/josephmoore/OF/apps/dionysius/vector/build/vector.build/Debug/vector.build/Objects-normal/i386/main-22684E7332B74F77.o and /Users/josephmoore/OF/apps/dionysius/vector/build/vector.build/Debug/vector.build/Objects-normal/i386/main-82227D70F1DD098B.o for architecture i386collect2: ld returned 1 exit statusCommand /Developer/usr/bin/llvm-g++-4.2 failed with exit code 12(21%IDEActivityLogMessage2@303"Duplicate symbol _main in /Users/josephmoore/OF/apps/dionysius/vector/build/vector.build/Debug/vector.build/Objects-normal/i386/main-22684E7332B74F77.o and /Users/josephmoore/OF/apps/dionysius/vector/build/vector.build/Debug/vector.build/Objects-normal/i386/main-82227D70F1DD098B.o for architecture i386-389341136#0#308#-0#-23%DVTTextDocumentLocation3@-0000000000000000^18446744073709551615#18446744073709551615#18446744073709551615#18446744073709551615#18446744073709551615#0#31"Apple Mach-O Linker (ld) Notice--2@63"Command /Developer/usr/bin/llvm-g++-4.2 failed with exit code 1-389341136#18446744073709551615#0#-2#--30"Apple Mach-O Linker (ld) Error--0#0#0#--1840"Ld bin/vectorDebug.app/Contents/MacOS/vectorDebug normal i386    cd /Users/josephmoore/OF/apps/dionysius/vector    setenv MACOSX_DEPLOYMENT_TARGET 10.6    /Developer/usr/bin/llvm-g++-4.2 -arch i386 -isysroot /Developer/SDKs/MacOSX10.6.sdk -L/Users/josephmoore/OF/apps/dionysius/vector/bin -F/Users/josephmoore/OF/apps/dionysius/vector/bin -F/Users/josephmoore/OF/apps/dionysius/vector/../../../libs/glut/lib/osx -F/Users/josephmoore/OF/apps/dionysius/vector -filelist /Users/josephmoore/OF/apps/dionysius/vector/build/vector.build/Debug/vector.build/Objects-normal/i386/vectorDebug.LinkFileList -mmacosx-version-min=10.6 -dead_strip ../../../libs/poco/lib/osx/PocoCrypto.a ../../../libs/poco/lib/osx/PocoData.a ../../../libs/poco/lib/osx/PocoDataODBC.a ../../../libs/poco/lib/osx/PocoDataSQLite.a ../../../libs/poco/lib/osx/PocoFoundation.a ../../../libs/poco/lib/osx/PocoNet.a ../../../libs/poco/lib/osx/PocoNetSSL.a ../../../libs/poco/lib/osx/PocoUtil.a ../../../libs/poco/lib/osx/PocoXML.a ../../../libs/poco/lib/osx/PocoZip.a ../../../libs/tess2/lib/osx/tess2.a ../../../libs/glew/lib/osx/glew.a ../../../libs/cairo/lib/osx/cairo-script-interpreter.a ../../../libs/cairo/lib/osx/cairo.a ../../../libs/cairo/lib/osx/pixman-1.a ../../../libs/fmodex/lib/osx/libfmodex.dylib ../../../libs/rtAudio/lib/osx/rtAudio.a -framework Accelerate -framework QTKit -framework GLUT /Users/josephmoore/OF/libs/openFrameworksCompiled/lib/osx/openFrameworksDebug.a -framework AGL -framework ApplicationServices -framework AudioToolbox -framework Carbon -framework CoreAudio -framework CoreFoundation -framework CoreServices -framework OpenGL -framework QuickTime -framework AppKit -framework Cocoa -framework IOKit -framework CoreVideo -framework QuartzCore -o /Users/josephmoore/OF/apps/dionysius/vector/bin/vectorDebug.app/Contents/MacOS/vectorDebug
 
 CPBXCp ../../../libs/glut/lib/osx/GLUT.framework bin/vectorDebug.app/Contents/Frameworks/GLUT.framework
 s387307352.045343
@@ -1695,13 +2483,22 @@ xbin/vectorDebug.app/Contents/Frameworks/GLUT.framework
 lSLF03#21%IDEActivityLogSection1@2#32"com.apple.dt.IDE.BuildLogSection59"Copy bin/vectorDebug.app/Contents/Frameworks/GLUT.frameworkf2b10b58d715b741^1d584658d715b741^---0#0#0#-19%DVTDocumentLocation2@111"file://localhost/Users/josephmoore/OF/apps/Studio/vector/bin/vectorDebug.app/Contents/Frameworks/GLUT.framework000020442305f041^414"PBXCp ../../../libs/glut/lib/osx/GLUT.framework bin/vectorDebug.app/Contents/Frameworks/GLUT.framework    cd /Users/josephmoore/OF/apps/Studio/vector    builtin-copy -exclude .DS_Store -exclude CVS -exclude .svn -exclude .git -resolve-src-symlinks /Users/josephmoore/OF/apps/Studio/vector/../../../libs/glut/lib/osx/GLUT.framework /Users/josephmoore/OF/apps/Studio/vector/bin/vectorDebug.app/Contents/Frameworks
 
 CPhaseScriptExecution "Run Script" /Users/josephmoore/OF/apps/Studio/vector/build/vector.build/Debug/vector.build/Script-E4B6FFFD0C3F9AB9008CF71C.sh
-s387307351.902582
-e387307352.042285
+s388460374.709971
+e388460374.828360
 r1
 xPhaseScriptExecution
 xRun Script
 x/Users/josephmoore/OF/apps/Studio/vector/build/vector.build/Debug/vector.build/Script-E4B6FFFD0C3F9AB9008CF71C.sh
-lSLF03#21%IDEActivityLogSection1@2#32"com.apple.dt.IDE.BuildLogSection36"Run custom shell script 'Run Script'0264e857d715b741^21cb0a58d715b741^---0#0#0#--21852"PhaseScriptExecution "Run Script" build/vector.build/Debug/vector.build/Script-E4B6FFFD0C3F9AB9008CF71C.sh    cd /Users/josephmoore/OF/apps/Studio/vector    setenv ACTION build    setenv ALTERNATE_GROUP staff    setenv ALTERNATE_MODE u+w,go-w,a+rX    setenv ALTERNATE_OWNER josephmoore    setenv ALWAYS_SEARCH_USER_PATHS YES    setenv APPLE_INTERNAL_DEVELOPER_DIR /AppleInternal/Developer    setenv APPLE_INTERNAL_DIR /AppleInternal    setenv APPLE_INTERNAL_DOCUMENTATION_DIR /AppleInternal/Documentation    setenv APPLE_INTERNAL_LIBRARY_DIR /AppleInternal/Library    setenv APPLE_INTERNAL_TOOLS /AppleInternal/Developer/Tools    setenv APPLY_RULES_IN_COPY_FILES NO    setenv ARCHS i386    setenv ARCHS_STANDARD_32_64_BIT "x86_64 i386"    setenv ARCHS_STANDARD_32_BIT i386    setenv ARCHS_STANDARD_64_BIT x86_64    setenv AVAILABLE_PLATFORMS "iphonesimulator macosx iphoneos"    setenv BUILD_COMPONENTS "headers build"    setenv BUILD_DIR /Users/josephmoore/OF/apps/Studio/vector/build    setenv BUILD_ROOT /Users/josephmoore/OF/apps/Studio/vector/build    setenv BUILD_STYLE Debug    setenv BUILD_VARIANTS normal    setenv BUILT_PRODUCTS_DIR /Users/josephmoore/OF/apps/Studio/vector/bin    setenv CACHE_ROOT /var/folders/Dc/DcObbznzEJyqvLZguF+Lwk+++TI/-Caches-/com.apple.Xcode.501    setenv CCHROOT /var/folders/Dc/DcObbznzEJyqvLZguF+Lwk+++TI/-Caches-/com.apple.Xcode.501    setenv CHMOD /bin/chmod    setenv CHOWN /usr/sbin/chown    setenv CLASS_FILE_DIR /Users/josephmoore/OF/apps/Studio/vector/build/vector.build/Debug/vector.build/JavaClasses    setenv CLEAN_PRECOMPS YES    setenv CLONE_HEADERS NO    setenv CODESIGNING_FOLDER_PATH /Users/josephmoore/OF/apps/Studio/vector/bin/vectorDebug.app    setenv CODE_SIGNING_ALLOWED YES    setenv COMBINE_HIDPI_IMAGES NO    setenv COMMAND_MODE legacy    setenv COMPOSITE_SDK_DIRS /var/folders/Dc/DcObbznzEJyqvLZguF+Lwk+++TI/-Caches-/com.apple.Xcode.501/CompositeSDKs    setenv CONFIGURATION Debug    setenv CONFIGURATION_BUILD_DIR /Users/josephmoore/OF/apps/Studio/vector/bin    setenv CONFIGURATION_TEMP_DIR /Users/josephmoore/OF/apps/Studio/vector/build/vector.build/Debug    setenv CONTENTS_FOLDER_PATH vectorDebug.app/Contents    setenv COPYING_PRESERVES_HFS_DATA NO    setenv COPY_PHASE_STRIP NO    setenv COPY_RESOURCES_FROM_STATIC_FRAMEWORKS YES    setenv CP /bin/cp    setenv CURRENT_ARCH i386    setenv CURRENT_VARIANT normal    setenv DEAD_CODE_STRIPPING YES    setenv DEBUGGING_SYMBOLS YES    setenv DEBUG_INFORMATION_FORMAT dwarf    setenv DEPLOYMENT_LOCATION NO    setenv DEPLOYMENT_POSTPROCESSING NO    setenv DERIVED_FILES_DIR /Users/josephmoore/OF/apps/Studio/vector/build/vector.build/Debug/vector.build/DerivedSources    setenv DERIVED_FILE_DIR /Users/josephmoore/OF/apps/Studio/vector/build/vector.build/Debug/vector.build/DerivedSources    setenv DERIVED_SOURCES_DIR /Users/josephmoore/OF/apps/Studio/vector/build/vector.build/Debug/vector.build/DerivedSources    setenv DEVELOPER_APPLICATIONS_DIR /Developer/Applications    setenv DEVELOPER_BIN_DIR /Developer/usr/bin    setenv DEVELOPER_DIR /Developer    setenv DEVELOPER_FRAMEWORKS_DIR /Developer/Library/Frameworks    setenv DEVELOPER_FRAMEWORKS_DIR_QUOTED "\"/Developer/Library/Frameworks\""    setenv DEVELOPER_LIBRARY_DIR /Developer/Library    setenv DEVELOPER_SDK_DIR /Developer/SDKs    setenv DEVELOPER_TOOLS_DIR /Developer/Tools    setenv DEVELOPER_USR_DIR /Developer/usr    setenv DEVELOPMENT_LANGUAGE English    setenv DOCUMENTATION_FOLDER_PATH vectorDebug.app/Contents/Resources/English.lproj/Documentation    setenv DO_HEADER_SCANNING_IN_JAM NO    setenv DSTROOT /tmp/vector.dst    setenv DWARF_DSYM_FILE_NAME vectorDebug.app.dSYM    setenv DWARF_DSYM_FOLDER_PATH /Users/josephmoore/OF/apps/Studio/vector/bin    setenv ENABLE_HEADER_DEPENDENCIES YES    setenv ENABLE_OPENMP_SUPPORT NO    setenv EXCLUDED_INSTALLSRC_SUBDIRECTORY_PATTERNS ".svn CVS"    setenv EXCLUDED_RECURSIVE_SEARCH_PATH_SUBDIRECTORIES "*.nib *.lproj *.framework *.gch (*) CVS .svn .git *.xcodeproj *.xcode *.pbproj *.pbxproj"    setenv EXECUTABLES_FOLDER_PATH vectorDebug.app/Contents/Executables    setenv EXECUTABLE_FOLDER_PATH vectorDebug.app/Contents/MacOS    setenv EXECUTABLE_NAME vectorDebug    setenv EXECUTABLE_PATH vectorDebug.app/Contents/MacOS/vectorDebug    setenv FILE_LIST /Users/josephmoore/OF/apps/Studio/vector/build/vector.build/Debug/vector.build/Objects/LinkFileList    setenv FIXED_FILES_DIR /Users/josephmoore/OF/apps/Studio/vector/build/vector.build/Debug/vector.build/FixedFiles    setenv FRAMEWORKS_FOLDER_PATH vectorDebug.app/Contents/Frameworks    setenv FRAMEWORK_FLAG_PREFIX -framework    setenv FRAMEWORK_SEARCH_PATHS "\"/Users/josephmoore/OF/apps/Studio/vector/bin\"  \"/Users/josephmoore/OF/apps/Studio/vector/../../../libs/glut/lib/osx\""    setenv FRAMEWORK_SEARCH_PATHS_QUOTED_FOR_TARGET_1 "\"/Users/josephmoore/OF/apps/Studio/vector/../../../libs/glut/lib/osx\""    setenv FRAMEWORK_VERSION A    setenv FULL_PRODUCT_NAME vectorDebug.app    setenv GCC3_VERSION 3.3    setenv GCC_AUTO_VECTORIZATION YES    setenv GCC_DYNAMIC_NO_PIC NO    setenv GCC_ENABLE_FIX_AND_CONTINUE YES    setenv GCC_ENABLE_SSE3_EXTENSIONS YES    setenv GCC_ENABLE_SUPPLEMENTAL_SSE3_INSTRUCTIONS YES    setenv GCC_GENERATE_DEBUGGING_SYMBOLS YES    setenv GCC_INLINES_ARE_PRIVATE_EXTERN NO    setenv GCC_MODEL_TUNING NONE    setenv GCC_OPTIMIZATION_LEVEL 0    setenv GCC_PFE_FILE_C_DIALECTS "c objective-c c++ objective-c++"    setenv GCC_PRECOMPILE_PREFIX_HEADER YES    setenv GCC_PREFIX_HEADER /Developer/SDKs/MacOSX10.6.sdk/System/Library/Frameworks/Carbon.framework/Headers/Carbon.h    setenv GCC_SYMBOLS_PRIVATE_EXTERN NO    setenv GCC_TREAT_WARNINGS_AS_ERRORS NO    setenv GCC_VERSION com.apple.compilers.llvmgcc42    setenv GCC_WARN_ABOUT_DEPRECATED_FUNCTIONS YES    setenv GCC_WARN_ABOUT_INVALID_OFFSETOF_MACRO NO    setenv GCC_WARN_ALLOW_INCOMPLETE_PROTOCOL NO    setenv GCC_WARN_UNINITIALIZED_AUTOS NO    setenv GCC_WARN_UNUSED_VALUE NO    setenv GCC_WARN_UNUSED_VARIABLE NO    setenv GENERATE_MASTER_OBJECT_FILE NO    setenv GENERATE_PKGINFO_FILE YES    setenv GENERATE_PROFILING_CODE NO    setenv GID 20    setenv GROUP staff    setenv HEADERMAP_INCLUDES_FLAT_ENTRIES_FOR_TARGET_BEING_BUILT YES    setenv HEADERMAP_INCLUDES_FRAMEWORK_ENTRIES_FOR_ALL_PRODUCT_TYPES YES    setenv HEADERMAP_INCLUDES_NONPUBLIC_NONPRIVATE_HEADERS YES    setenv HEADERMAP_INCLUDES_PROJECT_HEADERS YES    setenv HEADER_CAIRO "\"../../../libs/cairo/include/cairo\""    setenv HEADER_FMODEX "\"../../../libs/fmodex/include\""    setenv HEADER_FREEIMAGE "\"../../../libs/FreeImage/include\""    setenv HEADER_FREETYPE "\"../../../libs/freetype/include\""    setenv HEADER_FREETYPE2 "\"../../../libs/freetype/include/freetype2\""    setenv HEADER_GLEW "\"../../../libs/glew/include\""    setenv HEADER_OF "\"../../../libs/openFrameworks/**\""    setenv HEADER_POCO "\"../../../libs/poco/include\""    setenv HEADER_RTAUDIO "\"../../../libs/rtAudio/include\""    setenv HEADER_SEARCH_PATHS "\"/Users/josephmoore/OF/apps/Studio/vector/bin/include\" \"../../../libs/openFrameworks/**\" \"../../../libs/poco/include\" \"../../../libs/freetype/include\" \"../../../libs/freetype/include/freetype2\" \"../../../libs/fmodex/include\" \"../../../libs/glew/include\" \"../../../libs/FreeImage/include\" \"../../../libs/tess2/include\" \"../../../libs/cairo/include/cairo\" \"../../../libs/rtAudio/include\""    setenv HEADER_TESS2 "\"../../../libs/tess2/include\""    setenv ICONV /usr/bin/iconv    setenv INFOPLIST_EXPAND_BUILD_SETTINGS YES    setenv INFOPLIST_FILE openFrameworks-Info.plist    setenv INFOPLIST_OUTPUT_FORMAT same-as-input    setenv INFOPLIST_PATH vectorDebug.app/Contents/Info.plist    setenv INFOPLIST_PREPROCESS NO    setenv INFOSTRINGS_PATH vectorDebug.app/Contents/Resources/English.lproj/InfoPlist.strings    setenv INSTALL_DIR /tmp/vector.dst/Users/josephmoore/Applications    setenv INSTALL_GROUP staff    setenv INSTALL_MODE_FLAG u+w,go-w,a+rX    setenv INSTALL_OWNER josephmoore    setenv INSTALL_PATH /Users/josephmoore/Applications    setenv INSTALL_ROOT /tmp/vector.dst    setenv JAVAC_DEFAULT_FLAGS "-J-Xms64m -J-XX:NewSize=4M -J-Dfile.encoding=UTF8"    setenv JAVA_APP_STUB /System/Library/Frameworks/JavaVM.framework/Resources/MacOS/JavaApplicationStub    setenv JAVA_ARCHIVE_CLASSES YES    setenv JAVA_ARCHIVE_TYPE JAR    setenv JAVA_COMPILER /usr/bin/javac    setenv JAVA_FOLDER_PATH vectorDebug.app/Contents/Resources/Java    setenv JAVA_FRAMEWORK_RESOURCES_DIRS Resources    setenv JAVA_JAR_FLAGS cv    setenv JAVA_SOURCE_SUBDIR .    setenv JAVA_USE_DEPENDENCIES YES    setenv JAVA_ZIP_FLAGS -urg    setenv JIKES_DEFAULT_FLAGS "+E +OLDCSO"    setenv KEEP_PRIVATE_EXTERNS NO    setenv LD_GENERATE_MAP_FILE NO    setenv LD_MAP_FILE_PATH /Users/josephmoore/OF/apps/Studio/vector/build/vector.build/Debug/vector.build/vectorDebug-LinkMap-normal-i386.txt    setenv LD_OPENMP_FLAGS -fopenmp    setenv LEGACY_DEVELOPER_DIR /Developer/Library/Xcode/PrivatePlugIns/Xcode3Core.ideplugin/Contents/SharedSupport/Developer    setenv LEX /Developer/usr/bin/lex    setenv LIBRARY_FLAG_NOSPACE YES    setenv LIBRARY_FLAG_PREFIX -l    setenv LIBRARY_SEARCH_PATHS "\"/Users/josephmoore/OF/apps/Studio/vector/bin\"                                                              "    setenv LIB_CAIRO1 "\"../../../libs/cairo/lib/osx/cairo-script-interpreter.a\""    setenv LIB_CAIRO2 "\"../../../libs/cairo/lib/osx/cairo.a\""    setenv LIB_CAIRO3 "\"../../../libs/cairo/lib/osx/pixman-1.a\""    setenv LIB_FMODEX "\"../../../libs/fmodex/lib/osx/libfmodex.dylib\""    setenv LIB_FREEIMAGE "\"../../../libs/FreeImage/lib/osx/freeimage.a\""    setenv LIB_FREETYPE "\"../../../libs/freetype/lib/osx/freetype.a\""    setenv LIB_GLEW "\"../../../libs/glew/lib/osx/glew.a\""    setenv LIB_GLUT "\"../../../libs/glut/lib/osx/GLUT.framework/Versions/A/GLUT\""    setenv LIB_POCO_1 "\"../../../libs/poco/lib/osx/PocoCrypto.a\""    setenv LIB_POCO_10 "\"../../../libs/poco/lib/osx/PocoZip.a\""    setenv LIB_POCO_2 "\"../../../libs/poco/lib/osx/PocoData.a\""    setenv LIB_POCO_3 "\"../../../libs/poco/lib/osx/PocoDataODBC.a\""    setenv LIB_POCO_4 "\"../../../libs/poco/lib/osx/PocoDataSQLite.a\""    setenv LIB_POCO_5 "\"../../../libs/poco/lib/osx/PocoFoundation.a\""    setenv LIB_POCO_6 "\"../../../libs/poco/lib/osx/PocoNet.a\""    setenv LIB_POCO_7 "\"../../../libs/poco/lib/osx/PocoNetSSL.a\""    setenv LIB_POCO_8 "\"../../../libs/poco/lib/osx/PocoUtil.a\""    setenv LIB_POCO_9 "\"../../../libs/poco/lib/osx/PocoXML.a\""    setenv LIB_RTAUDIO "\"../../../libs/rtAudio/lib/osx/rtAudio.a\""    setenv LIB_TESS "\"../../../libs/tess2/lib/osx/tess2.a\""    setenv LINKER_DISPLAYS_MANGLED_NAMES NO    setenv LINK_FILE_LIST_normal_i386 /Users/josephmoore/OF/apps/Studio/vector/build/vector.build/Debug/vector.build/Objects-normal/i386/vectorDebug.LinkFileList    setenv LINK_WITH_STANDARD_LIBRARIES YES    setenv LOCALIZED_RESOURCES_FOLDER_PATH vectorDebug.app/Contents/Resources/English.lproj    setenv LOCAL_ADMIN_APPS_DIR /Applications/Utilities    setenv LOCAL_APPS_DIR /Applications    setenv LOCAL_DEVELOPER_DIR /Library/Developer    setenv LOCAL_LIBRARY_DIR /Library    setenv MACH_O_TYPE mh_execute    setenv MACOSX_DEPLOYMENT_TARGET 10.6    setenv MAC_OS_X_PRODUCT_BUILD_VERSION 10K549    setenv MAC_OS_X_VERSION_ACTUAL 1068    setenv MAC_OS_X_VERSION_MAJOR 1060    setenv MAC_OS_X_VERSION_MINOR 0608    setenv NATIVE_ARCH i386    setenv NATIVE_ARCH_32_BIT i386    setenv NATIVE_ARCH_64_BIT x86_64    setenv NATIVE_ARCH_ACTUAL x86_64    setenv NO_COMMON YES    setenv OBJECT_FILE_DIR /Users/josephmoore/OF/apps/Studio/vector/build/vector.build/Debug/vector.build/Objects    setenv OBJECT_FILE_DIR_normal /Users/josephmoore/OF/apps/Studio/vector/build/vector.build/Debug/vector.build/Objects-normal    setenv OBJROOT /Users/josephmoore/OF/apps/Studio/vector/build    setenv OF_CORE_HEADERS "\"../../../libs/openFrameworks/**\" \"../../../libs/poco/include\" \"../../../libs/freetype/include\" \"../../../libs/freetype/include/freetype2\" \"../../../libs/fmodex/include\" \"../../../libs/glew/include\" \"../../../libs/FreeImage/include\" \"../../../libs/tess2/include\" \"../../../libs/cairo/include/cairo\" \"../../../libs/rtAudio/include\""    setenv OF_CORE_LIBS "\"../../../libs/poco/lib/osx/PocoCrypto.a\" \"../../../libs/poco/lib/osx/PocoData.a\" \"../../../libs/poco/lib/osx/PocoDataODBC.a\" \"../../../libs/poco/lib/osx/PocoDataSQLite.a\" \"../../../libs/poco/lib/osx/PocoFoundation.a\" \"../../../libs/poco/lib/osx/PocoNet.a\" \"../../../libs/poco/lib/osx/PocoNetSSL.a\" \"../../../libs/poco/lib/osx/PocoUtil.a\" \"../../../libs/poco/lib/osx/PocoXML.a\" \"../../../libs/poco/lib/osx/PocoZip.a\" \"../../../libs/tess2/lib/osx/tess2.a\" \"../../../libs/glew/lib/osx/glew.a\" \"../../../libs/cairo/lib/osx/cairo-script-interpreter.a\" \"../../../libs/cairo/lib/osx/cairo.a\" \"../../../libs/cairo/lib/osx/pixman-1.a\" \"../../../libs/fmodex/lib/osx/libfmodex.dylib\" \"../../../libs/rtAudio/lib/osx/rtAudio.a\""    setenv OF_PATH ../../..    setenv ONLY_ACTIVE_ARCH NO    setenv OPTIMIZATION_LEVEL 0    setenv OS MACOS    setenv OSAC /usr/bin/osacompile    setenv OTHER_CPLUSPLUSFLAGS "-D__MACOSX_CORE__ -lpthread -mtune=native"    setenv OTHER_LDFLAGS "\"../../../libs/poco/lib/osx/PocoCrypto.a\" \"../../../libs/poco/lib/osx/PocoData.a\" \"../../../libs/poco/lib/osx/PocoDataODBC.a\" \"../../../libs/poco/lib/osx/PocoDataSQLite.a\" \"../../../libs/poco/lib/osx/PocoFoundation.a\" \"../../../libs/poco/lib/osx/PocoNet.a\" \"../../../libs/poco/lib/osx/PocoNetSSL.a\" \"../../../libs/poco/lib/osx/PocoUtil.a\" \"../../../libs/poco/lib/osx/PocoXML.a\" \"../../../libs/poco/lib/osx/PocoZip.a\" \"../../../libs/tess2/lib/osx/tess2.a\" \"../../../libs/glew/lib/osx/glew.a\" \"../../../libs/cairo/lib/osx/cairo-script-interpreter.a\" \"../../../libs/cairo/lib/osx/cairo.a\" \"../../../libs/cairo/lib/osx/pixman-1.a\" \"../../../libs/fmodex/lib/osx/libfmodex.dylib\" \"../../../libs/rtAudio/lib/osx/rtAudio.a\""    setenv PACKAGE_TYPE com.apple.package-type.wrapper.application    setenv PASCAL_STRINGS YES    setenv PATH_PREFIXES_EXCLUDED_FROM_HEADER_DEPENDENCIES "/usr/include /usr/local/include /System/Library/Frameworks /System/Library/PrivateFrameworks /Developer/Headers /Developer/SDKs /Developer/Platforms"    setenv PBDEVELOPMENTPLIST_PATH vectorDebug.app/Contents/pbdevelopment.plist    setenv PFE_FILE_C_DIALECTS c++    setenv PHONEGAPLIB /Users/josephmoore/Documents/PhoneGapLib    setenv PKGINFO_FILE_PATH /Users/josephmoore/OF/apps/Studio/vector/build/vector.build/Debug/vector.build/PkgInfo    setenv PKGINFO_PATH vectorDebug.app/Contents/PkgInfo    setenv PLATFORM_DEVELOPER_APPLICATIONS_DIR /Developer/Applications    setenv PLATFORM_DEVELOPER_BIN_DIR /Developer/usr/bin    setenv PLATFORM_DEVELOPER_LIBRARY_DIR /Developer/Library    setenv PLATFORM_DEVELOPER_SDK_DIR /Developer/SDKs    setenv PLATFORM_DEVELOPER_TOOLS_DIR /Developer/Tools    setenv PLATFORM_DEVELOPER_USR_DIR /Developer/usr    setenv PLATFORM_DIR /Developer/Platforms/MacOSX.platform    setenv PLATFORM_NAME macosx    setenv PLATFORM_PREFERRED_ARCH x86_64    setenv PLATFORM_PRODUCT_BUILD_VERSION 4A304a    setenv PLIST_FILE_OUTPUT_FORMAT same-as-input    setenv PLUGINS_FOLDER_PATH vectorDebug.app/Contents/PlugIns    setenv PREBINDING NO    setenv PRECOMPS_INCLUDE_HEADERS_FROM_BUILT_PRODUCTS_DIR YES    setenv PRECOMP_DESTINATION_DIR /Users/josephmoore/OF/apps/Studio/vector/build/vector.build/Debug/vector.build/PrefixHeaders    setenv PRESERVE_DEAD_CODE_INITS_AND_TERMS NO    setenv PRIVATE_HEADERS_FOLDER_PATH vectorDebug.app/Contents/PrivateHeaders    setenv PRODUCT_NAME vectorDebug    setenv PRODUCT_SETTINGS_PATH /Users/josephmoore/OF/apps/Studio/vector/openFrameworks-Info.plist    setenv PRODUCT_TYPE com.apple.product-type.application    setenv PROFILING_CODE NO    setenv PROJECT vector    setenv PROJECT_DERIVED_FILE_DIR /Users/josephmoore/OF/apps/Studio/vector/build/vector.build/DerivedSources    setenv PROJECT_DIR /Users/josephmoore/OF/apps/Studio/vector    setenv PROJECT_FILE_PATH /Users/josephmoore/OF/apps/Studio/vector/vector.xcodeproj    setenv PROJECT_NAME vector    setenv PROJECT_TEMP_DIR /Users/josephmoore/OF/apps/Studio/vector/build/vector.build    setenv PUBLIC_HEADERS_FOLDER_PATH vectorDebug.app/Contents/Headers    setenv RECURSIVE_SEARCH_PATHS_FOLLOW_SYMLINKS YES    setenv REMOVE_CVS_FROM_RESOURCES YES    setenv REMOVE_GIT_FROM_RESOURCES YES    setenv REMOVE_SVN_FROM_RESOURCES YES    setenv REZ_COLLECTOR_DIR /Users/josephmoore/OF/apps/Studio/vector/build/vector.build/Debug/vector.build/ResourceManagerResources    setenv REZ_OBJECTS_DIR /Users/josephmoore/OF/apps/Studio/vector/build/vector.build/Debug/vector.build/ResourceManagerResources/Objects    setenv REZ_SEARCH_PATHS "\"/Users/josephmoore/OF/apps/Studio/vector/bin\" "    setenv RUN_CLANG_STATIC_ANALYZER NO    setenv SCAN_ALL_SOURCE_FILES_FOR_INCLUDES NO    setenv SCRIPTS_FOLDER_PATH vectorDebug.app/Contents/Resources/Scripts    setenv SCRIPT_INPUT_FILE_COUNT 0    setenv SCRIPT_OUTPUT_FILE_COUNT 0    setenv SDKROOT /Developer/SDKs/MacOSX10.6.sdk    setenv SDK_DIR /Developer/SDKs/MacOSX10.6.sdk    setenv SDK_NAME macosx10.6    setenv SDK_PRODUCT_BUILD_VERSION 4A304a    setenv SED /usr/bin/sed    setenv SEPARATE_STRIP NO    setenv SEPARATE_SYMBOL_EDIT NO    setenv SET_DIR_MODE_OWNER_GROUP YES    setenv SET_FILE_MODE_OWNER_GROUP NO    setenv SHARED_DERIVED_FILE_DIR /Users/josephmoore/OF/apps/Studio/vector/bin/DerivedSources    setenv SHARED_FRAMEWORKS_FOLDER_PATH vectorDebug.app/Contents/SharedFrameworks    setenv SHARED_PRECOMPS_DIR /var/folders/Dc/DcObbznzEJyqvLZguF+Lwk+++TI/-Caches-/com.apple.Xcode.501/SharedPrecompiledHeaders    setenv SHARED_SUPPORT_FOLDER_PATH vectorDebug.app/Contents/SharedSupport    setenv SKIP_INSTALL NO    setenv SOURCE_ROOT /Users/josephmoore/OF/apps/Studio/vector    setenv SRCROOT /Users/josephmoore/OF/apps/Studio/vector    setenv STANDARD_C_PLUS_PLUS_LIBRARY_TYPE dynamic    setenv STRINGS_FILE_OUTPUT_ENCODING UTF-16    setenv STRIP_INSTALLED_PRODUCT YES    setenv STRIP_STYLE all    setenv SUPPORTED_PLATFORMS macosx    setenv SYMBOL_REPOSITORY_DIR /Users/josephmoore/OF/apps/Studio/vector/build/vector.build/Debug/vector.build/SymbolRepositories    setenv SYMROOT /Users/josephmoore/OF/apps/Studio/vector/build    setenv SYSTEM_ADMIN_APPS_DIR /Applications/Utilities    setenv SYSTEM_APPS_DIR /Applications    setenv SYSTEM_CORE_SERVICES_DIR /System/Library/CoreServices    setenv SYSTEM_DEMOS_DIR /Applications/Extras    setenv SYSTEM_DEVELOPER_APPS_DIR /Developer/Applications    setenv SYSTEM_DEVELOPER_BIN_DIR /Developer/usr/bin    setenv SYSTEM_DEVELOPER_DEMOS_DIR "/Developer/Applications/Utilities/Built Examples"    setenv SYSTEM_DEVELOPER_DIR /Developer    setenv SYSTEM_DEVELOPER_DOC_DIR "/Developer/ADC Reference Library"    setenv SYSTEM_DEVELOPER_GRAPHICS_TOOLS_DIR "/Developer/Applications/Graphics Tools"    setenv SYSTEM_DEVELOPER_JAVA_TOOLS_DIR "/Developer/Applications/Java Tools"    setenv SYSTEM_DEVELOPER_PERFORMANCE_TOOLS_DIR "/Developer/Applications/Performance Tools"    setenv SYSTEM_DEVELOPER_RELEASENOTES_DIR "/Developer/ADC Reference Library/releasenotes"    setenv SYSTEM_DEVELOPER_TOOLS /Developer/Tools    setenv SYSTEM_DEVELOPER_TOOLS_DOC_DIR "/Developer/ADC Reference Library/documentation/DeveloperTools"    setenv SYSTEM_DEVELOPER_TOOLS_RELEASENOTES_DIR "/Developer/ADC Reference Library/releasenotes/DeveloperTools"    setenv SYSTEM_DEVELOPER_USR_DIR /Developer/usr    setenv SYSTEM_DEVELOPER_UTILITIES_DIR /Developer/Applications/Utilities    setenv SYSTEM_DOCUMENTATION_DIR /Library/Documentation    setenv SYSTEM_LIBRARY_DIR /System/Library    setenv TARGETNAME vector    setenv TARGET_BUILD_DIR /Users/josephmoore/OF/apps/Studio/vector/bin    setenv TARGET_NAME vector    setenv TARGET_TEMP_DIR /Users/josephmoore/OF/apps/Studio/vector/build/vector.build/Debug/vector.build    setenv TEMP_DIR /Users/josephmoore/OF/apps/Studio/vector/build/vector.build/Debug/vector.build    setenv TEMP_FILES_DIR /Users/josephmoore/OF/apps/Studio/vector/build/vector.build/Debug/vector.build    setenv TEMP_FILE_DIR /Users/josephmoore/OF/apps/Studio/vector/build/vector.build/Debug/vector.build    setenv TEMP_ROOT /Users/josephmoore/OF/apps/Studio/vector/build    setenv TEST_AFTER_BUILD NO    setenv UID 501    setenv UNLOCALIZED_RESOURCES_FOLDER_PATH vectorDebug.app/Contents/Resources    setenv UNSTRIPPED_PRODUCT NO    setenv USER josephmoore    setenv USER_APPS_DIR /Users/josephmoore/Applications    setenv USER_LIBRARY_DIR /Users/josephmoore/Library    setenv USE_DYNAMIC_NO_PIC YES    setenv USE_HEADERMAP YES    setenv USE_HEADER_SYMLINKS NO    setenv VALIDATE_PRODUCT NO    setenv VALID_ARCHS "i386 x86_64"    setenv VERBOSE_PBXCP NO    setenv VERSIONPLIST_PATH vectorDebug.app/Contents/version.plist    setenv VERSION_INFO_BUILDER josephmoore    setenv VERSION_INFO_FILE vectorDebug_vers.c    setenv VERSION_INFO_STRING "\"@(#)PROGRAM:vectorDebug  PROJECT:vector-\""    setenv WRAPPER_EXTENSION app    setenv WRAPPER_NAME vectorDebug.app    setenv WRAPPER_SUFFIX .app    setenv XCODE_APP_SUPPORT_DIR /Developer/Library/Xcode    setenv XCODE_PRODUCT_BUILD_VERSION 4A304a    setenv XCODE_VERSION_ACTUAL 0400    setenv XCODE_VERSION_MAJOR 0400    setenv XCODE_VERSION_MINOR 0400    setenv YACC /Developer/usr/bin/yacc    /bin/sh -c /Users/josephmoore/OF/apps/Studio/vector/build/vector.build/Debug/vector.build/Script-E4B6FFFD0C3F9AB9008CF71C.sh
+lSLF03#21%IDEActivityLogSection1@2#32"com.apple.dt.IDE.BuildLogSection36"Run custom shell script 'Run Script'ace5b6566f27b741^1a19d4566f27b741^---0#0#0#--21998"PhaseScriptExecution "Run Script" build/vector.build/Debug/vector.build/Script-E4B6FFFD0C3F9AB9008CF71C.sh    cd /Users/josephmoore/OF/apps/Studio/vector    setenv ACTION build    setenv ALTERNATE_GROUP staff    setenv ALTERNATE_MODE u+w,go-w,a+rX    setenv ALTERNATE_OWNER josephmoore    setenv ALWAYS_SEARCH_USER_PATHS YES    setenv APPLE_INTERNAL_DEVELOPER_DIR /AppleInternal/Developer    setenv APPLE_INTERNAL_DIR /AppleInternal    setenv APPLE_INTERNAL_DOCUMENTATION_DIR /AppleInternal/Documentation    setenv APPLE_INTERNAL_LIBRARY_DIR /AppleInternal/Library    setenv APPLE_INTERNAL_TOOLS /AppleInternal/Developer/Tools    setenv APPLY_RULES_IN_COPY_FILES NO    setenv ARCHS i386    setenv ARCHS_STANDARD_32_64_BIT "x86_64 i386"    setenv ARCHS_STANDARD_32_BIT i386    setenv ARCHS_STANDARD_64_BIT x86_64    setenv AVAILABLE_PLATFORMS "iphonesimulator macosx iphoneos"    setenv BUILD_COMPONENTS "headers build"    setenv BUILD_DIR /Users/josephmoore/OF/apps/Studio/vector/build    setenv BUILD_ROOT /Users/josephmoore/OF/apps/Studio/vector/build    setenv BUILD_STYLE Debug    setenv BUILD_VARIANTS normal    setenv BUILT_PRODUCTS_DIR /Users/josephmoore/OF/apps/Studio/vector/bin    setenv CACHE_ROOT /var/folders/Dc/DcObbznzEJyqvLZguF+Lwk+++TI/-Caches-/com.apple.Xcode.501    setenv CCHROOT /var/folders/Dc/DcObbznzEJyqvLZguF+Lwk+++TI/-Caches-/com.apple.Xcode.501    setenv CHMOD /bin/chmod    setenv CHOWN /usr/sbin/chown    setenv CLASS_FILE_DIR /Users/josephmoore/OF/apps/Studio/vector/build/vector.build/Debug/vector.build/JavaClasses    setenv CLEAN_PRECOMPS YES    setenv CLONE_HEADERS NO    setenv CODESIGNING_FOLDER_PATH /Users/josephmoore/OF/apps/Studio/vector/bin/vectorDebug.app    setenv CODE_SIGNING_ALLOWED YES    setenv COMBINE_HIDPI_IMAGES NO    setenv COMMAND_MODE legacy    setenv COMPOSITE_SDK_DIRS /var/folders/Dc/DcObbznzEJyqvLZguF+Lwk+++TI/-Caches-/com.apple.Xcode.501/CompositeSDKs    setenv CONFIGURATION Debug    setenv CONFIGURATION_BUILD_DIR /Users/josephmoore/OF/apps/Studio/vector/bin    setenv CONFIGURATION_TEMP_DIR /Users/josephmoore/OF/apps/Studio/vector/build/vector.build/Debug    setenv CONTENTS_FOLDER_PATH vectorDebug.app/Contents    setenv COPYING_PRESERVES_HFS_DATA NO    setenv COPY_PHASE_STRIP NO    setenv COPY_RESOURCES_FROM_STATIC_FRAMEWORKS YES    setenv CP /bin/cp    setenv CURRENT_ARCH i386    setenv CURRENT_VARIANT normal    setenv DEAD_CODE_STRIPPING YES    setenv DEBUGGING_SYMBOLS YES    setenv DEBUG_INFORMATION_FORMAT dwarf    setenv DEPLOYMENT_LOCATION NO    setenv DEPLOYMENT_POSTPROCESSING NO    setenv DERIVED_FILES_DIR /Users/josephmoore/OF/apps/Studio/vector/build/vector.build/Debug/vector.build/DerivedSources    setenv DERIVED_FILE_DIR /Users/josephmoore/OF/apps/Studio/vector/build/vector.build/Debug/vector.build/DerivedSources    setenv DERIVED_SOURCES_DIR /Users/josephmoore/OF/apps/Studio/vector/build/vector.build/Debug/vector.build/DerivedSources    setenv DEVELOPER_APPLICATIONS_DIR /Developer/Applications    setenv DEVELOPER_BIN_DIR /Developer/usr/bin    setenv DEVELOPER_DIR /Developer    setenv DEVELOPER_FRAMEWORKS_DIR /Developer/Library/Frameworks    setenv DEVELOPER_FRAMEWORKS_DIR_QUOTED "\"/Developer/Library/Frameworks\""    setenv DEVELOPER_LIBRARY_DIR /Developer/Library    setenv DEVELOPER_SDK_DIR /Developer/SDKs    setenv DEVELOPER_TOOLS_DIR /Developer/Tools    setenv DEVELOPER_USR_DIR /Developer/usr    setenv DEVELOPMENT_LANGUAGE English    setenv DOCUMENTATION_FOLDER_PATH vectorDebug.app/Contents/Resources/English.lproj/Documentation    setenv DO_HEADER_SCANNING_IN_JAM NO    setenv DSTROOT /tmp/vector.dst    setenv DWARF_DSYM_FILE_NAME vectorDebug.app.dSYM    setenv DWARF_DSYM_FOLDER_PATH /Users/josephmoore/OF/apps/Studio/vector/bin    setenv ENABLE_HEADER_DEPENDENCIES YES    setenv ENABLE_OPENMP_SUPPORT NO    setenv EXCLUDED_INSTALLSRC_SUBDIRECTORY_PATTERNS ".svn CVS"    setenv EXCLUDED_RECURSIVE_SEARCH_PATH_SUBDIRECTORIES "*.nib *.lproj *.framework *.gch (*) CVS .svn .git *.xcodeproj *.xcode *.pbproj *.pbxproj"    setenv EXECUTABLES_FOLDER_PATH vectorDebug.app/Contents/Executables    setenv EXECUTABLE_FOLDER_PATH vectorDebug.app/Contents/MacOS    setenv EXECUTABLE_NAME vectorDebug    setenv EXECUTABLE_PATH vectorDebug.app/Contents/MacOS/vectorDebug    setenv FILE_LIST /Users/josephmoore/OF/apps/Studio/vector/build/vector.build/Debug/vector.build/Objects/LinkFileList    setenv FIXED_FILES_DIR /Users/josephmoore/OF/apps/Studio/vector/build/vector.build/Debug/vector.build/FixedFiles    setenv FRAMEWORKS_FOLDER_PATH vectorDebug.app/Contents/Frameworks    setenv FRAMEWORK_FLAG_PREFIX -framework    setenv FRAMEWORK_SEARCH_PATHS "\"/Users/josephmoore/OF/apps/Studio/vector/bin\"  \"/Users/josephmoore/OF/apps/Studio/vector/../../../libs/glut/lib/osx\" \"/Users/josephmoore/OF/apps/Studio/vector\""    setenv FRAMEWORK_SEARCH_PATHS_QUOTED_FOR_TARGET_1 "\"/Users/josephmoore/OF/apps/Studio/vector/../../../libs/glut/lib/osx\""    setenv FRAMEWORK_SEARCH_PATHS_QUOTED_FOR_TARGET_2 "\"/Users/josephmoore/OF/apps/Studio/vector\""    setenv FRAMEWORK_VERSION A    setenv FULL_PRODUCT_NAME vectorDebug.app    setenv GCC3_VERSION 3.3    setenv GCC_AUTO_VECTORIZATION YES    setenv GCC_DYNAMIC_NO_PIC NO    setenv GCC_ENABLE_FIX_AND_CONTINUE YES    setenv GCC_ENABLE_SSE3_EXTENSIONS YES    setenv GCC_ENABLE_SUPPLEMENTAL_SSE3_INSTRUCTIONS YES    setenv GCC_GENERATE_DEBUGGING_SYMBOLS YES    setenv GCC_INLINES_ARE_PRIVATE_EXTERN NO    setenv GCC_MODEL_TUNING NONE    setenv GCC_OPTIMIZATION_LEVEL 0    setenv GCC_PFE_FILE_C_DIALECTS "c objective-c c++ objective-c++"    setenv GCC_PRECOMPILE_PREFIX_HEADER YES    setenv GCC_PREFIX_HEADER /Developer/SDKs/MacOSX10.6.sdk/System/Library/Frameworks/Carbon.framework/Headers/Carbon.h    setenv GCC_SYMBOLS_PRIVATE_EXTERN NO    setenv GCC_TREAT_WARNINGS_AS_ERRORS NO    setenv GCC_VERSION com.apple.compilers.llvmgcc42    setenv GCC_WARN_ABOUT_DEPRECATED_FUNCTIONS YES    setenv GCC_WARN_ABOUT_INVALID_OFFSETOF_MACRO NO    setenv GCC_WARN_ALLOW_INCOMPLETE_PROTOCOL NO    setenv GCC_WARN_UNINITIALIZED_AUTOS NO    setenv GCC_WARN_UNUSED_VALUE NO    setenv GCC_WARN_UNUSED_VARIABLE NO    setenv GENERATE_MASTER_OBJECT_FILE NO    setenv GENERATE_PKGINFO_FILE YES    setenv GENERATE_PROFILING_CODE NO    setenv GID 20    setenv GROUP staff    setenv HEADERMAP_INCLUDES_FLAT_ENTRIES_FOR_TARGET_BEING_BUILT YES    setenv HEADERMAP_INCLUDES_FRAMEWORK_ENTRIES_FOR_ALL_PRODUCT_TYPES YES    setenv HEADERMAP_INCLUDES_NONPUBLIC_NONPRIVATE_HEADERS YES    setenv HEADERMAP_INCLUDES_PROJECT_HEADERS YES    setenv HEADER_CAIRO "\"../../../libs/cairo/include/cairo\""    setenv HEADER_FMODEX "\"../../../libs/fmodex/include\""    setenv HEADER_FREEIMAGE "\"../../../libs/FreeImage/include\""    setenv HEADER_FREETYPE "\"../../../libs/freetype/include\""    setenv HEADER_FREETYPE2 "\"../../../libs/freetype/include/freetype2\""    setenv HEADER_GLEW "\"../../../libs/glew/include\""    setenv HEADER_OF "\"../../../libs/openFrameworks/**\""    setenv HEADER_POCO "\"../../../libs/poco/include\""    setenv HEADER_RTAUDIO "\"../../../libs/rtAudio/include\""    setenv HEADER_SEARCH_PATHS "\"/Users/josephmoore/OF/apps/Studio/vector/bin/include\" \"../../../libs/openFrameworks/**\" \"../../../libs/poco/include\" \"../../../libs/freetype/include\" \"../../../libs/freetype/include/freetype2\" \"../../../libs/fmodex/include\" \"../../../libs/glew/include\" \"../../../libs/FreeImage/include\" \"../../../libs/tess2/include\" \"../../../libs/cairo/include/cairo\" \"../../../libs/rtAudio/include\""    setenv HEADER_TESS2 "\"../../../libs/tess2/include\""    setenv ICONV /usr/bin/iconv    setenv INFOPLIST_EXPAND_BUILD_SETTINGS YES    setenv INFOPLIST_FILE openFrameworks-Info.plist    setenv INFOPLIST_OUTPUT_FORMAT same-as-input    setenv INFOPLIST_PATH vectorDebug.app/Contents/Info.plist    setenv INFOPLIST_PREPROCESS NO    setenv INFOSTRINGS_PATH vectorDebug.app/Contents/Resources/English.lproj/InfoPlist.strings    setenv INSTALL_DIR /tmp/vector.dst/Users/josephmoore/Applications    setenv INSTALL_GROUP staff    setenv INSTALL_MODE_FLAG u+w,go-w,a+rX    setenv INSTALL_OWNER josephmoore    setenv INSTALL_PATH /Users/josephmoore/Applications    setenv INSTALL_ROOT /tmp/vector.dst    setenv JAVAC_DEFAULT_FLAGS "-J-Xms64m -J-XX:NewSize=4M -J-Dfile.encoding=UTF8"    setenv JAVA_APP_STUB /System/Library/Frameworks/JavaVM.framework/Resources/MacOS/JavaApplicationStub    setenv JAVA_ARCHIVE_CLASSES YES    setenv JAVA_ARCHIVE_TYPE JAR    setenv JAVA_COMPILER /usr/bin/javac    setenv JAVA_FOLDER_PATH vectorDebug.app/Contents/Resources/Java    setenv JAVA_FRAMEWORK_RESOURCES_DIRS Resources    setenv JAVA_JAR_FLAGS cv    setenv JAVA_SOURCE_SUBDIR .    setenv JAVA_USE_DEPENDENCIES YES    setenv JAVA_ZIP_FLAGS -urg    setenv JIKES_DEFAULT_FLAGS "+E +OLDCSO"    setenv KEEP_PRIVATE_EXTERNS NO    setenv LD_GENERATE_MAP_FILE NO    setenv LD_MAP_FILE_PATH /Users/josephmoore/OF/apps/Studio/vector/build/vector.build/Debug/vector.build/vectorDebug-LinkMap-normal-i386.txt    setenv LD_OPENMP_FLAGS -fopenmp    setenv LEGACY_DEVELOPER_DIR /Developer/Library/Xcode/PrivatePlugIns/Xcode3Core.ideplugin/Contents/SharedSupport/Developer    setenv LEX /Developer/usr/bin/lex    setenv LIBRARY_FLAG_NOSPACE YES    setenv LIBRARY_FLAG_PREFIX -l    setenv LIBRARY_SEARCH_PATHS "\"/Users/josephmoore/OF/apps/Studio/vector/bin\"                                                              "    setenv LIB_CAIRO1 "\"../../../libs/cairo/lib/osx/cairo-script-interpreter.a\""    setenv LIB_CAIRO2 "\"../../../libs/cairo/lib/osx/cairo.a\""    setenv LIB_CAIRO3 "\"../../../libs/cairo/lib/osx/pixman-1.a\""    setenv LIB_FMODEX "\"../../../libs/fmodex/lib/osx/libfmodex.dylib\""    setenv LIB_FREEIMAGE "\"../../../libs/FreeImage/lib/osx/freeimage.a\""    setenv LIB_FREETYPE "\"../../../libs/freetype/lib/osx/freetype.a\""    setenv LIB_GLEW "\"../../../libs/glew/lib/osx/glew.a\""    setenv LIB_GLUT "\"../../../libs/glut/lib/osx/GLUT.framework/Versions/A/GLUT\""    setenv LIB_POCO_1 "\"../../../libs/poco/lib/osx/PocoCrypto.a\""    setenv LIB_POCO_10 "\"../../../libs/poco/lib/osx/PocoZip.a\""    setenv LIB_POCO_2 "\"../../../libs/poco/lib/osx/PocoData.a\""    setenv LIB_POCO_3 "\"../../../libs/poco/lib/osx/PocoDataODBC.a\""    setenv LIB_POCO_4 "\"../../../libs/poco/lib/osx/PocoDataSQLite.a\""    setenv LIB_POCO_5 "\"../../../libs/poco/lib/osx/PocoFoundation.a\""    setenv LIB_POCO_6 "\"../../../libs/poco/lib/osx/PocoNet.a\""    setenv LIB_POCO_7 "\"../../../libs/poco/lib/osx/PocoNetSSL.a\""    setenv LIB_POCO_8 "\"../../../libs/poco/lib/osx/PocoUtil.a\""    setenv LIB_POCO_9 "\"../../../libs/poco/lib/osx/PocoXML.a\""    setenv LIB_RTAUDIO "\"../../../libs/rtAudio/lib/osx/rtAudio.a\""    setenv LIB_TESS "\"../../../libs/tess2/lib/osx/tess2.a\""    setenv LINKER_DISPLAYS_MANGLED_NAMES NO    setenv LINK_FILE_LIST_normal_i386 /Users/josephmoore/OF/apps/Studio/vector/build/vector.build/Debug/vector.build/Objects-normal/i386/vectorDebug.LinkFileList    setenv LINK_WITH_STANDARD_LIBRARIES YES    setenv LOCALIZED_RESOURCES_FOLDER_PATH vectorDebug.app/Contents/Resources/English.lproj    setenv LOCAL_ADMIN_APPS_DIR /Applications/Utilities    setenv LOCAL_APPS_DIR /Applications    setenv LOCAL_DEVELOPER_DIR /Library/Developer    setenv LOCAL_LIBRARY_DIR /Library    setenv MACH_O_TYPE mh_execute    setenv MACOSX_DEPLOYMENT_TARGET 10.6    setenv MAC_OS_X_PRODUCT_BUILD_VERSION 10K549    setenv MAC_OS_X_VERSION_ACTUAL 1068    setenv MAC_OS_X_VERSION_MAJOR 1060    setenv MAC_OS_X_VERSION_MINOR 0608    setenv NATIVE_ARCH i386    setenv NATIVE_ARCH_32_BIT i386    setenv NATIVE_ARCH_64_BIT x86_64    setenv NATIVE_ARCH_ACTUAL x86_64    setenv NO_COMMON YES    setenv OBJECT_FILE_DIR /Users/josephmoore/OF/apps/Studio/vector/build/vector.build/Debug/vector.build/Objects    setenv OBJECT_FILE_DIR_normal /Users/josephmoore/OF/apps/Studio/vector/build/vector.build/Debug/vector.build/Objects-normal    setenv OBJROOT /Users/josephmoore/OF/apps/Studio/vector/build    setenv OF_CORE_HEADERS "\"../../../libs/openFrameworks/**\" \"../../../libs/poco/include\" \"../../../libs/freetype/include\" \"../../../libs/freetype/include/freetype2\" \"../../../libs/fmodex/include\" \"../../../libs/glew/include\" \"../../../libs/FreeImage/include\" \"../../../libs/tess2/include\" \"../../../libs/cairo/include/cairo\" \"../../../libs/rtAudio/include\""    setenv OF_CORE_LIBS "\"../../../libs/poco/lib/osx/PocoCrypto.a\" \"../../../libs/poco/lib/osx/PocoData.a\" \"../../../libs/poco/lib/osx/PocoDataODBC.a\" \"../../../libs/poco/lib/osx/PocoDataSQLite.a\" \"../../../libs/poco/lib/osx/PocoFoundation.a\" \"../../../libs/poco/lib/osx/PocoNet.a\" \"../../../libs/poco/lib/osx/PocoNetSSL.a\" \"../../../libs/poco/lib/osx/PocoUtil.a\" \"../../../libs/poco/lib/osx/PocoXML.a\" \"../../../libs/poco/lib/osx/PocoZip.a\" \"../../../libs/tess2/lib/osx/tess2.a\" \"../../../libs/glew/lib/osx/glew.a\" \"../../../libs/cairo/lib/osx/cairo-script-interpreter.a\" \"../../../libs/cairo/lib/osx/cairo.a\" \"../../../libs/cairo/lib/osx/pixman-1.a\" \"../../../libs/fmodex/lib/osx/libfmodex.dylib\" \"../../../libs/rtAudio/lib/osx/rtAudio.a\""    setenv OF_PATH ../../..    setenv ONLY_ACTIVE_ARCH NO    setenv OPTIMIZATION_LEVEL 0    setenv OS MACOS    setenv OSAC /usr/bin/osacompile    setenv OTHER_CPLUSPLUSFLAGS "-D__MACOSX_CORE__ -lpthread -mtune=native"    setenv OTHER_LDFLAGS "\"../../../libs/poco/lib/osx/PocoCrypto.a\" \"../../../libs/poco/lib/osx/PocoData.a\" \"../../../libs/poco/lib/osx/PocoDataODBC.a\" \"../../../libs/poco/lib/osx/PocoDataSQLite.a\" \"../../../libs/poco/lib/osx/PocoFoundation.a\" \"../../../libs/poco/lib/osx/PocoNet.a\" \"../../../libs/poco/lib/osx/PocoNetSSL.a\" \"../../../libs/poco/lib/osx/PocoUtil.a\" \"../../../libs/poco/lib/osx/PocoXML.a\" \"../../../libs/poco/lib/osx/PocoZip.a\" \"../../../libs/tess2/lib/osx/tess2.a\" \"../../../libs/glew/lib/osx/glew.a\" \"../../../libs/cairo/lib/osx/cairo-script-interpreter.a\" \"../../../libs/cairo/lib/osx/cairo.a\" \"../../../libs/cairo/lib/osx/pixman-1.a\" \"../../../libs/fmodex/lib/osx/libfmodex.dylib\" \"../../../libs/rtAudio/lib/osx/rtAudio.a\""    setenv PACKAGE_TYPE com.apple.package-type.wrapper.application    setenv PASCAL_STRINGS YES    setenv PATH_PREFIXES_EXCLUDED_FROM_HEADER_DEPENDENCIES "/usr/include /usr/local/include /System/Library/Frameworks /System/Library/PrivateFrameworks /Developer/Headers /Developer/SDKs /Developer/Platforms"    setenv PBDEVELOPMENTPLIST_PATH vectorDebug.app/Contents/pbdevelopment.plist    setenv PFE_FILE_C_DIALECTS c++    setenv PHONEGAPLIB /Users/josephmoore/Documents/PhoneGapLib    setenv PKGINFO_FILE_PATH /Users/josephmoore/OF/apps/Studio/vector/build/vector.build/Debug/vector.build/PkgInfo    setenv PKGINFO_PATH vectorDebug.app/Contents/PkgInfo    setenv PLATFORM_DEVELOPER_APPLICATIONS_DIR /Developer/Applications    setenv PLATFORM_DEVELOPER_BIN_DIR /Developer/usr/bin    setenv PLATFORM_DEVELOPER_LIBRARY_DIR /Developer/Library    setenv PLATFORM_DEVELOPER_SDK_DIR /Developer/SDKs    setenv PLATFORM_DEVELOPER_TOOLS_DIR /Developer/Tools    setenv PLATFORM_DEVELOPER_USR_DIR /Developer/usr    setenv PLATFORM_DIR /Developer/Platforms/MacOSX.platform    setenv PLATFORM_NAME macosx    setenv PLATFORM_PREFERRED_ARCH x86_64    setenv PLATFORM_PRODUCT_BUILD_VERSION 4A304a    setenv PLIST_FILE_OUTPUT_FORMAT same-as-input    setenv PLUGINS_FOLDER_PATH vectorDebug.app/Contents/PlugIns    setenv PREBINDING NO    setenv PRECOMPS_INCLUDE_HEADERS_FROM_BUILT_PRODUCTS_DIR YES    setenv PRECOMP_DESTINATION_DIR /Users/josephmoore/OF/apps/Studio/vector/build/vector.build/Debug/vector.build/PrefixHeaders    setenv PRESERVE_DEAD_CODE_INITS_AND_TERMS NO    setenv PRIVATE_HEADERS_FOLDER_PATH vectorDebug.app/Contents/PrivateHeaders    setenv PRODUCT_NAME vectorDebug    setenv PRODUCT_SETTINGS_PATH /Users/josephmoore/OF/apps/Studio/vector/openFrameworks-Info.plist    setenv PRODUCT_TYPE com.apple.product-type.application    setenv PROFILING_CODE NO    setenv PROJECT vector    setenv PROJECT_DERIVED_FILE_DIR /Users/josephmoore/OF/apps/Studio/vector/build/vector.build/DerivedSources    setenv PROJECT_DIR /Users/josephmoore/OF/apps/Studio/vector    setenv PROJECT_FILE_PATH /Users/josephmoore/OF/apps/Studio/vector/vector.xcodeproj    setenv PROJECT_NAME vector    setenv PROJECT_TEMP_DIR /Users/josephmoore/OF/apps/Studio/vector/build/vector.build    setenv PUBLIC_HEADERS_FOLDER_PATH vectorDebug.app/Contents/Headers    setenv RECURSIVE_SEARCH_PATHS_FOLLOW_SYMLINKS YES    setenv REMOVE_CVS_FROM_RESOURCES YES    setenv REMOVE_GIT_FROM_RESOURCES YES    setenv REMOVE_SVN_FROM_RESOURCES YES    setenv REZ_COLLECTOR_DIR /Users/josephmoore/OF/apps/Studio/vector/build/vector.build/Debug/vector.build/ResourceManagerResources    setenv REZ_OBJECTS_DIR /Users/josephmoore/OF/apps/Studio/vector/build/vector.build/Debug/vector.build/ResourceManagerResources/Objects    setenv REZ_SEARCH_PATHS "\"/Users/josephmoore/OF/apps/Studio/vector/bin\" "    setenv RUN_CLANG_STATIC_ANALYZER NO    setenv SCAN_ALL_SOURCE_FILES_FOR_INCLUDES NO    setenv SCRIPTS_FOLDER_PATH vectorDebug.app/Contents/Resources/Scripts    setenv SCRIPT_INPUT_FILE_COUNT 0    setenv SCRIPT_OUTPUT_FILE_COUNT 0    setenv SDKROOT /Developer/SDKs/MacOSX10.6.sdk    setenv SDK_DIR /Developer/SDKs/MacOSX10.6.sdk    setenv SDK_NAME macosx10.6    setenv SDK_PRODUCT_BUILD_VERSION 4A304a    setenv SED /usr/bin/sed    setenv SEPARATE_STRIP NO    setenv SEPARATE_SYMBOL_EDIT NO    setenv SET_DIR_MODE_OWNER_GROUP YES    setenv SET_FILE_MODE_OWNER_GROUP NO    setenv SHARED_DERIVED_FILE_DIR /Users/josephmoore/OF/apps/Studio/vector/bin/DerivedSources    setenv SHARED_FRAMEWORKS_FOLDER_PATH vectorDebug.app/Contents/SharedFrameworks    setenv SHARED_PRECOMPS_DIR /var/folders/Dc/DcObbznzEJyqvLZguF+Lwk+++TI/-Caches-/com.apple.Xcode.501/SharedPrecompiledHeaders    setenv SHARED_SUPPORT_FOLDER_PATH vectorDebug.app/Contents/SharedSupport    setenv SKIP_INSTALL NO    setenv SOURCE_ROOT /Users/josephmoore/OF/apps/Studio/vector    setenv SRCROOT /Users/josephmoore/OF/apps/Studio/vector    setenv STANDARD_C_PLUS_PLUS_LIBRARY_TYPE dynamic    setenv STRINGS_FILE_OUTPUT_ENCODING UTF-16    setenv STRIP_INSTALLED_PRODUCT YES    setenv STRIP_STYLE all    setenv SUPPORTED_PLATFORMS macosx    setenv SYMBOL_REPOSITORY_DIR /Users/josephmoore/OF/apps/Studio/vector/build/vector.build/Debug/vector.build/SymbolRepositories    setenv SYMROOT /Users/josephmoore/OF/apps/Studio/vector/build    setenv SYSTEM_ADMIN_APPS_DIR /Applications/Utilities    setenv SYSTEM_APPS_DIR /Applications    setenv SYSTEM_CORE_SERVICES_DIR /System/Library/CoreServices    setenv SYSTEM_DEMOS_DIR /Applications/Extras    setenv SYSTEM_DEVELOPER_APPS_DIR /Developer/Applications    setenv SYSTEM_DEVELOPER_BIN_DIR /Developer/usr/bin    setenv SYSTEM_DEVELOPER_DEMOS_DIR "/Developer/Applications/Utilities/Built Examples"    setenv SYSTEM_DEVELOPER_DIR /Developer    setenv SYSTEM_DEVELOPER_DOC_DIR "/Developer/ADC Reference Library"    setenv SYSTEM_DEVELOPER_GRAPHICS_TOOLS_DIR "/Developer/Applications/Graphics Tools"    setenv SYSTEM_DEVELOPER_JAVA_TOOLS_DIR "/Developer/Applications/Java Tools"    setenv SYSTEM_DEVELOPER_PERFORMANCE_TOOLS_DIR "/Developer/Applications/Performance Tools"    setenv SYSTEM_DEVELOPER_RELEASENOTES_DIR "/Developer/ADC Reference Library/releasenotes"    setenv SYSTEM_DEVELOPER_TOOLS /Developer/Tools    setenv SYSTEM_DEVELOPER_TOOLS_DOC_DIR "/Developer/ADC Reference Library/documentation/DeveloperTools"    setenv SYSTEM_DEVELOPER_TOOLS_RELEASENOTES_DIR "/Developer/ADC Reference Library/releasenotes/DeveloperTools"    setenv SYSTEM_DEVELOPER_USR_DIR /Developer/usr    setenv SYSTEM_DEVELOPER_UTILITIES_DIR /Developer/Applications/Utilities    setenv SYSTEM_DOCUMENTATION_DIR /Library/Documentation    setenv SYSTEM_LIBRARY_DIR /System/Library    setenv TARGETNAME vector    setenv TARGET_BUILD_DIR /Users/josephmoore/OF/apps/Studio/vector/bin    setenv TARGET_NAME vector    setenv TARGET_TEMP_DIR /Users/josephmoore/OF/apps/Studio/vector/build/vector.build/Debug/vector.build    setenv TEMP_DIR /Users/josephmoore/OF/apps/Studio/vector/build/vector.build/Debug/vector.build    setenv TEMP_FILES_DIR /Users/josephmoore/OF/apps/Studio/vector/build/vector.build/Debug/vector.build    setenv TEMP_FILE_DIR /Users/josephmoore/OF/apps/Studio/vector/build/vector.build/Debug/vector.build    setenv TEMP_ROOT /Users/josephmoore/OF/apps/Studio/vector/build    setenv TEST_AFTER_BUILD NO    setenv UID 501    setenv UNLOCALIZED_RESOURCES_FOLDER_PATH vectorDebug.app/Contents/Resources    setenv UNSTRIPPED_PRODUCT NO    setenv USER josephmoore    setenv USER_APPS_DIR /Users/josephmoore/Applications    setenv USER_LIBRARY_DIR /Users/josephmoore/Library    setenv USE_DYNAMIC_NO_PIC YES    setenv USE_HEADERMAP YES    setenv USE_HEADER_SYMLINKS NO    setenv VALIDATE_PRODUCT NO    setenv VALID_ARCHS "i386 x86_64"    setenv VERBOSE_PBXCP NO    setenv VERSIONPLIST_PATH vectorDebug.app/Contents/version.plist    setenv VERSION_INFO_BUILDER josephmoore    setenv VERSION_INFO_FILE vectorDebug_vers.c    setenv VERSION_INFO_STRING "\"@(#)PROGRAM:vectorDebug  PROJECT:vector-\""    setenv WRAPPER_EXTENSION app    setenv WRAPPER_NAME vectorDebug.app    setenv WRAPPER_SUFFIX .app    setenv XCODE_APP_SUPPORT_DIR /Developer/Library/Xcode    setenv XCODE_PRODUCT_BUILD_VERSION 4A304a    setenv XCODE_VERSION_ACTUAL 0400    setenv XCODE_VERSION_MAJOR 0400    setenv XCODE_VERSION_MINOR 0400    setenv YACC /Developer/usr/bin/yacc    /bin/sh -c /Users/josephmoore/OF/apps/Studio/vector/build/vector.build/Debug/vector.build/Script-E4B6FFFD0C3F9AB9008CF71C.sh
+
+CPhaseScriptExecution "Run Script" /Users/josephmoore/OF/apps/dionysius/vector/build/vector.build/Debug/vector.build/Script-E4B6FFFD0C3F9AB9008CF71C.sh
+s389333143.614942
+e389333143.844502
+r1
+xPhaseScriptExecution
+xRun Script
+x/Users/josephmoore/OF/apps/dionysius/vector/build/vector.build/Debug/vector.build/Script-E4B6FFFD0C3F9AB9008CF71C.sh
+lSLF03#21%IDEActivityLogSection1@2#32"com.apple.dt.IDE.BuildLogSection36"Run custom shell script 'Run Script'4eef9e97c034b741^5e30d897c034b741^---0#0#0#--22142"PhaseScriptExecution "Run Script" build/vector.build/Debug/vector.build/Script-E4B6FFFD0C3F9AB9008CF71C.sh    cd /Users/josephmoore/OF/apps/dionysius/vector    setenv ACTION build    setenv ALTERNATE_GROUP staff    setenv ALTERNATE_MODE u+w,go-w,a+rX    setenv ALTERNATE_OWNER josephmoore    setenv ALWAYS_SEARCH_USER_PATHS YES    setenv APPLE_INTERNAL_DEVELOPER_DIR /AppleInternal/Developer    setenv APPLE_INTERNAL_DIR /AppleInternal    setenv APPLE_INTERNAL_DOCUMENTATION_DIR /AppleInternal/Documentation    setenv APPLE_INTERNAL_LIBRARY_DIR /AppleInternal/Library    setenv APPLE_INTERNAL_TOOLS /AppleInternal/Developer/Tools    setenv APPLY_RULES_IN_COPY_FILES NO    setenv ARCHS i386    setenv ARCHS_STANDARD_32_64_BIT "x86_64 i386"    setenv ARCHS_STANDARD_32_BIT i386    setenv ARCHS_STANDARD_64_BIT x86_64    setenv AVAILABLE_PLATFORMS "iphonesimulator macosx iphoneos"    setenv BUILD_COMPONENTS "headers build"    setenv BUILD_DIR /Users/josephmoore/OF/apps/dionysius/vector/build    setenv BUILD_ROOT /Users/josephmoore/OF/apps/dionysius/vector/build    setenv BUILD_STYLE Debug    setenv BUILD_VARIANTS normal    setenv BUILT_PRODUCTS_DIR /Users/josephmoore/OF/apps/dionysius/vector/bin    setenv CACHE_ROOT /var/folders/Dc/DcObbznzEJyqvLZguF+Lwk+++TI/-Caches-/com.apple.Xcode.501    setenv CCHROOT /var/folders/Dc/DcObbznzEJyqvLZguF+Lwk+++TI/-Caches-/com.apple.Xcode.501    setenv CHMOD /bin/chmod    setenv CHOWN /usr/sbin/chown    setenv CLASS_FILE_DIR /Users/josephmoore/OF/apps/dionysius/vector/build/vector.build/Debug/vector.build/JavaClasses    setenv CLEAN_PRECOMPS YES    setenv CLONE_HEADERS NO    setenv CODESIGNING_FOLDER_PATH /Users/josephmoore/OF/apps/dionysius/vector/bin/vectorDebug.app    setenv CODE_SIGNING_ALLOWED YES    setenv COMBINE_HIDPI_IMAGES NO    setenv COMMAND_MODE legacy    setenv COMPOSITE_SDK_DIRS /var/folders/Dc/DcObbznzEJyqvLZguF+Lwk+++TI/-Caches-/com.apple.Xcode.501/CompositeSDKs    setenv CONFIGURATION Debug    setenv CONFIGURATION_BUILD_DIR /Users/josephmoore/OF/apps/dionysius/vector/bin    setenv CONFIGURATION_TEMP_DIR /Users/josephmoore/OF/apps/dionysius/vector/build/vector.build/Debug    setenv CONTENTS_FOLDER_PATH vectorDebug.app/Contents    setenv COPYING_PRESERVES_HFS_DATA NO    setenv COPY_PHASE_STRIP NO    setenv COPY_RESOURCES_FROM_STATIC_FRAMEWORKS YES    setenv CP /bin/cp    setenv CURRENT_ARCH i386    setenv CURRENT_VARIANT normal    setenv DEAD_CODE_STRIPPING YES    setenv DEBUGGING_SYMBOLS YES    setenv DEBUG_INFORMATION_FORMAT dwarf    setenv DEPLOYMENT_LOCATION NO    setenv DEPLOYMENT_POSTPROCESSING NO    setenv DERIVED_FILES_DIR /Users/josephmoore/OF/apps/dionysius/vector/build/vector.build/Debug/vector.build/DerivedSources    setenv DERIVED_FILE_DIR /Users/josephmoore/OF/apps/dionysius/vector/build/vector.build/Debug/vector.build/DerivedSources    setenv DERIVED_SOURCES_DIR /Users/josephmoore/OF/apps/dionysius/vector/build/vector.build/Debug/vector.build/DerivedSources    setenv DEVELOPER_APPLICATIONS_DIR /Developer/Applications    setenv DEVELOPER_BIN_DIR /Developer/usr/bin    setenv DEVELOPER_DIR /Developer    setenv DEVELOPER_FRAMEWORKS_DIR /Developer/Library/Frameworks    setenv DEVELOPER_FRAMEWORKS_DIR_QUOTED "\"/Developer/Library/Frameworks\""    setenv DEVELOPER_LIBRARY_DIR /Developer/Library    setenv DEVELOPER_SDK_DIR /Developer/SDKs    setenv DEVELOPER_TOOLS_DIR /Developer/Tools    setenv DEVELOPER_USR_DIR /Developer/usr    setenv DEVELOPMENT_LANGUAGE English    setenv DOCUMENTATION_FOLDER_PATH vectorDebug.app/Contents/Resources/English.lproj/Documentation    setenv DO_HEADER_SCANNING_IN_JAM NO    setenv DSTROOT /tmp/vector.dst    setenv DWARF_DSYM_FILE_NAME vectorDebug.app.dSYM    setenv DWARF_DSYM_FOLDER_PATH /Users/josephmoore/OF/apps/dionysius/vector/bin    setenv ENABLE_HEADER_DEPENDENCIES YES    setenv ENABLE_OPENMP_SUPPORT NO    setenv EXCLUDED_INSTALLSRC_SUBDIRECTORY_PATTERNS ".svn CVS"    setenv EXCLUDED_RECURSIVE_SEARCH_PATH_SUBDIRECTORIES "*.nib *.lproj *.framework *.gch (*) CVS .svn .git *.xcodeproj *.xcode *.pbproj *.pbxproj"    setenv EXECUTABLES_FOLDER_PATH vectorDebug.app/Contents/Executables    setenv EXECUTABLE_FOLDER_PATH vectorDebug.app/Contents/MacOS    setenv EXECUTABLE_NAME vectorDebug    setenv EXECUTABLE_PATH vectorDebug.app/Contents/MacOS/vectorDebug    setenv FILE_LIST /Users/josephmoore/OF/apps/dionysius/vector/build/vector.build/Debug/vector.build/Objects/LinkFileList    setenv FIXED_FILES_DIR /Users/josephmoore/OF/apps/dionysius/vector/build/vector.build/Debug/vector.build/FixedFiles    setenv FRAMEWORKS_FOLDER_PATH vectorDebug.app/Contents/Frameworks    setenv FRAMEWORK_FLAG_PREFIX -framework    setenv FRAMEWORK_SEARCH_PATHS "\"/Users/josephmoore/OF/apps/dionysius/vector/bin\"  \"/Users/josephmoore/OF/apps/dionysius/vector/../../../libs/glut/lib/osx\" \"/Users/josephmoore/OF/apps/dionysius/vector\""    setenv FRAMEWORK_SEARCH_PATHS_QUOTED_FOR_TARGET_1 "\"/Users/josephmoore/OF/apps/dionysius/vector/../../../libs/glut/lib/osx\""    setenv FRAMEWORK_SEARCH_PATHS_QUOTED_FOR_TARGET_2 "\"/Users/josephmoore/OF/apps/dionysius/vector\""    setenv FRAMEWORK_VERSION A    setenv FULL_PRODUCT_NAME vectorDebug.app    setenv GCC3_VERSION 3.3    setenv GCC_AUTO_VECTORIZATION YES    setenv GCC_DYNAMIC_NO_PIC NO    setenv GCC_ENABLE_FIX_AND_CONTINUE YES    setenv GCC_ENABLE_SSE3_EXTENSIONS YES    setenv GCC_ENABLE_SUPPLEMENTAL_SSE3_INSTRUCTIONS YES    setenv GCC_GENERATE_DEBUGGING_SYMBOLS YES    setenv GCC_INLINES_ARE_PRIVATE_EXTERN NO    setenv GCC_MODEL_TUNING NONE    setenv GCC_OPTIMIZATION_LEVEL 0    setenv GCC_PFE_FILE_C_DIALECTS "c objective-c c++ objective-c++"    setenv GCC_PRECOMPILE_PREFIX_HEADER YES    setenv GCC_PREFIX_HEADER /Developer/SDKs/MacOSX10.6.sdk/System/Library/Frameworks/Carbon.framework/Headers/Carbon.h    setenv GCC_SYMBOLS_PRIVATE_EXTERN NO    setenv GCC_TREAT_WARNINGS_AS_ERRORS NO    setenv GCC_VERSION com.apple.compilers.llvmgcc42    setenv GCC_WARN_ABOUT_DEPRECATED_FUNCTIONS YES    setenv GCC_WARN_ABOUT_INVALID_OFFSETOF_MACRO NO    setenv GCC_WARN_ALLOW_INCOMPLETE_PROTOCOL NO    setenv GCC_WARN_UNINITIALIZED_AUTOS NO    setenv GCC_WARN_UNUSED_VALUE NO    setenv GCC_WARN_UNUSED_VARIABLE NO    setenv GENERATE_MASTER_OBJECT_FILE NO    setenv GENERATE_PKGINFO_FILE YES    setenv GENERATE_PROFILING_CODE NO    setenv GID 20    setenv GROUP staff    setenv HEADERMAP_INCLUDES_FLAT_ENTRIES_FOR_TARGET_BEING_BUILT YES    setenv HEADERMAP_INCLUDES_FRAMEWORK_ENTRIES_FOR_ALL_PRODUCT_TYPES YES    setenv HEADERMAP_INCLUDES_NONPUBLIC_NONPRIVATE_HEADERS YES    setenv HEADERMAP_INCLUDES_PROJECT_HEADERS YES    setenv HEADER_CAIRO "\"../../../libs/cairo/include/cairo\""    setenv HEADER_FMODEX "\"../../../libs/fmodex/include\""    setenv HEADER_FREEIMAGE "\"../../../libs/FreeImage/include\""    setenv HEADER_FREETYPE "\"../../../libs/freetype/include\""    setenv HEADER_FREETYPE2 "\"../../../libs/freetype/include/freetype2\""    setenv HEADER_GLEW "\"../../../libs/glew/include\""    setenv HEADER_OF "\"../../../libs/openFrameworks/**\""    setenv HEADER_POCO "\"../../../libs/poco/include\""    setenv HEADER_RTAUDIO "\"../../../libs/rtAudio/include\""    setenv HEADER_SEARCH_PATHS "\"/Users/josephmoore/OF/apps/dionysius/vector/bin/include\" \"../../../libs/openFrameworks/**\" \"../../../libs/poco/include\" \"../../../libs/freetype/include\" \"../../../libs/freetype/include/freetype2\" \"../../../libs/fmodex/include\" \"../../../libs/glew/include\" \"../../../libs/FreeImage/include\" \"../../../libs/tess2/include\" \"../../../libs/cairo/include/cairo\" \"../../../libs/rtAudio/include\""    setenv HEADER_TESS2 "\"../../../libs/tess2/include\""    setenv ICONV /usr/bin/iconv    setenv INFOPLIST_EXPAND_BUILD_SETTINGS YES    setenv INFOPLIST_FILE openFrameworks-Info.plist    setenv INFOPLIST_OUTPUT_FORMAT same-as-input    setenv INFOPLIST_PATH vectorDebug.app/Contents/Info.plist    setenv INFOPLIST_PREPROCESS NO    setenv INFOSTRINGS_PATH vectorDebug.app/Contents/Resources/English.lproj/InfoPlist.strings    setenv INSTALL_DIR /tmp/vector.dst/Users/josephmoore/Applications    setenv INSTALL_GROUP staff    setenv INSTALL_MODE_FLAG u+w,go-w,a+rX    setenv INSTALL_OWNER josephmoore    setenv INSTALL_PATH /Users/josephmoore/Applications    setenv INSTALL_ROOT /tmp/vector.dst    setenv JAVAC_DEFAULT_FLAGS "-J-Xms64m -J-XX:NewSize=4M -J-Dfile.encoding=UTF8"    setenv JAVA_APP_STUB /System/Library/Frameworks/JavaVM.framework/Resources/MacOS/JavaApplicationStub    setenv JAVA_ARCHIVE_CLASSES YES    setenv JAVA_ARCHIVE_TYPE JAR    setenv JAVA_COMPILER /usr/bin/javac    setenv JAVA_FOLDER_PATH vectorDebug.app/Contents/Resources/Java    setenv JAVA_FRAMEWORK_RESOURCES_DIRS Resources    setenv JAVA_JAR_FLAGS cv    setenv JAVA_SOURCE_SUBDIR .    setenv JAVA_USE_DEPENDENCIES YES    setenv JAVA_ZIP_FLAGS -urg    setenv JIKES_DEFAULT_FLAGS "+E +OLDCSO"    setenv KEEP_PRIVATE_EXTERNS NO    setenv LD_GENERATE_MAP_FILE NO    setenv LD_MAP_FILE_PATH /Users/josephmoore/OF/apps/dionysius/vector/build/vector.build/Debug/vector.build/vectorDebug-LinkMap-normal-i386.txt    setenv LD_OPENMP_FLAGS -fopenmp    setenv LEGACY_DEVELOPER_DIR /Developer/Library/Xcode/PrivatePlugIns/Xcode3Core.ideplugin/Contents/SharedSupport/Developer    setenv LEX /Developer/usr/bin/lex    setenv LIBRARY_FLAG_NOSPACE YES    setenv LIBRARY_FLAG_PREFIX -l    setenv LIBRARY_SEARCH_PATHS "\"/Users/josephmoore/OF/apps/dionysius/vector/bin\"                                                              "    setenv LIB_CAIRO1 "\"../../../libs/cairo/lib/osx/cairo-script-interpreter.a\""    setenv LIB_CAIRO2 "\"../../../libs/cairo/lib/osx/cairo.a\""    setenv LIB_CAIRO3 "\"../../../libs/cairo/lib/osx/pixman-1.a\""    setenv LIB_FMODEX "\"../../../libs/fmodex/lib/osx/libfmodex.dylib\""    setenv LIB_FREEIMAGE "\"../../../libs/FreeImage/lib/osx/freeimage.a\""    setenv LIB_FREETYPE "\"../../../libs/freetype/lib/osx/freetype.a\""    setenv LIB_GLEW "\"../../../libs/glew/lib/osx/glew.a\""    setenv LIB_GLUT "\"../../../libs/glut/lib/osx/GLUT.framework/Versions/A/GLUT\""    setenv LIB_POCO_1 "\"../../../libs/poco/lib/osx/PocoCrypto.a\""    setenv LIB_POCO_10 "\"../../../libs/poco/lib/osx/PocoZip.a\""    setenv LIB_POCO_2 "\"../../../libs/poco/lib/osx/PocoData.a\""    setenv LIB_POCO_3 "\"../../../libs/poco/lib/osx/PocoDataODBC.a\""    setenv LIB_POCO_4 "\"../../../libs/poco/lib/osx/PocoDataSQLite.a\""    setenv LIB_POCO_5 "\"../../../libs/poco/lib/osx/PocoFoundation.a\""    setenv LIB_POCO_6 "\"../../../libs/poco/lib/osx/PocoNet.a\""    setenv LIB_POCO_7 "\"../../../libs/poco/lib/osx/PocoNetSSL.a\""    setenv LIB_POCO_8 "\"../../../libs/poco/lib/osx/PocoUtil.a\""    setenv LIB_POCO_9 "\"../../../libs/poco/lib/osx/PocoXML.a\""    setenv LIB_RTAUDIO "\"../../../libs/rtAudio/lib/osx/rtAudio.a\""    setenv LIB_TESS "\"../../../libs/tess2/lib/osx/tess2.a\""    setenv LINKER_DISPLAYS_MANGLED_NAMES NO    setenv LINK_FILE_LIST_normal_i386 /Users/josephmoore/OF/apps/dionysius/vector/build/vector.build/Debug/vector.build/Objects-normal/i386/vectorDebug.LinkFileList    setenv LINK_WITH_STANDARD_LIBRARIES YES    setenv LOCALIZED_RESOURCES_FOLDER_PATH vectorDebug.app/Contents/Resources/English.lproj    setenv LOCAL_ADMIN_APPS_DIR /Applications/Utilities    setenv LOCAL_APPS_DIR /Applications    setenv LOCAL_DEVELOPER_DIR /Library/Developer    setenv LOCAL_LIBRARY_DIR /Library    setenv MACH_O_TYPE mh_execute    setenv MACOSX_DEPLOYMENT_TARGET 10.6    setenv MAC_OS_X_PRODUCT_BUILD_VERSION 10K549    setenv MAC_OS_X_VERSION_ACTUAL 1068    setenv MAC_OS_X_VERSION_MAJOR 1060    setenv MAC_OS_X_VERSION_MINOR 0608    setenv NATIVE_ARCH i386    setenv NATIVE_ARCH_32_BIT i386    setenv NATIVE_ARCH_64_BIT x86_64    setenv NATIVE_ARCH_ACTUAL x86_64    setenv NO_COMMON YES    setenv OBJECT_FILE_DIR /Users/josephmoore/OF/apps/dionysius/vector/build/vector.build/Debug/vector.build/Objects    setenv OBJECT_FILE_DIR_normal /Users/josephmoore/OF/apps/dionysius/vector/build/vector.build/Debug/vector.build/Objects-normal    setenv OBJROOT /Users/josephmoore/OF/apps/dionysius/vector/build    setenv OF_CORE_HEADERS "\"../../../libs/openFrameworks/**\" \"../../../libs/poco/include\" \"../../../libs/freetype/include\" \"../../../libs/freetype/include/freetype2\" \"../../../libs/fmodex/include\" \"../../../libs/glew/include\" \"../../../libs/FreeImage/include\" \"../../../libs/tess2/include\" \"../../../libs/cairo/include/cairo\" \"../../../libs/rtAudio/include\""    setenv OF_CORE_LIBS "\"../../../libs/poco/lib/osx/PocoCrypto.a\" \"../../../libs/poco/lib/osx/PocoData.a\" \"../../../libs/poco/lib/osx/PocoDataODBC.a\" \"../../../libs/poco/lib/osx/PocoDataSQLite.a\" \"../../../libs/poco/lib/osx/PocoFoundation.a\" \"../../../libs/poco/lib/osx/PocoNet.a\" \"../../../libs/poco/lib/osx/PocoNetSSL.a\" \"../../../libs/poco/lib/osx/PocoUtil.a\" \"../../../libs/poco/lib/osx/PocoXML.a\" \"../../../libs/poco/lib/osx/PocoZip.a\" \"../../../libs/tess2/lib/osx/tess2.a\" \"../../../libs/glew/lib/osx/glew.a\" \"../../../libs/cairo/lib/osx/cairo-script-interpreter.a\" \"../../../libs/cairo/lib/osx/cairo.a\" \"../../../libs/cairo/lib/osx/pixman-1.a\" \"../../../libs/fmodex/lib/osx/libfmodex.dylib\" \"../../../libs/rtAudio/lib/osx/rtAudio.a\""    setenv OF_PATH ../../..    setenv ONLY_ACTIVE_ARCH NO    setenv OPTIMIZATION_LEVEL 0    setenv OS MACOS    setenv OSAC /usr/bin/osacompile    setenv OTHER_CPLUSPLUSFLAGS "-D__MACOSX_CORE__ -lpthread -mtune=native"    setenv OTHER_LDFLAGS "\"../../../libs/poco/lib/osx/PocoCrypto.a\" \"../../../libs/poco/lib/osx/PocoData.a\" \"../../../libs/poco/lib/osx/PocoDataODBC.a\" \"../../../libs/poco/lib/osx/PocoDataSQLite.a\" \"../../../libs/poco/lib/osx/PocoFoundation.a\" \"../../../libs/poco/lib/osx/PocoNet.a\" \"../../../libs/poco/lib/osx/PocoNetSSL.a\" \"../../../libs/poco/lib/osx/PocoUtil.a\" \"../../../libs/poco/lib/osx/PocoXML.a\" \"../../../libs/poco/lib/osx/PocoZip.a\" \"../../../libs/tess2/lib/osx/tess2.a\" \"../../../libs/glew/lib/osx/glew.a\" \"../../../libs/cairo/lib/osx/cairo-script-interpreter.a\" \"../../../libs/cairo/lib/osx/cairo.a\" \"../../../libs/cairo/lib/osx/pixman-1.a\" \"../../../libs/fmodex/lib/osx/libfmodex.dylib\" \"../../../libs/rtAudio/lib/osx/rtAudio.a\""    setenv PACKAGE_TYPE com.apple.package-type.wrapper.application    setenv PASCAL_STRINGS YES    setenv PATH_PREFIXES_EXCLUDED_FROM_HEADER_DEPENDENCIES "/usr/include /usr/local/include /System/Library/Frameworks /System/Library/PrivateFrameworks /Developer/Headers /Developer/SDKs /Developer/Platforms"    setenv PBDEVELOPMENTPLIST_PATH vectorDebug.app/Contents/pbdevelopment.plist    setenv PFE_FILE_C_DIALECTS c++    setenv PHONEGAPLIB /Users/josephmoore/Documents/PhoneGapLib    setenv PKGINFO_FILE_PATH /Users/josephmoore/OF/apps/dionysius/vector/build/vector.build/Debug/vector.build/PkgInfo    setenv PKGINFO_PATH vectorDebug.app/Contents/PkgInfo    setenv PLATFORM_DEVELOPER_APPLICATIONS_DIR /Developer/Applications    setenv PLATFORM_DEVELOPER_BIN_DIR /Developer/usr/bin    setenv PLATFORM_DEVELOPER_LIBRARY_DIR /Developer/Library    setenv PLATFORM_DEVELOPER_SDK_DIR /Developer/SDKs    setenv PLATFORM_DEVELOPER_TOOLS_DIR /Developer/Tools    setenv PLATFORM_DEVELOPER_USR_DIR /Developer/usr    setenv PLATFORM_DIR /Developer/Platforms/MacOSX.platform    setenv PLATFORM_NAME macosx    setenv PLATFORM_PREFERRED_ARCH x86_64    setenv PLATFORM_PRODUCT_BUILD_VERSION 4A304a    setenv PLIST_FILE_OUTPUT_FORMAT same-as-input    setenv PLUGINS_FOLDER_PATH vectorDebug.app/Contents/PlugIns    setenv PREBINDING NO    setenv PRECOMPS_INCLUDE_HEADERS_FROM_BUILT_PRODUCTS_DIR YES    setenv PRECOMP_DESTINATION_DIR /Users/josephmoore/OF/apps/dionysius/vector/build/vector.build/Debug/vector.build/PrefixHeaders    setenv PRESERVE_DEAD_CODE_INITS_AND_TERMS NO    setenv PRIVATE_HEADERS_FOLDER_PATH vectorDebug.app/Contents/PrivateHeaders    setenv PRODUCT_NAME vectorDebug    setenv PRODUCT_SETTINGS_PATH /Users/josephmoore/OF/apps/dionysius/vector/openFrameworks-Info.plist    setenv PRODUCT_TYPE com.apple.product-type.application    setenv PROFILING_CODE NO    setenv PROJECT vector    setenv PROJECT_DERIVED_FILE_DIR /Users/josephmoore/OF/apps/dionysius/vector/build/vector.build/DerivedSources    setenv PROJECT_DIR /Users/josephmoore/OF/apps/dionysius/vector    setenv PROJECT_FILE_PATH /Users/josephmoore/OF/apps/dionysius/vector/vector.xcodeproj    setenv PROJECT_NAME vector    setenv PROJECT_TEMP_DIR /Users/josephmoore/OF/apps/dionysius/vector/build/vector.build    setenv PUBLIC_HEADERS_FOLDER_PATH vectorDebug.app/Contents/Headers    setenv RECURSIVE_SEARCH_PATHS_FOLLOW_SYMLINKS YES    setenv REMOVE_CVS_FROM_RESOURCES YES    setenv REMOVE_GIT_FROM_RESOURCES YES    setenv REMOVE_SVN_FROM_RESOURCES YES    setenv REZ_COLLECTOR_DIR /Users/josephmoore/OF/apps/dionysius/vector/build/vector.build/Debug/vector.build/ResourceManagerResources    setenv REZ_OBJECTS_DIR /Users/josephmoore/OF/apps/dionysius/vector/build/vector.build/Debug/vector.build/ResourceManagerResources/Objects    setenv REZ_SEARCH_PATHS "\"/Users/josephmoore/OF/apps/dionysius/vector/bin\" "    setenv RUN_CLANG_STATIC_ANALYZER NO    setenv SCAN_ALL_SOURCE_FILES_FOR_INCLUDES NO    setenv SCRIPTS_FOLDER_PATH vectorDebug.app/Contents/Resources/Scripts    setenv SCRIPT_INPUT_FILE_COUNT 0    setenv SCRIPT_OUTPUT_FILE_COUNT 0    setenv SDKROOT /Developer/SDKs/MacOSX10.6.sdk    setenv SDK_DIR /Developer/SDKs/MacOSX10.6.sdk    setenv SDK_NAME macosx10.6    setenv SDK_PRODUCT_BUILD_VERSION 4A304a    setenv SED /usr/bin/sed    setenv SEPARATE_STRIP NO    setenv SEPARATE_SYMBOL_EDIT NO    setenv SET_DIR_MODE_OWNER_GROUP YES    setenv SET_FILE_MODE_OWNER_GROUP NO    setenv SHARED_DERIVED_FILE_DIR /Users/josephmoore/OF/apps/dionysius/vector/bin/DerivedSources    setenv SHARED_FRAMEWORKS_FOLDER_PATH vectorDebug.app/Contents/SharedFrameworks    setenv SHARED_PRECOMPS_DIR /var/folders/Dc/DcObbznzEJyqvLZguF+Lwk+++TI/-Caches-/com.apple.Xcode.501/SharedPrecompiledHeaders    setenv SHARED_SUPPORT_FOLDER_PATH vectorDebug.app/Contents/SharedSupport    setenv SKIP_INSTALL NO    setenv SOURCE_ROOT /Users/josephmoore/OF/apps/dionysius/vector    setenv SRCROOT /Users/josephmoore/OF/apps/dionysius/vector    setenv STANDARD_C_PLUS_PLUS_LIBRARY_TYPE dynamic    setenv STRINGS_FILE_OUTPUT_ENCODING UTF-16    setenv STRIP_INSTALLED_PRODUCT YES    setenv STRIP_STYLE all    setenv SUPPORTED_PLATFORMS macosx    setenv SYMBOL_REPOSITORY_DIR /Users/josephmoore/OF/apps/dionysius/vector/build/vector.build/Debug/vector.build/SymbolRepositories    setenv SYMROOT /Users/josephmoore/OF/apps/dionysius/vector/build    setenv SYSTEM_ADMIN_APPS_DIR /Applications/Utilities    setenv SYSTEM_APPS_DIR /Applications    setenv SYSTEM_CORE_SERVICES_DIR /System/Library/CoreServices    setenv SYSTEM_DEMOS_DIR /Applications/Extras    setenv SYSTEM_DEVELOPER_APPS_DIR /Developer/Applications    setenv SYSTEM_DEVELOPER_BIN_DIR /Developer/usr/bin    setenv SYSTEM_DEVELOPER_DEMOS_DIR "/Developer/Applications/Utilities/Built Examples"    setenv SYSTEM_DEVELOPER_DIR /Developer    setenv SYSTEM_DEVELOPER_DOC_DIR "/Developer/ADC Reference Library"    setenv SYSTEM_DEVELOPER_GRAPHICS_TOOLS_DIR "/Developer/Applications/Graphics Tools"    setenv SYSTEM_DEVELOPER_JAVA_TOOLS_DIR "/Developer/Applications/Java Tools"    setenv SYSTEM_DEVELOPER_PERFORMANCE_TOOLS_DIR "/Developer/Applications/Performance Tools"    setenv SYSTEM_DEVELOPER_RELEASENOTES_DIR "/Developer/ADC Reference Library/releasenotes"    setenv SYSTEM_DEVELOPER_TOOLS /Developer/Tools    setenv SYSTEM_DEVELOPER_TOOLS_DOC_DIR "/Developer/ADC Reference Library/documentation/DeveloperTools"    setenv SYSTEM_DEVELOPER_TOOLS_RELEASENOTES_DIR "/Developer/ADC Reference Library/releasenotes/DeveloperTools"    setenv SYSTEM_DEVELOPER_USR_DIR /Developer/usr    setenv SYSTEM_DEVELOPER_UTILITIES_DIR /Developer/Applications/Utilities    setenv SYSTEM_DOCUMENTATION_DIR /Library/Documentation    setenv SYSTEM_LIBRARY_DIR /System/Library    setenv TARGETNAME vector    setenv TARGET_BUILD_DIR /Users/josephmoore/OF/apps/dionysius/vector/bin    setenv TARGET_NAME vector    setenv TARGET_TEMP_DIR /Users/josephmoore/OF/apps/dionysius/vector/build/vector.build/Debug/vector.build    setenv TEMP_DIR /Users/josephmoore/OF/apps/dionysius/vector/build/vector.build/Debug/vector.build    setenv TEMP_FILES_DIR /Users/josephmoore/OF/apps/dionysius/vector/build/vector.build/Debug/vector.build    setenv TEMP_FILE_DIR /Users/josephmoore/OF/apps/dionysius/vector/build/vector.build/Debug/vector.build    setenv TEMP_ROOT /Users/josephmoore/OF/apps/dionysius/vector/build    setenv TEST_AFTER_BUILD NO    setenv UID 501    setenv UNLOCALIZED_RESOURCES_FOLDER_PATH vectorDebug.app/Contents/Resources    setenv UNSTRIPPED_PRODUCT NO    setenv USER josephmoore    setenv USER_APPS_DIR /Users/josephmoore/Applications    setenv USER_LIBRARY_DIR /Users/josephmoore/Library    setenv USE_DYNAMIC_NO_PIC YES    setenv USE_HEADERMAP YES    setenv USE_HEADER_SYMLINKS NO    setenv VALIDATE_PRODUCT NO    setenv VALID_ARCHS "i386 x86_64"    setenv VERBOSE_PBXCP NO    setenv VERSIONPLIST_PATH vectorDebug.app/Contents/version.plist    setenv VERSION_INFO_BUILDER josephmoore    setenv VERSION_INFO_FILE vectorDebug_vers.c    setenv VERSION_INFO_STRING "\"@(#)PROGRAM:vectorDebug  PROJECT:vector-\""    setenv WRAPPER_EXTENSION app    setenv WRAPPER_NAME vectorDebug.app    setenv WRAPPER_SUFFIX .app    setenv XCODE_APP_SUPPORT_DIR /Developer/Library/Xcode    setenv XCODE_PRODUCT_BUILD_VERSION 4A304a    setenv XCODE_VERSION_ACTUAL 0400    setenv XCODE_VERSION_MAJOR 0400    setenv XCODE_VERSION_MINOR 0400    setenv YACC /Developer/usr/bin/yacc    /bin/sh -c /Users/josephmoore/OF/apps/dionysius/vector/build/vector.build/Debug/vector.build/Script-E4B6FFFD0C3F9AB9008CF71C.sh
 
 CProcessInfoPlistFile /Users/josephmoore/OF/apps/Studio/vector/bin/vectorDebug.app/Contents/Info.plist openFrameworks-Info.plist
 s387307342.129389
@@ -1712,8 +2509,51 @@ x/Users/josephmoore/OF/apps/Studio/vector/bin/vectorDebug.app/Contents/Info.plis
 xopenFrameworks-Info.plist
 lSLF03#21%IDEActivityLogSection1@2#32"com.apple.dt.IDE.BuildLogSection33"Process openFrameworks-Info.plist7592214ed715b741^b4ac234ed715b741^---0#0#0#-19%DVTDocumentLocation2@82"file://localhost/Users/josephmoore/OF/apps/Studio/vector/openFrameworks-Info.plist0000000000000000^402"ProcessInfoPlistFile bin/vectorDebug.app/Contents/Info.plist openFrameworks-Info.plist    cd /Users/josephmoore/OF/apps/Studio/vector    builtin-infoPlistUtility openFrameworks-Info.plist -genpkginfo /Users/josephmoore/OF/apps/Studio/vector/bin/vectorDebug.app/Contents/PkgInfo -expandbuildsettings -platform macosx -o /Users/josephmoore/OF/apps/Studio/vector/bin/vectorDebug.app/Contents/Info.plist
 
+CProcessInfoPlistFile /Users/josephmoore/OF/apps/dionysius/vector/bin/vectorDebug.app/Contents/Info.plist openFrameworks-Info.plist
+s389341121.236303
+e389341121.278215
+r1
+xProcessInfoPlistFile
+x/Users/josephmoore/OF/apps/dionysius/vector/bin/vectorDebug.app/Contents/Info.plist
+xopenFrameworks-Info.plist
+lSLF03#21%IDEActivityLogSection1@2#32"com.apple.dt.IDE.BuildLogSection33"Process openFrameworks-Info.plist209b3cc1df34b741^0b4447c1df34b741^---0#0#0#-19%DVTDocumentLocation2@85"file://localhost/Users/josephmoore/OF/apps/dionysius/vector/openFrameworks-Info.plist0000000000000000^411"ProcessInfoPlistFile bin/vectorDebug.app/Contents/Info.plist openFrameworks-Info.plist    cd /Users/josephmoore/OF/apps/dionysius/vector    builtin-infoPlistUtility openFrameworks-Info.plist -genpkginfo /Users/josephmoore/OF/apps/dionysius/vector/bin/vectorDebug.app/Contents/PkgInfo -expandbuildsettings -platform macosx -o /Users/josephmoore/OF/apps/dionysius/vector/bin/vectorDebug.app/Contents/Info.plist
+
+CProcessPCH++ /Users/josephmoore/Library/Developer/Xcode/DerivedData/vector-dugknmekwoywwzaefjnzeeylfryu/Index/PrecompiledHeaders/Carbon-fgwbdxglvvacbmbwjvxrbujpjfoa_ast/Carbon.h.pth /Developer/SDKs/MacOSX10.6.sdk/System/Library/Frameworks/Carbon.framework/Headers/Carbon.h normal i386 c++ com.apple.compilers.llvm.clang.1_0.astbuilder
+r0
+
 CProcessPCH++ /Users/josephmoore/Library/Developer/Xcode/DerivedData/vector-feuhjxbujlyiyefnbvisdjjglcvp/Index/PrecompiledHeaders/Carbon-beddrplvvmcmalblhpojwrxctkkc_ast/Carbon.h.pth /Developer/SDKs/MacOSX10.6.sdk/System/Library/Frameworks/Carbon.framework/Headers/Carbon.h normal i386 c++ com.apple.compilers.llvm.clang.1_0.astbuilder
 r0
+
+CProcessPCH++ /Users/josephmoore/Library/Developer/Xcode/DerivedData/vector-feuhjxbujlyiyefnbvisdjjglcvp/Index/PrecompiledHeaders/Carbon-cqnwtxdehykgrpfqfitwdpylfuzp_ast/Carbon.h.pth /Developer/SDKs/MacOSX10.6.sdk/System/Library/Frameworks/Carbon.framework/Headers/Carbon.h normal i386 c++ com.apple.compilers.llvm.clang.1_0.astbuilder
+r0
+
+CProcessPCH++ /var/folders/Dc/DcObbznzEJyqvLZguF+Lwk+++TI/-Caches-/com.apple.Xcode.501/SharedPrecompiledHeaders/Carbon-bgjtnldsaokiwiauzhagwxvrdtof/Carbon.h.gch /Developer/SDKs/MacOSX10.6.sdk/System/Library/Frameworks/Carbon.framework/Headers/Carbon.h normal i386 c++ com.apple.compilers.llvmgcc42
+s387530736.394675
+e387530740.606032
+r1
+xProcessPCH++
+x/var/folders/Dc/DcObbznzEJyqvLZguF+Lwk+++TI/-Caches-/com.apple.Xcode.501/SharedPrecompiledHeaders/Carbon-bgjtnldsaokiwiauzhagwxvrdtof/Carbon.h.gch
+x/Developer/SDKs/MacOSX10.6.sdk/System/Library/Frameworks/Carbon.framework/Headers/Carbon.h
+xnormal
+xi386
+xc++
+xcom.apple.compilers.llvmgcc42
+oi686-apple-darwin10-llvm-gcc-4.2: -lpthread: linker input file unused because linking not done
+lSLF03#21%IDEActivityLogSection1@2#32"com.apple.dt.IDE.BuildLogSection101"Precompile /Developer/SDKs/MacOSX10.6.sdk/System/Library/Frameworks/Carbon.framework/Headers/Carbon.hd12465f03f19b741^a8379bf43f19b741^-95"i686-apple-darwin10-llvm-gcc-4.2: -lpthread: linker input file unused because linking not done-0#0#0#-19%DVTDocumentLocation2@106"file://localhost/Developer/SDKs/MacOSX10.6.sdk/System/Library/Frameworks/Carbon.framework/Headers/Carbon.h0000000000000000^2159"ProcessPCH++ /var/folders/Dc/DcObbznzEJyqvLZguF+Lwk+++TI/-Caches-/com.apple.Xcode.501/SharedPrecompiledHeaders/Carbon-bgjtnldsaokiwiauzhagwxvrdtof/Carbon.h.gch /Developer/SDKs/MacOSX10.6.sdk/System/Library/Frameworks/Carbon.framework/Headers/Carbon.h normal i386 c++ com.apple.compilers.llvmgcc42    cd /Users/josephmoore/OF/apps/Studio/vector    setenv LANG en_US.US-ASCII    /Developer/usr/bin/llvm-gcc-4.2 -x c++-header -arch i386 -fmessage-length=0 -pipe -Wno-trigraphs -fpascal-strings -O0 -isysroot /Developer/SDKs/MacOSX10.6.sdk -fasm-blocks -Wno-invalid-offsetof -mmacosx-version-min=10.6 -gdwarf-2 -msse3 -mssse3 -I/Users/josephmoore/OF/apps/Studio/vector/build/vector.build/Debug/vector.build/vectorDebug.hmap -I/Users/josephmoore/OF/apps/Studio/vector/bin/include -I../../../libs/openFrameworks -I../../../libs/openFrameworks/3d -I../../../libs/openFrameworks/app -I../../../libs/openFrameworks/communication -I../../../libs/openFrameworks/events -I../../../libs/openFrameworks/gl -I../../../libs/openFrameworks/graphics -I../../../libs/openFrameworks/math -I../../../libs/openFrameworks/sound -I../../../libs/openFrameworks/types -I../../../libs/openFrameworks/utils -I../../../libs/openFrameworks/video -I../../../libs/poco/include -I../../../libs/freetype/include -I../../../libs/freetype/include/freetype2 -I../../../libs/fmodex/include -I../../../libs/glew/include -I../../../libs/FreeImage/include -I../../../libs/tess2/include -I../../../libs/cairo/include/cairo -I../../../libs/rtAudio/include -I/Users/josephmoore/OF/apps/Studio/vector/build/vector.build/Debug/vector.build/DerivedSources/i386 -I/Users/josephmoore/OF/apps/Studio/vector/build/vector.build/Debug/vector.build/DerivedSources -F/Users/josephmoore/OF/apps/Studio/vector/bin -F/Users/josephmoore/OF/apps/Studio/vector/../../../libs/glut/lib/osx -F/Users/josephmoore/OF/apps/Studio/vector -D__MACOSX_CORE__ -lpthread -mtune=native -c /Developer/SDKs/MacOSX10.6.sdk/System/Library/Frameworks/Carbon.framework/Headers/Carbon.h -o /var/folders/Dc/DcObbznzEJyqvLZguF+Lwk+++TI/-Caches-/com.apple.Xcode.501/SharedPrecompiledHeaders/Carbon-bgjtnldsaokiwiauzhagwxvrdtof/Carbon.h.gch
+
+CProcessPCH++ /var/folders/Dc/DcObbznzEJyqvLZguF+Lwk+++TI/-Caches-/com.apple.Xcode.501/SharedPrecompiledHeaders/Carbon-bmjrktjmoyvpxagbylvcnybmvztq/Carbon.h.gch /Developer/SDKs/MacOSX10.6.sdk/System/Library/Frameworks/Carbon.framework/Headers/Carbon.h normal i386 c++ com.apple.compilers.llvmgcc42
+s389341121.284289
+e389341124.446124
+r1
+xProcessPCH++
+x/var/folders/Dc/DcObbznzEJyqvLZguF+Lwk+++TI/-Caches-/com.apple.Xcode.501/SharedPrecompiledHeaders/Carbon-bmjrktjmoyvpxagbylvcnybmvztq/Carbon.h.gch
+x/Developer/SDKs/MacOSX10.6.sdk/System/Library/Frameworks/Carbon.framework/Headers/Carbon.h
+xnormal
+xi386
+xc++
+xcom.apple.compilers.llvmgcc42
+oi686-apple-darwin10-llvm-gcc-4.2: -lpthread: linker input file unused because linking not done
+lSLF03#21%IDEActivityLogSection1@2#32"com.apple.dt.IDE.BuildLogSection101"Precompile /Developer/SDKs/MacOSX10.6.sdk/System/Library/Frameworks/Carbon.framework/Headers/Carbon.h3d1049c1df34b741^933572c4df34b741^-95"i686-apple-darwin10-llvm-gcc-4.2: -lpthread: linker input file unused because linking not done-0#0#0#-19%DVTDocumentLocation2@106"file://localhost/Developer/SDKs/MacOSX10.6.sdk/System/Library/Frameworks/Carbon.framework/Headers/Carbon.h0000000000000000^2183"ProcessPCH++ /var/folders/Dc/DcObbznzEJyqvLZguF+Lwk+++TI/-Caches-/com.apple.Xcode.501/SharedPrecompiledHeaders/Carbon-bmjrktjmoyvpxagbylvcnybmvztq/Carbon.h.gch /Developer/SDKs/MacOSX10.6.sdk/System/Library/Frameworks/Carbon.framework/Headers/Carbon.h normal i386 c++ com.apple.compilers.llvmgcc42    cd /Users/josephmoore/OF/apps/dionysius/vector    setenv LANG en_US.US-ASCII    /Developer/usr/bin/llvm-gcc-4.2 -x c++-header -arch i386 -fmessage-length=0 -pipe -Wno-trigraphs -fpascal-strings -O0 -isysroot /Developer/SDKs/MacOSX10.6.sdk -fasm-blocks -Wno-invalid-offsetof -mmacosx-version-min=10.6 -gdwarf-2 -msse3 -mssse3 -I/Users/josephmoore/OF/apps/dionysius/vector/build/vector.build/Debug/vector.build/vectorDebug.hmap -I/Users/josephmoore/OF/apps/dionysius/vector/bin/include -I../../../libs/openFrameworks -I../../../libs/openFrameworks/3d -I../../../libs/openFrameworks/app -I../../../libs/openFrameworks/communication -I../../../libs/openFrameworks/events -I../../../libs/openFrameworks/gl -I../../../libs/openFrameworks/graphics -I../../../libs/openFrameworks/math -I../../../libs/openFrameworks/sound -I../../../libs/openFrameworks/types -I../../../libs/openFrameworks/utils -I../../../libs/openFrameworks/video -I../../../libs/poco/include -I../../../libs/freetype/include -I../../../libs/freetype/include/freetype2 -I../../../libs/fmodex/include -I../../../libs/glew/include -I../../../libs/FreeImage/include -I../../../libs/tess2/include -I../../../libs/cairo/include/cairo -I../../../libs/rtAudio/include -I/Users/josephmoore/OF/apps/dionysius/vector/build/vector.build/Debug/vector.build/DerivedSources/i386 -I/Users/josephmoore/OF/apps/dionysius/vector/build/vector.build/Debug/vector.build/DerivedSources -F/Users/josephmoore/OF/apps/dionysius/vector/bin -F/Users/josephmoore/OF/apps/dionysius/vector/../../../libs/glut/lib/osx -F/Users/josephmoore/OF/apps/dionysius/vector -D__MACOSX_CORE__ -lpthread -mtune=native -c /Developer/SDKs/MacOSX10.6.sdk/System/Library/Frameworks/Carbon.framework/Headers/Carbon.h -o /var/folders/Dc/DcObbznzEJyqvLZguF+Lwk+++TI/-Caches-/com.apple.Xcode.501/SharedPrecompiledHeaders/Carbon-bmjrktjmoyvpxagbylvcnybmvztq/Carbon.h.gch
 
 CProcessPCH++ /var/folders/Dc/DcObbznzEJyqvLZguF+Lwk+++TI/-Caches-/com.apple.Xcode.501/SharedPrecompiledHeaders/Carbon-elbzneltbpgvelfozhdnvsjtscyu/Carbon.h.gch /Developer/SDKs/MacOSX10.6.sdk/System/Library/Frameworks/Carbon.framework/Headers/Carbon.h normal i386 c++ com.apple.compilers.llvmgcc42
 s387307342.142589
@@ -1730,10 +2570,18 @@ oi686-apple-darwin10-llvm-gcc-4.2: -lpthread: linker input file unused because l
 lSLF03#21%IDEActivityLogSection1@2#32"com.apple.dt.IDE.BuildLogSection101"Precompile /Developer/SDKs/MacOSX10.6.sdk/System/Library/Frameworks/Carbon.framework/Headers/Carbon.h7829254ed715b741^51f61e52d715b741^-95"i686-apple-darwin10-llvm-gcc-4.2: -lpthread: linker input file unused because linking not done-0#0#0#-19%DVTDocumentLocation2@106"file://localhost/Developer/SDKs/MacOSX10.6.sdk/System/Library/Frameworks/Carbon.framework/Headers/Carbon.h0000000000000000^2116"ProcessPCH++ /var/folders/Dc/DcObbznzEJyqvLZguF+Lwk+++TI/-Caches-/com.apple.Xcode.501/SharedPrecompiledHeaders/Carbon-elbzneltbpgvelfozhdnvsjtscyu/Carbon.h.gch /Developer/SDKs/MacOSX10.6.sdk/System/Library/Frameworks/Carbon.framework/Headers/Carbon.h normal i386 c++ com.apple.compilers.llvmgcc42    cd /Users/josephmoore/OF/apps/Studio/vector    setenv LANG en_US.US-ASCII    /Developer/usr/bin/llvm-gcc-4.2 -x c++-header -arch i386 -fmessage-length=0 -pipe -Wno-trigraphs -fpascal-strings -O0 -isysroot /Developer/SDKs/MacOSX10.6.sdk -fasm-blocks -Wno-invalid-offsetof -mmacosx-version-min=10.6 -gdwarf-2 -msse3 -mssse3 -I/Users/josephmoore/OF/apps/Studio/vector/build/vector.build/Debug/vector.build/vectorDebug.hmap -I/Users/josephmoore/OF/apps/Studio/vector/bin/include -I../../../libs/openFrameworks -I../../../libs/openFrameworks/3d -I../../../libs/openFrameworks/app -I../../../libs/openFrameworks/communication -I../../../libs/openFrameworks/events -I../../../libs/openFrameworks/gl -I../../../libs/openFrameworks/graphics -I../../../libs/openFrameworks/math -I../../../libs/openFrameworks/sound -I../../../libs/openFrameworks/types -I../../../libs/openFrameworks/utils -I../../../libs/openFrameworks/video -I../../../libs/poco/include -I../../../libs/freetype/include -I../../../libs/freetype/include/freetype2 -I../../../libs/fmodex/include -I../../../libs/glew/include -I../../../libs/FreeImage/include -I../../../libs/tess2/include -I../../../libs/cairo/include/cairo -I../../../libs/rtAudio/include -I/Users/josephmoore/OF/apps/Studio/vector/build/vector.build/Debug/vector.build/DerivedSources/i386 -I/Users/josephmoore/OF/apps/Studio/vector/build/vector.build/Debug/vector.build/DerivedSources -F/Users/josephmoore/OF/apps/Studio/vector/bin -F/Users/josephmoore/OF/apps/Studio/vector/../../../libs/glut/lib/osx -D__MACOSX_CORE__ -lpthread -mtune=native -c /Developer/SDKs/MacOSX10.6.sdk/System/Library/Frameworks/Carbon.framework/Headers/Carbon.h -o /var/folders/Dc/DcObbznzEJyqvLZguF+Lwk+++TI/-Caches-/com.apple.Xcode.501/SharedPrecompiledHeaders/Carbon-elbzneltbpgvelfozhdnvsjtscyu/Carbon.h.gch
 
 CTouch /Users/josephmoore/OF/apps/Studio/vector/bin/vectorDebug.app
-s387307352.277372
-e387307352.285426
+s388443473.577117
+e388443473.586923
 r1
 xTouch
 x/Users/josephmoore/OF/apps/Studio/vector/bin/vectorDebug.app
-lSLF03#21%IDEActivityLogSection1@2#32"com.apple.dt.IDE.BuildLogSection66"Touch /Users/josephmoore/OF/apps/Studio/vector/bin/vectorDebug.app13104758d715b741^cf114958d715b741^---0#0#0#--157"Touch bin/vectorDebug.app    cd /Users/josephmoore/OF/apps/Studio/vector    /usr/bin/touch -c /Users/josephmoore/OF/apps/Studio/vector/bin/vectorDebug.app
+lSLF03#21%IDEActivityLogSection1@2#32"com.apple.dt.IDE.BuildLogSection66"Touch /Users/josephmoore/OF/apps/Studio/vector/bin/vectorDebug.appc5cb93512d27b741^064696512d27b741^---0#0#0#--157"Touch bin/vectorDebug.app    cd /Users/josephmoore/OF/apps/Studio/vector    /usr/bin/touch -c /Users/josephmoore/OF/apps/Studio/vector/bin/vectorDebug.app
+
+CTouch /Users/josephmoore/OF/apps/dionysius/vector/bin/vectorDebug.app
+s389333143.851251
+e389333143.961064
+r1
+xTouch
+x/Users/josephmoore/OF/apps/dionysius/vector/bin/vectorDebug.app
+lSLF03#21%IDEActivityLogSection1@2#32"com.apple.dt.IDE.BuildLogSection69"Touch /Users/josephmoore/OF/apps/dionysius/vector/bin/vectorDebug.app7e00da97c034b741^0937f997c034b741^---0#0#0#--163"Touch bin/vectorDebug.app    cd /Users/josephmoore/OF/apps/dionysius/vector    /usr/bin/touch -c /Users/josephmoore/OF/apps/dionysius/vector/bin/vectorDebug.app
 
