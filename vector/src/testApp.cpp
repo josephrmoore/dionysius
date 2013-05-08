@@ -61,7 +61,19 @@ void testApp::update(){
             values = ofSplitString(output, " ", true, true); // trues are ignoreempty & trim
             if(values.size()==20){
                 current_point.x += ofToInt(values[0]);
+                if(current_point.x > ofGetScreenWidth()+current_radius){
+                    current_point.x = ofGetScreenWidth()+current_radius;
+                }
+                if(current_point.x < -current_radius-5){
+                    current_point.x = -current_radius-5;
+                }
                 current_point.y += -ofToInt(values[1]);
+                if(current_point.y > ofGetScreenHeight()+current_radius){
+                    current_point.y = ofGetScreenHeight()+current_radius;
+                }
+                if(current_point.y < -current_radius-5){
+                    current_point.y = -current_radius-5;
+                }
                 if(ofToInt(values[2]) == 1 && j1_up == false){
                     // J1 UP
                     if(current_object < (objects.size()-1) && objects.size()>0){
@@ -121,6 +133,15 @@ void testApp::update(){
                 } else {
                     ok_button = false;
                 }
+                if(ofToInt(values[7]) == 0 && delete_button == false){
+                    // DELETE
+                    if(current_object>=0){
+                        deleteObject(current_object);            
+                    }
+                    delete_button = true;
+                } else {
+                    delete_button = false;
+                }
                 if(values[8] == "0" && j2_up == false){                    
                     // J2 UP
                     float bri = current_color.getBrightness();
@@ -161,14 +182,17 @@ void testApp::update(){
                 } else {
                     j2_right = false;
                 }
-                if(ofToInt(values[7]) == 0 && delete_button == false){
-                    // DELETE
-                    if(current_object>=0){
-                        deleteObject(current_object);            
-                    }
-                    delete_button = true;
+                current_sides = (int)(ofMap(ofToInt(values[12]), 58, 1006, 0, 20));
+                current_radius = (int)(ofMap(ofToInt(values[13]), 0, 1020, 0, ofGetScreenWidth()/2));
+                current_color.setHue(ofMap(ofToInt(values[14]), 58, 1021, 0, 255));
+                current_z = (int)(ofMap(ofToInt(values[15]), 58, 1008, 0, objects.size()));
+                current_alpha = (int)(ofMap(ofToInt(values[16]), 58, 1020, 0, 255));
+                if(ofToInt(values[17]) == 0 && delete_button == false){
+                    // CLOSE SHAPE
+                    line.close();
+                    close = true;
                 } else {
-                    delete_button = false;
+                    close = false;
                 }
                 if(ofToInt(values[18]) == 0 && delete_button == false){
                     // VERTEX
@@ -179,24 +203,12 @@ void testApp::update(){
                 } else {
                     vertex = false;
                 }
-                if(ofToInt(values[17]) == 0 && delete_button == false){
-                    // CLOSE SHAPE
-                    line.close();
-                    close = true;
-                } else {
-                    close = false;
-                }
                 if(ofToInt(values[19]) == 0){
                     // OSKAR MODE
                     oskar = false;
                 } else {
                     oskar = true;
                 }
-                current_color.setHue(ofMap(ofToInt(values[14]), 5, 685, 0, 255));
-                current_sides = ofMap(ofToInt(values[12]), 5, 685, 0, 20);
-                current_radius = ofMap(ofToInt(values[13]), 5, 685, 0, ofGetScreenWidth()/2);
-                current_z = ofMap(ofToInt(values[15]), 5, 685, 0, objects.size());
-                current_alpha = ofMap(ofToInt(values[16]), 5, 685, 0, 255);
             }
         }
         if (arduino == "") continue;
@@ -233,7 +245,10 @@ void testApp::draw(){
         if(current_z==zs.size()){
             drawPreview();
         }
-
+    }
+    if(current_sides == 1){
+        ofLine(current_point.x-5, current_point.y-5, current_point.x+5, current_point.y+5);
+        ofLine(current_point.x-5, current_point.y+5, current_point.x+5, current_point.y-5);
     }
     devInfo();
 }
