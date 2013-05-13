@@ -34,7 +34,7 @@ void testApp::setup(){
     ok_button = false;
     vertex = false;
     close = false;
-    sender.setup("localhost", 4567);
+    sender.setup("127.0.0.1", 5456);
 }
 
 //--------------------------------------------------------------
@@ -507,9 +507,17 @@ void testApp::placeObject(){
         audio(current_point, current_sides, current_radius, current_color, current_z, line);
         ofxOscMessage message;
         message.setAddress("/playtone");
-        float tone = 80.0;
+        message.setRemoteEndpoint("127.0.0.1", 5456);
+        float tone = ofMap(current_point.x, 0, ofGetScreenWidth(), 200, 2000);
         message.addFloatArg( tone );
+        float amp = ofMap(current_point.y, 0, ofGetScreenHeight(), 0.1, 0.6);
+        message.addFloatArg( amp );
+        float dur = ofMap(current_radius, 0, ofGetScreenWidth()/2, .1, 5);
+        message.addFloatArg( dur );
         sender.sendMessage(message);
+        cout<<message.getAddress()<<endl;
+        cout<<message.getRemotePort()<<endl;
+
     }
 }
 

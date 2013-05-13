@@ -1,7 +1,6 @@
 ffffffffffffffffffffffffffffffff 1497f7069df3b1697252460e9f455470 ffffffffffffffffffffffffffffffff 102 /Users/josephmoore/OF/apps/dionysius/vector/bin/vectorDebug.app
-ffffffffffffffffffffffffffffffff 96ec492c7f0c1e014c964471a32d3097 ffffffffffffffffffffffffffffffff 5715980 /Users/josephmoore/OF/apps/dionysius/vector/bin/vectorDebug.app/Contents/MacOS/vectorDebug
-87333ca081721db1c9e0405e6d8ea882 85999b225568c8c87635ae261fd1b15c ffffffffffffffffffffffffffffffff 500120 /Users/josephmoore/OF/apps/dionysius/vector/build/vector.build/Debug/vector.build/Objects-normal/i386/testApp.o
 0000000051237d4800000000000000cc 984da116d836bb3fd11a4d4ced15d448 ffffffffffffffffffffffffffffffff 204 /Users/josephmoore/OF/apps/dionysius/vector/bin/vectorDebug.app/Contents/Frameworks/GLUT.framework
+ffffffffffffffffffffffffffffffff 96ec492c7f0c1e014c964471a32d3097 ffffffffffffffffffffffffffffffff 5725644 /Users/josephmoore/OF/apps/dionysius/vector/bin/vectorDebug.app/Contents/MacOS/vectorDebug
 ffffffffffffffffffffffffffffffff 65a38eddd2a3af74d7422e84921969e4 ffffffffffffffffffffffffffffffff 97604 /Users/josephmoore/OF/apps/dionysius/vector/build/vector.build/Debug/vector.build/Objects-normal/i386/ofxOscSender.o
 ffffffffffffffffffffffffffffffff 6fc9d6a2f01dc37e08547661676503d1 ffffffffffffffffffffffffffffffff 127908 /Users/josephmoore/OF/apps/dionysius/vector/build/vector.build/Debug/vector.build/Objects-normal/i386/ofxOscReceiver.o
 87333ca09147d520c9e0405e6d8d95a3 0246ed4e67869909261bc53bf59a4dd3 ffffffffffffffffffffffffffffffff 91940 /Users/josephmoore/OF/apps/dionysius/vector/build/vector.build/Debug/vector.build/Objects-normal/i386/ofxOscMessage.o
@@ -19,6 +18,7 @@ ffffffffffffffffffffffffffffffff 37f4bdab2406c1df3bff1e50d01ba6b3 ffffffffffffff
 87333ca08a0464dac9e0405e6d8d872b a45274682ac2acf1a852a083b09f1503 ffffffffffffffffffffffffffffffff 51748 /Users/josephmoore/OF/apps/dionysius/vector/build/vector.build/Debug/vector.build/Objects-normal/i386/ofxAnimatableOfColor.o
 87333ca0d6586cb1c9e0405e6d8ec156 4333e16ba732cc63d2df4971d19e80b8 ffffffffffffffffffffffffffffffff 38012 /Users/josephmoore/OF/apps/dionysius/vector/build/vector.build/Debug/vector.build/Objects-normal/i386/ofxAnimatableFloat.o
 87333ca087dcfa25c9e0405e6d8eeda8 77f1b3cb16fddbb3a4873c197f594295 ffffffffffffffffffffffffffffffff 109176 /Users/josephmoore/OF/apps/dionysius/vector/build/vector.build/Debug/vector.build/Objects-normal/i386/ofxAnimatable.o
+87333ca081739a94c9e0405e6d8ea921 85999b225568c8c87635ae261fd1b15c ffffffffffffffffffffffffffffffff 503456 /Users/josephmoore/OF/apps/dionysius/vector/build/vector.build/Debug/vector.build/Objects-normal/i386/testApp.o
 87333ca0c7fc403ac9e0405e6d8fc480 6e6c0149fe47e7722bd2a75ebf676ce6 ffffffffffffffffffffffffffffffff 199360 /Users/josephmoore/OF/apps/dionysius/vector/build/vector.build/Debug/vector.build/Objects-normal/i386/main.o
 87333ca09c9f9a9cc9e0405e6d8eebc7 1f792e09032a6487b2eccdd6f9288689 ffffffffffffffffffffffffffffffff 223572 /Users/josephmoore/OF/apps/dionysius/vector/build/vector.build/Debug/vector.build/Objects-normal/i386/geometry.o
 87333ca0d0941731c9e0405e6d8c9541 77783d06ca16548a40cfa9056703e15e ffffffffffffffffffffffffffffffff 746608 /Users/josephmoore/OF/apps/dionysius/vector/build/vector.build/Debug/vector.build/Objects-normal/i386/ofxExtras.o
