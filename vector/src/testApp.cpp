@@ -16,7 +16,7 @@ void testApp::setup(){
     preview_object.create_geometry(-2, current_point, current_sides, current_radius, current_color, current_z, line);
     ofSetVerticalSync(true);
     step = 5;
-    info_on = true;
+    info_on = false;
     arduino = "";
 	serial.setup(0, 9600); //open the first device
     oskar = false;
