@@ -34,6 +34,7 @@ void testApp::setup(){
     ok_button = false;
     vertex = false;
     close = false;
+    sender.setup("localhost", 4567);
 }
 
 //--------------------------------------------------------------
@@ -504,6 +505,11 @@ void testApp::placeObject(){
     if(oskar){
         animate(current_point, current_sides, current_radius, current_color, current_z, line);
         audio(current_point, current_sides, current_radius, current_color, current_z, line);
+        ofxOscMessage message;
+        message.setAddress("/playtone");
+        float tone = 80.0;
+        message.addFloatArg( tone );
+        sender.sendMessage(message);
     }
 }
 

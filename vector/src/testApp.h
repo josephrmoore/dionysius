@@ -2,6 +2,7 @@
 
 #include "ofxExtras.h"
 #include "geometry.h"
+#include "ofxOsc.h"
 
 
 class testApp : public ofBaseApp{
@@ -50,7 +51,8 @@ class testApp : public ofBaseApp{
         string      arduino, output;
     
         ofSerial	serial;
-        
+        ofxOscSender sender;
+    
         vector <string> values;
     
         bool j1_up, j1_down, j1_left, j1_right, j1_button, j2_up, j2_down, j2_left, j2_right, j2_button, delete_button, ok_button, info_on, vertex, close;
