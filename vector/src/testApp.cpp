@@ -513,7 +513,40 @@ void testApp::placeObject(){
         float amp = ofMap(current_point.y, 0, ofGetScreenHeight(), 0.1, 0.6);
         message.addFloatArg( amp );
         float dur = ofMap(current_radius, 0, ofGetScreenWidth()/2, .1, 5);
+        float type = 0;
+        float en = 0;
+        float attack = 0.1;
+        float decay = 1;
+        float sustain = 1;
+        float release = 1;
+        float curve = -1;
+        if (current_color.getSaturation() < 200 && current_color.getSaturation() > 100){
+            type = 1; 
+        } else if (current_color.getSaturation() <= 100){
+            type = 2;
+        } 
+        if(current_sides == 1){
+            en = 1;
+        } else if (current_sides == 2){
+            en = 2;
+        }
+        attack = ofMap(current_radius, 0, ofGetScreenWidth()/2, 0.1, 1);
+        if(line.size()>10){
+            decay = 10;
+        } else {
+            decay = line.size();
+        }
+        sustain = ofMap(current_alpha, 0, 255, 0, 1);
+        release = ofMap(current_color.getBrightness(), 0, 255, 2, 0);
+        curve = ofMap(current_color.getHue(), 0, 255, -0.1, -4);
         message.addFloatArg( dur );
+        message.addFloatArg( type );
+        message.addFloatArg( en );
+        message.addFloatArg( attack );
+        message.addFloatArg( decay );
+        message.addFloatArg( sustain );
+        message.addFloatArg( release );
+        message.addFloatArg( curve );
         sender.sendMessage(message);
         cout<<message.getAddress()<<endl;
         cout<<message.getRemotePort()<<endl;
