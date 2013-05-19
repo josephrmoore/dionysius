@@ -23,7 +23,7 @@ public:
     ofPolyline line;
     ofxAnimatableOfPoint ap;
     ofxAnimatableOfColor ac;
-    ofxAnimatableFloat af;
+    ofxAnimatableFloat af, az;
     float frame_point, frame_color, frame_float;
 
     geometry();
@@ -42,4 +42,5 @@ public:
     void pointAni();    
     void colorAni();    
     void floatAni();
+    void zAni();
 };
