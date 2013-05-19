@@ -16,32 +16,26 @@ var sin, saw, noi, env_gen, env;
 		env = Env.adsr(attack, decay, sustain, release, amp, curve);
 	};
 	env_gen = EnvGen.kr(env);
-	sin = SinOsc.ar(freq, mul: env_gen);
-	saw = Saw.ar(freq, mul: env_gen);
-	noi = WhiteNoise.ar(freq, mul: env_gen);
-Out.ar(out, sin);
-Out.ar(out, saw);
-Out.ar(out, noi);
 
+	if (type == "0"){
+			type.poll;
+	en.poll;
+		sin = SinOsc.ar(freq, mul: env_gen);
+		Out.ar(out, sin);
+	};
+	if (type == 1){
+		saw = Saw.ar(freq, mul: env_gen);
+		Out.ar(out, saw);
+	};
+	if (type == 2){
+		noi = WhiteNoise.ar(freq, mul: env_gen);
+		Out.ar(out, noi);
+	};
+		sin = SinOsc.ar(freq, mul: env_gen);
+		Out.ar(out, sin);
 });
 syn.load(s);
 )
-
-
-
-
-// most basic synthdef
-
-(
-SynthDef("joe", {arg out=0;
-	  // logic here
-	var sine = SinOsc.ar(440, 0, 1);
-	Out.ar(out, sine);
-}).add;
-)
-
-
-Synth("joe");
 
 // 2.
 thisProcess.openUDPPort(5456); // see if port is available

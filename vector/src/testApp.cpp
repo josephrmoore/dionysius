@@ -550,7 +550,6 @@ void testApp::placeObject(){
         sender.sendMessage(message);
         cout<<message.getAddress()<<endl;
         cout<<message.getRemotePort()<<endl;
-
     }
 }
 
