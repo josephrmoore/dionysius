@@ -34,6 +34,8 @@ void testApp::setup(){
     ok_button = false;
     vertex = false;
     close = false;
+    flag_start = false;
+    flag_stop = false;
     sender.setup("127.0.0.1", 5456);
 }
 
@@ -55,6 +57,7 @@ void testApp::update(){
         objects[i].update_geometry(objects[i].centroid, objects[i].verticies-1, objects[i].radius, objects[i].color, objects[i].z, objects[i].line, oskar);
     }
     ofBackground(current_bk);
+
     do {
         arduino = ofxGetSerialString(serial,';'); //read until end of line
         if(arduino != ""){
@@ -75,6 +78,10 @@ void testApp::update(){
                 if(current_point.y < -current_radius-5){
                     current_point.y = -current_radius-5;
                 }
+                CGPoint point;  
+                point.x = current_point.x;  
+                point.y = current_point.y;  
+                CGWarpMouseCursorPosition(point);
                 if(ofToInt(values[2]) == 1 && j1_up == false){
                     // J1 UP
                     if(current_object < (objects.size()-1) && objects.size()>0){
@@ -252,6 +259,13 @@ void testApp::draw(){
         ofLine(current_point.x-5, current_point.y+5, current_point.x+5, current_point.y-5);
     }
     devInfo();
+    if(oskar){
+        ofxOscMessage message_sides;
+        message_sides.setRemoteEndpoint("127.0.0.1", 5456);
+        message_sides.setAddress("/dionysius_background");
+        message_sides.addFloatArg(current_sides);
+        sender.sendMessage(message_sides);
+    }
 }
 
 //--------------------------------------------------------------
@@ -502,55 +516,86 @@ void testApp::placeObject(){
     objects.push_back(newgeo);
     line.clear();
     current_z++;
+    cout<<"starting: "<<flag_start<<endl;
+    cout<<"stopping: "<<flag_stop<<endl;
     if(oskar){
         animate(current_point, current_sides, current_radius, current_color, current_z, line);
         audio(current_point, current_sides, current_radius, current_color, current_z, line);
-        ofxOscMessage message;
-        message.setAddress("/playtone");
-        message.setRemoteEndpoint("127.0.0.1", 5456);
-        float tone = ofMap(current_point.x, 0, ofGetScreenWidth(), 200, 2000);
-        message.addFloatArg( tone );
-        float amp = ofMap(current_point.y, 0, ofGetScreenHeight(), 0.1, 0.6);
-        message.addFloatArg( amp );
-        float dur = ofMap(current_radius, 0, ofGetScreenWidth()/2, .1, 5);
-        float type = 0;
-        float en = 0;
-        float attack = 0.1;
-        float decay = 1;
-        float sustain = 1;
-        float release = 1;
-        float curve = -1;
-        if (current_color.getSaturation() < 200 && current_color.getSaturation() > 100){
-            type = 1; 
-        } else if (current_color.getSaturation() <= 100){
-            type = 2;
-        } 
-        if(current_sides == 1){
-            en = 1;
-        } else if (current_sides == 2){
-            en = 2;
-        }
-        attack = ofMap(current_radius, 0, ofGetScreenWidth()/2, 0.1, 1);
-        if(line.size()>10){
-            decay = 10;
-        } else {
-            decay = line.size();
-        }
-        sustain = ofMap(current_alpha, 0, 255, 0, 1);
-        release = ofMap(current_color.getBrightness(), 0, 255, 2, 0);
-        curve = ofMap(current_color.getHue(), 0, 255, -0.1, -4);
-        message.addFloatArg( dur );
-        message.addFloatArg( type );
-        message.addFloatArg( en );
-        message.addFloatArg( attack );
-        message.addFloatArg( decay );
-        message.addFloatArg( sustain );
-        message.addFloatArg( release );
-        message.addFloatArg( curve );
-        sender.sendMessage(message);
-        cout<<message.getAddress()<<endl;
-        cout<<message.getRemotePort()<<endl;
-    }
+        
+
+        
+        ofxOscMessage message_sound, message_color;
+        message_sound.setAddress("/dionysius_sound");
+        message_color.setAddress("/dionysius_noise");
+        message_sound.setRemoteEndpoint("127.0.0.1", 5456);
+        message_color.setRemoteEndpoint("127.0.0.1", 5456);
+                
+        float freq, dur, amp, size;
+        freq = ofMap(current_point.x, 0, ofGetScreenWidth(), 200, 2000);
+        dur = ofMap(current_point.y, 0, ofGetScreenHeight(), .1, 2);
+        amp = ofMap(current_alpha, 0, 255, 0, 1);
+        size = ofMap(current_radius, 0, ofGetScreenWidth()/2, 0, 100);
+        message_sound.addFloatArg(freq);
+        message_sound.addFloatArg(dur);
+        message_sound.addFloatArg(amp);
+        message_sound.addFloatArg(size);
+        
+        float hue, sat, bri;
+        hue = ofMap(current_color.getHue(), 0, 255, 0, 255);
+        sat = ofMap(current_color.getSaturation(), 0, 255, 0, 255);
+        bri = ofMap(current_color.getBrightness(), 0, 255, 0, 255);
+        message_color.addFloatArg(hue);
+        message_color.addFloatArg(sat);
+        message_color.addFloatArg(bri);
+        
+        sender.sendMessage(message_sound);
+        sender.sendMessage(message_color);
+
+        
+        
+//        float tone = ofMap(current_point.x, 0, ofGetScreenWidth(), 200, 2000);
+//        message.addFloatArg( tone );
+//        float amp = ofMap(current_point.y, 0, ofGetScreenHeight(), 0.1, 0.6);
+//        message.addFloatArg( amp );
+//        float dur = ofMap(current_radius, 0, ofGetScreenWidth()/2, .1, 5);
+//        float type = 0;
+//        float en = 0;
+//        float attack = 0.1;
+//        float decay = 1;
+//        float sustain = 1;
+//        float release = 1;
+//        float curve = -1;
+//        if (current_color.getSaturation() < 200 && current_color.getSaturation() > 100){
+//            type = 1; 
+//        } else if (current_color.getSaturation() <= 100){
+//            type = 2;
+//        } 
+//        if(current_sides == 1){
+//            en = 1;
+//        } else if (current_sides == 2){
+//            en = 2;
+//        }
+//        attack = ofMap(current_radius, 0, ofGetScreenWidth()/2, 0.1, 1);
+//        if(line.size()>10){
+//            decay = 10;
+//        } else {
+//            decay = line.size();
+//        }
+//        sustain = ofMap(current_alpha, 0, 255, 0, 1);
+//        release = ofMap(current_color.getBrightness(), 0, 255, 2, 0);
+//        curve = ofMap(current_color.getHue(), 0, 255, -0.1, -4);
+//        message.addFloatArg( dur );
+//        message.addFloatArg( type );
+//        message.addFloatArg( en );
+//        message.addFloatArg( attack );
+//        message.addFloatArg( decay );
+//        message.addFloatArg( sustain );
+//        message.addFloatArg( release );
+//        message.addFloatArg( curve );
+//        sender.sendMessage(message);
+//        cout<<message.getAddress()<<endl;
+//        cout<<message.getRemotePort()<<endl;
+    } 
 }
 
 //--------------------------------------------------------------

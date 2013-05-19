@@ -8,21 +8,14 @@ NetAddr.langPort // get current listening port
 var syn, sound;
 syn = SynthDef.new("oskar", {arg out = 0, freq = 440, amp = 0.2, dur = 1, type = 0, en = 0, attack = 0.1, decay = 1, sustain = 1, release = 1, curve = -4;
 var sin, saw, noi, env_gen, env;
-    env = Env.perc(attack, release, amp, curve);
-	if (en == 2){
-        env = Env.triangle(dur, amp);
-	};
-	if (en == 1){
-		env = Env.adsr(attack, decay, sustain, release, amp, curve);
-	};
+    env = Env.perc(attack, release, amp/100, curve);
+	env2 = Env.perc(attack, release, (100-amp)/100, curve);
 	env_gen = EnvGen.kr(env);
+	env_gen2 = EnvGen.kr(env2);
 	sin = SinOsc.ar(freq, mul: env_gen);
-	saw = Saw.ar(freq, mul: env_gen);
-	noi = WhiteNoise.ar(freq, mul: env_gen);
-Out.ar(out, sin);
-Out.ar(out, saw);
-Out.ar(out, noi);
-
+	saw = Saw.ar(freq, mul: env_gen2);
+	Out.ar(out, sin);
+	Out.ar(out, saw);
 });
 syn.load(s);
 )
